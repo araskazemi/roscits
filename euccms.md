@@ -10,3 +10,37 @@ inom EU.
 
 Implementeringen av EU CCMS är därmed en central komponent i att upprätthålla säkerhet, tillit och funktionell interoperabilitet i framtidens 
 digitaliserade transportsystem.
+
+## Tillit och säkerhet
+Tillitskedjan inkluderar flera roller:
+* <mark>CPA (Certificate Policy Authority)</mark>: ansvarar för policydokument och godkänner Root CAs.
+* <mark>TLM (Trust List Manager)</mark>: skapar och publicerar den europeiska certifikatlistan (ECTL) med alla betrodda Root CAs.
+* <mark>CPOC (C-ITS Point of Contact)</mark>: fungerar som nav mellan Root CAs och TLM, tar emot certifikat, publicerar ECTL och tillhandahåller ankre i tillitskedjan (trust anchors).
+* <mark>Root CA</mark>: kan vara statliga eller privata aktörer. Utfärdar certifikat till:
+    * <mark>EA (Enrolment Authority)</mark>: utfärdar <mark>Enrolment Credentials (EC)</mark> till C-ITS-enheter (fordon och RSU:er).
+    * <mark>AA (Authorization Authority)</mark>: utfärdar <mark>Authorisation Tickets (AT)</mark>, som är kortlivade pseudonyma certifikat för att skydda integriteten.
+
+C-ITS-enheter använder EC för identifiering gentemot tillitsinfrastrukturen och AT för att signera och verifiera C-ITS-meddelanden.
+
+### Vad som utmärker C-ITS jämfört med klassisk PKI
+#### Pseudonymitet och integritetsskydd
+Till skillnad från klassisk PKI, där identiteten ofta är knuten till certifikatet, använder C-ITS pseudonyma certifikat (ATs) som byts ofta för att förhindra spårning av fordon. Kopplingen till fordonets verkliga identitet hålls skyddad av EA/AA och exponeras inte i kommunikationen.
+
+#### Korta livstider i nyckelhanteringen
+Authorisation Tickets (AT) har kort giltighetstid och måste bytas ofta (sekretesskrav). Detta skiljer sig från traditionella PKI-certifikat som ofta är giltiga i månader eller år.
+
+#### Multirot-struktur och central trust list
+Flera Root CAs kan samexistera, men alla listas i en central European Certificate Trust List (ECTL) signerad av TLM. Detta är annorlunda än en klassisk PKI där en organisation ofta har en hierarki med en root och underordnade CAs, men inte en gemensam europeisk trust anchor.
+
+#### Separering av roller (EA och AA)
+En viktig säkerhetsdesign är separationen mellan enrolment (EC) och authorization (AT) för att undvika att någon enskild aktör kan både identifiera och spåra ett fordon. I en traditionell PKI finns inte denna uppdelning – CA utfärdar certifikat direkt till slutanvändare.
+
+#### Specifika C-ITS-protokoll och standarder
+Certifikat och signaturer följer ETSI TS 103 097 och relaterade standarder, optimerade för bandbredd och realtidskrav i fordonskommunikation.
+Även särskilda "butterfly key"-mekanismer används för att möjliggöra massgenerering av pseudonyma certifikat.
+
+#### Striktare operativa och fysiska kontroller
+Rollerna (Root CAs, EA, AA, TLM) omfattas av detaljerade krav på revision, fysiska säkerhetskontroller och procedurer som fastställs av EU (via CP, Security Policy och CPOC Protocol). Traditionell PKI följer ofta en CA/Browser Forum eller eIDAS-baserad policy, men C-ITS har sin egen europeiska styrmodell.
+
+#### Manuella och fysiska processer för nyckelhantering
+Root CA-certifikat lämnas ofta fysiskt (med kurir) till CPOC för att minska risken för kompromettering. Detta är ovanligt i klassisk PKI, där processerna i större utsträckning är automatiserade.
