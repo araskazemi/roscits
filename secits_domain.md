@@ -21,7 +21,7 @@ EU-CCMS är alltså en governance-styrd trust-list-modell – inte en klassisk s
 Den kryptografiska PKI-kedjan utgörs av Root CA, EA, AA och C-ITS-stationer.
 
 Tilliten i systemet etableras genom att Root CAs listas i den europeiska trust-listan (ECTL), inte genom en överordnad europeisk super-root.
-<p>nbsp;</p>
+<p>&nbsp;</p>
 
 Följande komponenter utgör den faktiska kryptografiska tillitskedjan:
 ```
