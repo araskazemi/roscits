@@ -1,4 +1,4 @@
-# Möjlig svensk alternativ
+# Ett möjligt svensk alternativ
 Inför en svensk implementation av interoperabel C-ITS enligt EU-CCMS uppstår ett antal strategiska frågor kring:
 - Domänägarskap
 - Registration Authority (RA)
@@ -133,31 +133,88 @@ Den administrativa tillitsstrukturen består av:
 
 <mark>Det är här nationell styrning sker</mark>.
 
+
 :one: **C-ITS-domän**
 
 En C-ITS-domän är en organisatorisk och policybaserad funktion som ansvarar för registrering, certifikathantering och rollstyrning inom EU-CCMS.
 
 En C-ITS-domän är en governance-struktur. Den är inte en Root CA och inte heller en teknisk komponent i den kryptografiska tillitskedjan.
 
-:two: **Registration Authority (RA)**
+
+:two: **C-ITS domänägare**
+
+Domänägaren är en lednings- och styrningsfunktion ovanför RA.
+
+Domänägaren:
+* Fastställer policy och kan ändra reglerna
+* Utser RA
+* Utser de EA och AA, vilka kan konsumera data från domänens RA-system
+* Beslutar om roll- och behörighetskategorier
+* Beslutar om anslutningsvillkor
+* Har incidentmandat
+* Representerar Sverige i EU-CCMS
+
+Domänägaren svarar på frågan:
+> Hur ska svensk C-ITS-domän styras?
+
+:three: **Registration Authority (RA)**
 
 RA är den administrativa inträdespunkten och innehåller tillförlitliga uppgifter om:
-- Aktör
+- Aktörer
     - Organisationens identitet och juridisk form
     - Organisationsnummer
     - Kontaktpersoner
     - Status
 
-- Station
+- Stationer
     - Station-ID
     - Koppling till organisation
     - Stationstyp
     - Status
 
-- Aktörens representation genom en betrodd C-ITS-station
+- Aktörernas representation genom betrodda C-ITS-stationer
     - Emergency vehicle
     - Public transport
     - Road operator
     - Behörighetsprofil
 
-RA är inte kryptografisk men är en kritisk säkerhetskontrollpunkt.
+> [!NOTE]
+> RA är en operativ, administrativ funktion, som:
+>- Verifierar organisationer
+>- Registrerar stationer
+>- Kopplar station till organisation
+>- Registrerar rollgrund
+>- För in data i systemet
+>- Dokumenterar beslut
+
+RA fattar beslut inom ramen för C-ITS-domänens policy. 
+
+RA är inte en kryptografisk roll i PKI-kedjan men är en kritisk säkerhetskontrollpunkt för de CA som utfärdar certifikat.
+
+RA svarar på frågan:
+> Är denna specifika organisation/station godkänd enligt reglerna?
+
+:four: **Policybeslut**
+
+När vi talar om policybeslut i C-ITS-sammanhang menar vi inte tekniska inställningar, utan formella beslut som styr:
+- Vem som får delta i domänen?
+- Under vilka villkor?
+- Med vilka roller?
+- Med vilket ansvar?
+- Under vilka säkerhetskrav? 
+- Hur incidenter ska hanteras? 
+- Vem som får uteslutas?
+
+Policybeslut i en domän ligger ovanför PKI-nivån och handlar inte om kryptografiska frågor.
+
+> [!NOTE]
+> Exempel på policybeslut i svensk kontext:
+>- Ska alla kommuner få registrera RSU:er?
+>- Ska privata väghållare få delta?
+>- Vem avgör att ett fordon är `emergency vehicle`?
+>- Ska kollektivtrafik ha prioritet i signaler?
+>- Hur ska spärrning ske vid säkerhetsincident?
+>- Ska utländska aktörer få registrera stationer i svensk domän?
+>- Hur hanteras konflikt mellan kommun och stat vid rollfrågor?
+
+
