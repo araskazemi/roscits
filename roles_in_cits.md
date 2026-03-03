@@ -89,3 +89,21 @@ Styrning av roller och rättigheter hanteras i tre lager:
 :white_check_mark: **Certificate Policy** definierar hur rättigheter får utfärdas.
 
 :white_check_mark: **C-ITS domänpolicy** avgör vem som faktiskt får dessa roller och rättigheter.
+
+Om alla fordon kunde sända “jag är ett utryckningsfordon”, då skulle hela systemet kollapsa säkerhetsmässigt. Därför är rollen kryptografiskt skyddad och måste vara auktoriserad av rätt RA/EA/AA – den måste ligga inom korrekt tillitskedja.
+
+EU definierar: meddelandetyper, certifikatstruktur, tillitsmodell och kryptografi samt interoperabilitetskrav.
+
+Medlemsstaten styr den operativa maktstrukturen inom sin C-ITS-domän. Detta innebär att medlemsstaten:
+- Fastställer nationell C-ITS-policy
+- Utser och styr RA/EA/AA-struktur
+- Avgör vilka aktörer som är legitima (t ex blåljus, kollektivtrafik, vägarbeten)
+- Beslutar om roll- och SSP-tilldelning
+- Ansvarar för riskbedömning och säkerhetsstyrning
+- Hanterar incidenter och revokering
+- Integrerar C-ITS med nationell lagstiftning och trafikstyrning
+- Fastställer operativa prioriteringsregler
+- Avgör acceptans av utländska rättigheter inom nationell infrastruktur
+
+
+
