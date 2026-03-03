@@ -6,7 +6,7 @@ Detta projekt fokuserar på hur en trygg, robust och säker utrullning av <mark>
 ## Innehållsförteckning
 1. [Vad är C-ITS – och varför spelar det roll?](cits.md)
 2. [EU CCMS – det gemensamma europeiska ramverket för certifikathantering inom C-ITS.](euccms.md)
-3. [Möjlig svensk alternativ](secits_domain.md)
+3. [Ett möjligt svenskt alternativ](secits_domain.md)
 
 ### Extramaterial
 * [EU CCMS-protokollen](euccms_protocols.md)
