@@ -1,4 +1,4 @@
-# Ett möjligt svensk alternativ
+# Ett möjligt svenskt alternativ
 Inför en svensk implementation av interoperabel C-ITS enligt EU-CCMS uppstår ett antal strategiska frågor kring:
 - Domänägarskap
 - Registration Authority (RA)
@@ -216,5 +216,31 @@ Policybeslut i en domän ligger ovanför PKI-nivån och handlar inte om kryptogr
 >- Hur ska spärrning ske vid säkerhetsincident?
 >- Ska utländska aktörer få registrera stationer i svensk domän?
 >- Hur hanteras konflikt mellan kommun och stat vid rollfrågor?
+
+:five: **Roll- och behörighetsdefinition**
+text...
+
+### Domänstrukturer – alternativa modeller
+
+#### En nationell domän
+text...
+
+#### Sektorsdomäner
+text...
+
+#### Domän per kommun/region
+text...
+
+### RA-struktur – Central vs Federerad
+text...
+
+### Offentlig vs Privat domänägare
+text...
+
+
+
+
+
+
 
 
