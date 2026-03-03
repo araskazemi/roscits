@@ -13,7 +13,7 @@ Roller och behörigheter i C-ITS definieras men på ett specifikt sätt. Det är
 Dessa roller är infrastrukturella roller och inte trafikroller.
 
 ## Meddelandetyper och funktionella roller
-I C-ITS finns särskilda meddelandetyper och flaggor, såsom:
+I C-ITS finns särskilda meddelandetyper och flaggor för olika use cases (som i C-ITS kallas *applikationer*), till exempel:
 - Emergency Vehicle Alert (EVA)
 - Road Works Warning (RWW)
 - Public Transport Priority
@@ -22,3 +22,10 @@ I C-ITS finns särskilda meddelandetyper och flaggor, såsom:
 
 > [!IMPORTANT]
 > Exempelvis innebär EVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
+
+I certifikatet (AT) finns ett fält som heter `ITS-AID` (ITS Application Identifier). Det anger:
+- vilka applikationer stationen får använda
+- vilka [meddelandetyper](cits.md#vad-skickas) den får sända
+
+Det är alltså inte meddelandet i sig, utan rätten att använda applikationen som är säkerhetsstyrd.
+
