@@ -21,7 +21,7 @@ EU-CCMS är alltså en governance-styrd trust-list-modell – inte en klassisk s
 Den kryptografiska PKI-kedjan utgörs av Root CA, EA, AA och C-ITS-stationer.
 
 Tilliten i systemet etableras genom att Root CAs listas i den europeiska trust-listan (ECTL), inte genom en överordnad europeisk super-root.
-<p>/nbsp;</p>
+<p>nbsp;</p>
 
 Följande komponenter utgör den faktiska kryptografiska tillitskedjan:
 ```
@@ -39,15 +39,18 @@ C-ITS Station (OBU / RSU / Central ITS-station)
 ```
 
 :one: **Root CA (RCA)**
+
 - Utfärdar certifikat till EA och AA
 - Är det kryptografiska tillitsankaret
 - Flera Root CAs kan existera parallellt
 
 :two: **Enrolment Authority (EA)**
+
 - Utfärdar Enrollment Credentials (EC)
 - Verifierar stationens identitet
 
 :three: **Authorisation Authority (AA)**
+
 - Utfärdar Authorization Tickets (AT)
 - Ger rättigheter att använda specifika C-ITS-tjänster
 
@@ -71,16 +74,19 @@ Godkända Root CAs
 ```
 
 :one: **CPA – Certificate Policy Authority**
+
 Policy-organ, som godkänner Root CAs, fastställer regelverk och övervakar efterlevnad.
 
 CPA signerar inga C-ITS-certifikat.
 
 :two: **TLM – Trust List Manager**
+
 Publicerar och signerar ECTL. Lägger till/avlägsnar Root CAs i trust-listan. 
 
 Är en central europeisk funktion, men inte en CA och utfärdar därmed inga EA/AA-certifikat.
 
 :three: **ECTL – European Certificate Trust List**
+
 En lista över alla godkända Root CAs (definierar vilka Root CAs som är betrodda).
 
 ECTL distribueras till alla C-ITS stationer och är därmed det europeiska “tillitsankaret”.
@@ -118,45 +124,40 @@ Detta innebär att:
    C-ITS station             C-ITS station              C-ITS station
 ```
 
+### Administrativ tillitsstruktur
+Den administrativa tillitsstrukturen består av:
+- Domänägare
+- Registration Authority (RA)
+- Policybeslut
+- Roll- och behörighetsdefinition
 
+<mark>Det är här nationell styrning sker</mark>.
 
+:one: **C-ITS-domän**
 
-EU-CCMS består av:
-- EU Root CA (gemensamt europeiskt tillitsankare)
-- Enrollment Authority (EA)
-- Authorization Authority (AA)
-- C-ITS-stationer (OBU, RSU, Central ITS-S)
+En C-ITS-domän är en organisatorisk och policybaserad funktion som ansvarar för registrering, certifikathantering och rollstyrning inom EU-CCMS.
 
-Endast Root CA, EA, AA och stationer är delar av PKI-kedjan.
-Detta utgör den <mark>övergripande europeiska tillismodellen</mark>.
+En C-ITS-domän är en governance-struktur. Den är inte en Root CA och inte heller en teknisk komponent i den kryptografiska tillitskedjan.
 
-Varje medlemsstat (eller flera medlemsstater) kan ha en <mark>egen underordnad Root CA</mark>, som:
-- är certifierad (cross-certified eller underordnad) via EU Root
-- driver eller delegerar till underordnade certifikatutfärdare
-- hanterar certifikaten för underliggande EA/AA
+:two: **Registration Authority (RA)**
 
-En nationell (eller regional) Root-CA är inte fristående tillitsankare och är underordnade EU Root CA inom EU-CCMS-tillitsmodellen.
+RA är den administrativa inträdespunkten och innehåller tillförlitliga uppgifter om:
+- Aktör
+    - Organisationens identitet och juridisk form
+    - Organisationsnummer
+    - Kontaktpersoner
+    - Status
 
-```
-EU Root CA
-   ↓
-Root CA (per medlemsstat/region)
-   ↓
-EA / AA
-   ↓
-EC / AT (stationer)
-```
+- Station
+    - Station-ID
+    - Koppling till organisation
+    - Stationstyp
+    - Status
 
-2.2 Administrativ struktur
+- Aktörens representation genom en betrodd C-ITS-station
+    - Emergency vehicle
+    - Public transport
+    - Road operator
+    - Behörighetsprofil
 
-Utanför PKI-kedjan ligger:
-
-Registration Authority (RA)
-
-Domänägare (governance)
-
-Policybeslut
-
-Roll- och behörighetsdefinition
-
-Det är här nationell styrning sker.
+RA är inte kryptografisk men är en kritisk säkerhetskontrollpunkt.
