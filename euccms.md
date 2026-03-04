@@ -56,40 +56,37 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
 
 ```
 ────────────────────────────────────────────────────────────
-                   EUROPEAN LEVEL
+                EUROPEAN LEVEL
 ────────────────────────────────────────────────────────────
 
-        European Commission
-(Policy, Governance, Legal Framework)
-                 │
-                 ▼
-        Trust List Manager
-                 │
-                 ▼
-               ECTL
-         (EU Trust List)
-                 │
-                 ▼
-      ┌─────────────────────┐
-      │  RCA EU             │
-      │  (Default Root CA)  │
-      └─────────────────────┘
-                 │
-      ┌──────────┴──────────┐
-      ▼                     ▼
-┌─────────────┐      ┌─────────────┐
-│     EA      │      │     AA      │
-│Enrollment CA│      │Authorization│
-│             │      │     CA      │
-└─────────────┘      └─────────────┘
-      │                     │
-      │                     │
+            European Commission
+   (Policy, Governance, Legal Framework)
+                     │
+                     ▼
+             Trust List Manager
+                     │
+                     ▼
+                    ECTL
+              (EU Trust List)
+                     │
+                     ▼
+           ┌─────────────────────┐
+           │  RCA EU             │
+           │  (Default Root CA)  │
+           └─────────────────────┘
+                      │
+           ┌──────────┴──────────┐
+           ▼                     ▼
+   ┌───────────────┐      ┌───────────────┐
+   │      EA       │      │      AA       │
+   │ Enrollment CA │      │ Authorization │
+   │               │      │      CA       │
+   └───────────────┘      └───────────────┘
+           │                     │
+           │                     │
 ────────────────────────────────────────────────────────────
-                NATIONAL C-ITS DOMAIN
+         NATIONAL C-ITS DOMAIN (t ex Sverige)
 ────────────────────────────────────────────────────────────
-
-        National Trust Domain (ex. Sweden)
-        ─────────────────────────────────
 
         ┌───────────────────────────┐
         │ RA-system (Registration)  │
@@ -102,28 +99,27 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
                      │
          ┌───────────┴────────────┐
          ▼                        ▼
-   Enrollment Certificate     Authorization
-   (Long-term identity)       Tickets (AT)
-                               (Short-term)
-                    │
-                    ▼
-            C-ITS STATIONS
-   ┌───────────────────────────────────┐
-   │  Roadside ITS-S                  │
-   │  Vehicle ITS-S                   │
-   │  Traffic signal ITS-S            │
-   │  Emergency vehicle ITS-S         │
-   └───────────────────────────────────┘
-                   │
-                   ▼
+        EC                        AT
+(Long-term identity)    (Short-term pseudonym)
+                     │
+                     ▼
+              C-ITS STATIONS
+    ┌────────────────────────────────┐
+    │  Roadside ITS-S                │
+    │  Vehicle ITS-S                 │
+    │  Traffic signal ITS-S          │
+    │  Emergency vehicle ITS-S       │
+    └────────────────────────────────┘
+                     │
+                     ▼
             Signed C-ITS Messages
-         (CAM, DENM, MAPEM, SPATEM etc.)
+         (CAM, DENM, MAPEM, SPATEM, etc.)
 
-────────────────────────────────────────────
-OPTIONAL IP / CLOUD LAYER
-────────────────────────────────────────────
+────────────────────────────────────────────────────────────
+           OPTIONAL IP / CLOUD LAYER
+────────────────────────────────────────────────────────────
 
         Interchange / Cloud broker
-        (Not part of trust anchor,
-         but must validate signatures)
+(Not part of trust anchor, but must validate signatures)
+
 ```
