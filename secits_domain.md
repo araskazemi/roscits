@@ -111,7 +111,7 @@ Detta innebär att:
                                    │
         ┌──────────────────────────┼──────────────────────────┐
         │                          │                          │
-  Root CA (EU)              Root CA (nation)               Root CA (OEM)
+  Root CA (EU)             Root CA (nation)             Root CA (OEM)
         │                          │                          │
         ▼                          ▼                          ▼
       EA / AA                   EA / AA                    EA / AA
