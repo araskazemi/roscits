@@ -216,8 +216,27 @@ Policybeslut i en domän ligger ovanför PKI-nivån och handlar inte om kryptogr
 >- Ska utländska aktörer få registrera stationer i svensk domän?
 >- Hur hanteras konflikt mellan kommun och stat vid rollfrågor?
 
+
 :five: **Roll- och behörighetsdefinition**
-text...
+
+Behörighet definierar vad en roll får göra i systemet. Det handlar exempelvis om:
+- vilka meddelanden som får sändas.
+- vilka attribut som får sättas.
+- vilka funktioner som får användas.
+
+EU definierar ramverket, men medlemsstater definierar tillämpningen. Det innebär att Sverige måste definiera:
+- vilka roller som finns nationellt
+- vilka organisationer som får dessa roller
+- hur rollen verifieras
+
+Domänägaren fastställer rollkatalog, behörighetsmodell och ansvarsfördelning.
+
+RA registrerar:
+- vilken organisation som har vilken roll
+- vilken station som tillhör vilken roll
+
+AA utfärdar sedan certifikat baserat på denna information.
+Se även, [Roller och rättigheter i C-ITS](roles_in_cits.md)
 
 ### Domänstrukturer – alternativa modeller
 
