@@ -181,12 +181,30 @@ Tillitskedjena kan se ut så här:
 
 ```
 
+## Hur hänger den nationella C-ITS-domänen i tillitsmodellen?
 Den nationella domänen är inte en separat PKI-root, utan består av:
 - Nationellt RA-system
 - Avtal
 - Styrning och upprätthållande av policy
 - Tilldelning av roller
 
+Domän definieras genom domänägarens styrning över:
+- Vem/vilka får agera RA
+- Vilka aktörer och deras stationer får registreras i RA
+- Vilka EA/AA som är godkända att utfärda certifikat för stationerna inom domänen
+- Nationella policykrav
+- Incidenthantering
+
+## Hur hänger Interchange-noder i tillitsmodellen?
 Interchange är inte en PKI-aktör, snarare en broker/federationstjänst som transporterar IP-baserade meddelanden.
 En interchange node måste dock validera ETSI TS 103 097-signaturer samt följa Security Policy.
 
+Interchange kan beskrivas som en nod som drivs av en domän. Den ingår i ett nätverk eller en federation av noder och kan överföra C-ITS-meddelanden mellan olika domäner. 
+
+En interchange-nod:
+- tar emot ett C-ITS-meddelande via IP
+- verifierar signaturen (ETSI TS 103 097)
+- kontrollerar relevans
+- distribuerar vidare till nod i annan domän
+
+Interchange-noder litar inte på varandra via EU CCMS-PKI. Deras tillit etableras genom federation, avtal och konfiguration.
