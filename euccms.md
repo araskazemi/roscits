@@ -119,7 +119,11 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
            OPTIONAL IP / CLOUD LAYER
 ────────────────────────────────────────────────────────────
 
-        Interchange / Cloud broker
+    ┌────────────────────────────────┐
+    │                                │
+    │   Interchange / Cloud broker   │
+    │                                │
+    └────────────────────────────────┘
 (Not part of trust anchor, but must validate signatures)
 
 ```
@@ -165,12 +169,12 @@ Tillitskedjena kan se ut så här:
         ▼             ▼             ▼
    Root CA EU    Root CA A      Root CA B
   (EU default)  (e.g. nation)  (e.g. OEM)
-        │            │              │
-        ▼            ▼              ▼
-      EA/AA        EA/AA          EA/AA
-        │            │              │
-        ▼            ▼              ▼
-    Stations     Stations       Stations
+        │             │              │
+        ▼             ▼              ▼
+      EA/AA         EA/AA          EA/AA
+        │             │              │
+        ▼             ▼              ▼
+    Stations      Stations       Stations
 
 ```
 
