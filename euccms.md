@@ -131,9 +131,10 @@ Det innebär att:
 - en norsk station accepterar en tysk station,
 - och så vidare.
 
-Detta är grunden för interoperabilitet enligt Security Policy
+Detta är grunden för interoperabilitet enligt Security Policy.
 
-Tillitskedjan ser ut så här:
+Förenklat ser tillitskedjan ut så här:
+
 ```
  ECTL
    ↓
@@ -144,6 +145,32 @@ EA / AA
 C-ITS Station Certificates
    ↓
 Signed Messages
+
+```
+
+Den gemensamma tilliten kommer dock inte från en gemensam root, utan från en multiple root CA architecture med en gemensam europeisk trusted list, ECTL.
+
+Tillitskedjena kan se ut så här:
+
+```
+                     CPA
+                      │
+                      ▼
+              Trust List Manager
+                      │
+                      ▼
+            ECTL (EU Trust List)
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+   Root CA EU    Root CA A      Root CA B
+  (EU default)  (e.g. nation)  (e.g. OEM)
+        │            │              │
+        ▼            ▼              ▼
+      EA/AA        EA/AA          EA/AA
+        │            │              │
+        ▼            ▼              ▼
+    Stations     Stations       Stations
 
 ```
 
