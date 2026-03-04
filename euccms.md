@@ -85,7 +85,7 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
            │                     │
            │                     │
 ────────────────────────────────────────────────────────────
-         NATIONAL C-ITS DOMAIN (t ex Sverige)
+         NATIONAL C-ITS DOMAIN (e.g. Sweden)
 ────────────────────────────────────────────────────────────
 
         ┌───────────────────────────┐
@@ -123,3 +123,36 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
 (Not part of trust anchor, but must validate signatures)
 
 ```
+
+### Hur PKI-kedjan hänger ihop
+PKI-kedjan bygger på en multiple root CA-arkitektur med en gemensam trust list.
+Det innebär att:
+- en svensk station accepterar en fransk station,
+- en norsk station accepterar en tysk station,
+- och så vidare.
+
+Detta är grunden för interoperabilitet enligt Security Policy
+
+Tillitskedjan ser ut så här:
+```
+ ECTL
+   ↓
+  RCA
+   ↓
+EA / AA
+   ↓
+C-ITS Station Certificates
+   ↓
+Signed Messages
+
+```
+
+Den nationella domänen är inte en separat PKI-root, utan består av:
+- Nationellt RA-system
+- Avtal
+- Styrning och upprätthållande av policy
+- Tilldelning av roller
+
+Interchange är inte en PKI-aktör, snarare en broker/federationstjänst som transporterar IP-baserade meddelanden.
+En interchange node måste dock validera ETSI TS 103 097-signaturer samt följa Security Policy.
+
