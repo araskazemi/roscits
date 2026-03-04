@@ -231,9 +231,7 @@ EU definierar ramverket, men medlemsstater definierar tillämpningen. Det inneb�
 
 Domänägaren fastställer rollkatalog, behörighetsmodell och ansvarsfördelning.
 
-RA registrerar:
-- vilken organisation som har vilken roll
-- vilken station som tillhör vilken roll
+RA registrerar organisationers roller samt stationers roller och vilken organisation de tillhör.
 
 AA utfärdar sedan certifikat baserat på denna information.
 
