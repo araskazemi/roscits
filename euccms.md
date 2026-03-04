@@ -88,6 +88,9 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
          NATIONAL C-ITS DOMAIN (e.g. Sweden)
 ────────────────────────────────────────────────────────────
 
+              Domain Governance
+                     │
+                     ▼
         ┌───────────────────────────┐
         │ RA-system (Registration)  │
         │ Identity vetting          │
@@ -95,7 +98,7 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
         └───────────────────────────┘
                      │
                      ▼
-            (Requests certificates)
+            Certificate Requests
                      │
          ┌───────────┴────────────┐
          ▼                        ▼
