@@ -236,6 +236,7 @@ RA registrerar:
 - vilken station som tillhör vilken roll
 
 AA utfärdar sedan certifikat baserat på denna information.
+
 Se även, [Roller och rättigheter i C-ITS](roles_in_cits.md)
 
 ### Domänstrukturer – alternativa modeller
