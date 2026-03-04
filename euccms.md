@@ -44,3 +44,86 @@ Rollerna (Root CAs, EA, AA, TLM) omfattas av detaljerade krav på revision, fysi
 
 #### Manuella och fysiska processer för nyckelhantering
 Root CA-certifikat lämnas ofta fysiskt (med kurir) till CPOC för att minska risken för kompromettering. Detta är ovanligt i klassisk PKI, där processerna i större utsträckning är automatiserade.
+
+## Övergripande struktur
+Den övergripande strukturen för tillitsmodellen kan delas i följande tre skikt:
+
+:one: EU-nivå
+
+:two: Nationell domän
+
+:three: Molntjänstförmedlare (som kallas Interchange)
+
+```
+────────────────────────────────────────────────────────────
+                   EUROPEAN LEVEL
+────────────────────────────────────────────────────────────
+
+        European Commission
+(Policy, Governance, Legal Framework)
+                 │
+                 ▼
+        Trust List Manager
+                 │
+                 ▼
+               ECTL
+         (EU Trust List)
+                 │
+                 ▼
+      ┌─────────────────────┐
+      │  RCA EU             │
+      │  (Default Root CA)  │
+      └─────────────────────┘
+                 │
+      ┌──────────┴──────────┐
+      ▼                     ▼
+┌─────────────┐      ┌─────────────┐
+│     EA      │      │     AA      │
+│Enrollment CA│      │Authorization│
+│             │      │     CA      │
+└─────────────┘      └─────────────┘
+      │                     │
+      │                     │
+────────────────────────────────────────────────────────────
+                NATIONAL C-ITS DOMAIN
+────────────────────────────────────────────────────────────
+
+        National Trust Domain (ex. Sweden)
+        ─────────────────────────────────
+
+        ┌───────────────────────────┐
+        │ RA-system (Registration)  │
+        │ Identity vetting          │
+        │ Station approval          │
+        └───────────────────────────┘
+                     │
+                     ▼
+            (Requests certificates)
+                     │
+         ┌───────────┴────────────┐
+         ▼                        ▼
+   Enrollment Certificate     Authorization
+   (Long-term identity)       Tickets (AT)
+                               (Short-term)
+                    │
+                    ▼
+            C-ITS STATIONS
+   ┌───────────────────────────────────┐
+   │  Roadside ITS-S                  │
+   │  Vehicle ITS-S                   │
+   │  Traffic signal ITS-S            │
+   │  Emergency vehicle ITS-S         │
+   └───────────────────────────────────┘
+                   │
+                   ▼
+            Signed C-ITS Messages
+         (CAM, DENM, MAPEM, SPATEM etc.)
+
+────────────────────────────────────────────
+OPTIONAL IP / CLOUD LAYER
+────────────────────────────────────────────
+
+        Interchange / Cloud broker
+        (Not part of trust anchor,
+         but must validate signatures)
+```
