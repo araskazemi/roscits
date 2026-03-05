@@ -1,4 +1,4 @@
-# RA-system för C-ITS-domän
+# RA-verksamhetssystem för C-ITS-domän
 <mark>Registration Authority (RA)</mark> i C-ITS/EU-CCMS är den funktion som hanterar identifiering, validering och registrering av entiteter <mark>innan de får certifikat</mark>.
 
 RA är på så sätt inte en CA som utfärdar certifikat, men säkerställer att CA får korrekta uppgifter för att rätt aktör, rätt utrustning och rätt roll och rättigheter kopplas till rätt certifikat enligt Certificate Policy.
@@ -65,7 +65,7 @@ Detta möjliggör:
 
 > [!IMPORTANT]
 > RA registrerar inte certifikaten – känner inte till stationen EC och AT.
->- RA registrerar information om stationen och tilldelar/registrerar en station-identifierare.
+>- RA registrerar information om stationen och tilldelar/registrerar en stationidentifierare.
 >- EA använder den identifieraren när EC utfärdas och kopplar den till certifikatet.
 >- Det är alltså EA/AA som har loggar som kopplar certifikat till stationen.
 >- EA kan tekniskt utfärda EC utan att känna till stationens verkliga identitet — bara ett RA-godkänt identifieringsvärde.
@@ -80,6 +80,9 @@ RA hanterar metadata kring certifikatutgivning, t ex:
 - Loggning av beslut
 
 Detta är kärnan i registreringsprocessen och RA som funktion – att säkerställa korrekt koppling mellan identitet och certifikat och livscykelhantering.
+
+> [!NOTE]
+> RA ser och verifierar den publika nyckeln i samband med CSR/registrering för Enrollment Certificate (EC), men RA behöver inte nödvändigtvis lagra nyckeln permanent som en egen datapost.
 
 ### Avtals- och efterlevnadsinformation
 Eftersom C-ITS bygger på en gemensam trust-modell behövs även:
@@ -100,8 +103,8 @@ En RA måste enligt god säkerhetspraxis hantera:
 
 Detta är avgörande för juridisk hållbarhet, spårbarhet och incidenthantering.
 
-## Livscykelhantering av stationsinformation i ett RA-system
-En C-ITS-station genomgår typiskt följande livscykelfaser i RA-systemet:
+## Livscykelhantering av stationsinformation i ett RA-verksamhetssystem
+En C-ITS-station genomgår typiskt följande livscykelfaser i RA-verksamhetssystemet:
 
 :one: Förberedande registrering (organisation + roll)
 
@@ -131,12 +134,63 @@ Processen kan vara enligt följande steg:
 Resultat: Organisationen får rätt att registrera stationer inom sitt mandat.
 
 ### Initial registrering av station
+När organisationen är godkänd kan station registreras.
+
+Processen kan vara enligt följande steg:
+1. Organisation initierar registrering via RA-gränssnitt och lämna information om:
+    - Stations-ID (eller begäran om generering)
+    - Serienummer
+    - Tillverkare och modell
+    - Firmwareversion
+    - Typ av station (RSU/OBU/central)
+    - Säkerhetscertifieringsuppgifter
+    - Geografisk placering (för RSU)
+2. CSR (Certificate Signing Request) laddas upp.
+3. RA kontrollerar att:
+    - stationstypen är tillåten för organisationens roll,
+    - hårdvaran är godkänd enligt policy,
+    - inga dubbletter förekommer.
+4. RA loggar hela processen.
+
+Resultat: Stationen registreras och tilldelas status Preliminär.
 
 ### Certifikatgodkännande
+RA godkänner certifikatutfärdande.
+
+Processen kan vara enligt följande steg:
+1. RA verifierar CSR.
+2. RA säkerställer korrekt koppling (Organisation → Roll → Station → Certifikattyp)
+3. RA godkänner begäran.
+4. CA utfärdar Enrollment Certificate.
+5. Stationens status uppdateras.
+
+Resultat: Stationen tilldelas status Aktiv.
 
 ### Operativ drift
+Under drift hanterar systemet:
+- Certifikatförnyelser (EA/AA)
+- Utfärdande av Authorization Tickets (AA)
+- Loggning av certifikataktivitet (EA/AA)
+- Incidentrapportering (RA + övriga funktioner)
+
+RA ansvarar för att:
+- hålla register över stationer uppdaterat
+- övervaka avvikelser
+- initiera spärrning av certifikat
 
 ### Uppdatering / förändringshantering
+Information om en station kan behöva uppdateras, t ex firmwareuppdatering, hårdvarubyte, ändrad geografisk placering, byte av ägare/organisation, ändrad roll eller funktion.
+
+Processen kan vara enligt följande steg:
+1. Organisation initierar ändringsärende.
+2. RA bedömer om:
+    - endast metadata uppdateras
+    - nytt certifikat krävs
+    - ny säkerhetsvalidering krävs
+3. Ändringen loggas och versioneras.
+
+> [!NOTE]
+> Vid större förändring måste gamla certifikat spärras och nyregistrering eller ny CSR kan krävas.
 
 ### Spärrning / suspension
 
