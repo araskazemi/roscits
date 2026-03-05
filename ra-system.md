@@ -1,25 +1,26 @@
 # RA-system för C-ITS-domän
-Registration Authority (RA) i C-ITS/EU-CCMS är den funktion som hanterar identifiering, validering och registrering av entiteter innan de får certifikat.
+<mark>Registration Authority (RA)</mark> i C-ITS/EU-CCMS är den funktion som hanterar identifiering, validering och registrering av entiteter <mark>innan de får certifikat</mark>.
 
 RA är på så sätt inte en CA som utfärdar certifikat, men säkerställer att CA får korrekta uppgifter för att rätt aktör, rätt utrustning och rätt roll och rättigheter kopplas till rätt certifikat enligt Certificate Policy.
 
+## Information som en RA hanterar
 Utifrån Security Policy och den organisatoriska strukturen i C-Roads kan man dela upp informationen som RA hanterar i följande kategorier:
 
-:one: **Identitetsinformation om organisationen**
+:one: Identitetsinformation om organisationen
 
-:two: **Roll- och rättigheter**
+:two: Roll- och rättigheter
 
-:three: **Information om C-ITS-stationen**
+:three: Information om C-ITS-stationen
 
-:four: **Certifikathanteringsdata**
+:four: Certifikathanteringsdata
 
-:five: **Avtals- och efterlevnadsinformation**
+:five: Avtals- och efterlevnadsinformation
 
-:six: **Loggar och revisionsspår**
+:six: Loggar och revisionsspår
 
-## Identitetsinformation om organisationen
+### Identitetsinformation om organisationen
 RA måste hantera uppgifter om de organisationer som ingår i C-ITS-domänen, bl a:
-- Organisationsidentifierare (teknisk identitet)
+- Organisations-ID (teknisk identitet)
 - Organisationsnummer (juridisk identitet)
 - Organisationsnamn
 - Land/jurisdiktion
@@ -35,7 +36,7 @@ Syftet med dessa uppgifter är att säkerställa:
 
 Detta är klassisk PKI-registreringsinformation, men i C-ITS är kopplingen till roll och funktion särskilt viktig.
 
-## Roll- och rättigheter
+### Roll- och rättigheter
 Stationer i C-ITS har olika [roller och rättigheter](roles_in_cits.md). RA behöver ha en förteckning över:
 - Typer av C-ITS-stationer som kan registreras i domänen (RSU, OBU, central station, etc.)
 - Roller som kan förekomma i trust-modellen (road operator, OEM, service provider, etc.)
@@ -46,7 +47,7 @@ Detta är kritiskt eftersom:
 - vissa roller kan ha särskilda rättigheter (t ex SREM/SSEM för blåljus)
 - felaktig registrering kan skapa allvarliga säkerhetsrisker
 
-## Information om C-ITS-stationen
+### Information om C-ITS-stationen
 RA behöver skapa förutsättningar för att certifikat kan knytas till en konkret teknisk entitet.
 
 Exempel på data som registreras:
@@ -69,7 +70,7 @@ Detta möjliggör:
 >- Det är alltså EA/AA som har loggar som kopplar certifikat till stationen.
 >- EA kan tekniskt utfärda EC utan att känna till stationens verkliga identitet — bara ett RA-godkänt identifieringsvärde.
 
-## Certifikathanteringsdata
+### Certifikathanteringsdata
 RA hanterar metadata kring certifikatutgivning, t ex:
 - Certifikatförfrågan (CSR)
 - Koppling till rätt CA
@@ -80,7 +81,7 @@ RA hanterar metadata kring certifikatutgivning, t ex:
 
 Detta är kärnan i registreringsprocessen och RA som funktion – att säkerställa korrekt koppling mellan identitet och certifikat och livscykelhantering.
 
-## Avtals- och efterlevnadsinformation
+### Avtals- och efterlevnadsinformation
 Eftersom C-ITS bygger på en gemensam trust-modell behövs även:
 - Intyg om efterlevnad av Security Policy 
 - Åtagande att följa Certificate Policy
@@ -89,7 +90,7 @@ Eftersom C-ITS bygger på en gemensam trust-modell behövs även:
 
 Detta är särskilt viktigt när domänen styrs genom avtal, det vill säga när varje organisation frivilligt väljer att ansluta sig till och ingå i domänen, snarare än att omfattas av bindande regelverk eller lagstiftning.
 
-## Loggar och revisionsspår
+### Loggar och revisionsspår
 En RA måste enligt god säkerhetspraxis hantera:
 - Vem som godkänt registrering
 - När beslut fattades
@@ -117,5 +118,30 @@ En C-ITS-station genomgår typiskt följande livscykelfaser i RA-systemet:
 :seven: Avregistrering / avveckling
 
 :eight: Arkivering
+
+### Förberedande registrering (organisation + roll)
+Innan en station kan registreras måste organisationen vara godkänd i RA.
+
+Processen kan vara enligt följande steg:
+1. Organisation ansöker om att bli registrerad.
+2. RA verifierar, juridisk identitet, behörig företrädare, roll i C-ITS-ekosystemet.
+3. RA tilldelar organisations-ID.
+4. Organisationens behöriga administratör registreras.
+
+Resultat: Organisationen får rätt att registrera stationer inom sitt mandat.
+
+### Initial registrering av station
+
+### Certifikatgodkännande
+
+### Operativ drift
+
+### Uppdatering / förändringshantering
+
+### Spärrning / suspension
+
+### Avregistrering / avveckling
+
+### Arkivering
 
 
