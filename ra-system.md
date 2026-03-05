@@ -1,5 +1,5 @@
 # RA-verksamhetssystem för C-ITS-domän
-<mark>Registration Authority (RA)</mark> i C-ITS/EU-CCMS är den funktion som hanterar identifiering, validering och registrering av entiteter <mark>innan de får certifikat</mark>.
+<mark>Registration Authority (RA)</mark> i [EU-CCMS](euccms.md) är den funktion som hanterar identifiering, validering och registrering av entiteter <mark>innan de får certifikat</mark>.
 
 RA är på så sätt inte en CA som utfärdar certifikat, men säkerställer att CA får korrekta uppgifter för att rätt aktör, rätt utrustning och rätt roll och rättigheter kopplas till rätt certifikat enligt Certificate Policy.
 
