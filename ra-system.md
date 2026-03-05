@@ -1,0 +1,67 @@
+# RA-system för C-ITS-domän
+Registration Authority (RA) i C-ITS/EU-CCMS är den funktion som hanterar identifiering, validering och registrering av entiteter innan de får certifikat.
+
+RA är på så sätt inte en CA som utfärdar certifikat, men säkerställer att CA får korrekta uppgifter för att rätt aktör, rätt utrustning och rätt roll och rättigheter kopplas till rätt certifikat enligt Certificate Policy.
+
+Utifrån Security Policy och den organisatoriska strukturen i C-Roads kan man dela upp informationen som RA hanterar i följande kategorier:
+
+:one: **Identitetsinformation om organisationen**
+
+RA måste hantera uppgifter om de organisationer som ingår i C-ITS-domänen, bl a:
+- Organisationsidentifierare (teknisk identitet)
+- Organisationsnummer (juridisk identitet)
+- Organisationsnamn
+- Land/jurisdiktion
+- Kontaktperson(er)
+- Kontaktuppgifter
+- Eventuella fullmakter/behörighetsintyg och avtal
+
+Syftet med dessa uppgifter är att säkerställa:
+- att organisationen är legitim
+- att den har rätt att agera i en viss roll (t ex road operator, emergency authority etc.)
+- att den omfattas av rätt nationell rättsordning
+
+Detta är klassisk PKI-registreringsinformation, men i C-ITS är kopplingen till roll och funktion särskilt viktig.
+
+:two: **Roll- och rättigheter**
+
+Stationer i C-ITS har olika [roller och rättigheter](roles_in_cits.md). RA behöver ha en förteckning över:
+- Typer av C-ITS-stationer som kan registreras i domänen (RSU, OBU, central station, etc.)
+- Roller som kan förekomma i trust-modellen (road operator, OEM, service provider, etc.)
+- Eventuella särskilda behörigheter (t ex blåljusprioritet, trafiksignalstyrning, m.m.)
+
+Detta är kritiskt eftersom:
+- olika roller kan få olika certifikattyper
+- vissa roller kan ha särskilda rättigheter (t ex SREM/SSEM för blåljus)
+- felaktig registrering kan skapa allvarliga säkerhetsrisker
+
+:three: **Information om C-ITS-stationen**
+RA behöver skapa förutsättningar för att certifikat kan knytas till en konkret teknisk entitet.
+
+Exempel på data som registreras:
+- Unikt stations-ID (som kan skapas av RA eller av organisationen som äger stationen)
+- Serienummer
+- Tillverkare
+- Modell
+- Firmware-/hårdvaruversion
+- Säkerhetscertifiering (Common Criteria / ISO 15408 enligt Security Policy 
+
+Detta möjliggör:
+- spårbarhet
+- spärrning vid kompromettering
+- livscykelhantering
+
+> [!IMPORTANT]
+> RA registrerar inte certifikaten – känner inte till stationen EC och AT.
+>- RA registrerar information om stationen och tilldelar/registrerar en station-identifierare.
+>- EA använder den identifieraren när EC utfärdas och kopplar den till certifikatet.
+>- Det är alltså EA/AA som har loggar som kopplar certifikat till stationen.
+>- EA kan tekniskt utfärda EC utan att känna till stationens verkliga identitet — bara ett RA-godkänt identifieringsvärde.
+
+
+:four: ****
+
+:five: ****
+
+:six: ****
+
