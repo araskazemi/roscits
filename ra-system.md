@@ -221,9 +221,47 @@ RA måste:
 
 Gallring kan ske enligt fastställd bevarandetid, som fastställs utifrån gällande lagstiftning och säkerhetsklassning.
 
+## Teknisk gränssnitt mellan RA och CA
+Certifikatutfärdare behöver inte ha direktåtkomst till RA-verksamhetssystemet eller RA-databasen.
+
+Ett korrekt designat EU-CCMS bygger på:
+- rollseparation,
+- minimal informationsdelning, och
+- kryptografisk validering.
+
+EA/AA måste ha mekanismer för att hantera nyregistreringar samt få kännedom om spärrade EC, ändrad behörighet och policyändringar. 
+
+Anslutning mellan certifikatutfärdare och RA regleras genom avtal och måste uppfylla gällande krav enligt domänens policy. Kommunikationen måste säkras för att förhindra att CSR manipuleras under överföringen och behöver därför följa samma nivå som i Certificate Policy.
+
+Det finns tre situationer som kräver kommunikation mellan RA och CA.
+
+:one: **Nyregistrering**
+
+När en station registreras första gången: <br />
+RA → godkänner <br />
+EA → utfärdar EC <br />
+
+Här sker ett kontrollerat informationsutbyte.
+
+:two: **Statusförändring**
+
+Om något ändras hos RA, t ex station avregistreras, roll ändras, organisation mister behörighet eller vid säkerhetsincident: <br />
+RA → uppdatera status <br />
+EA/AA → sluta utfärda certifikat <br />
+
+Det kan exempelvis ske via:
+- periodisk synkronisering,
+- push-notifikationer/prenumerationer,
+- status-API.
+
+Det är alltså en statuskoppling, inte en fullständig databasdelning som krävs.
+
+:three: **Incident**
+Vid missbruk kan Misbehaviour Authority (MA) involveras. RA kan behöva verifiera den ursprungliga registreringen, medan AA kan behöva upphöra med att utfärda nya AT. Detta förutsätter samverkan mellan aktörerna, men inte nödvändigtvis teknisk integration i realtid i samtliga delar.
+
 ## Hur CSR används i RA-processen
 ### Enrollment CSR
-1. Stationen genererar nyckelpar i HSM, Secure element eller TPM-liknande miljö.
+1. Stationen genererar nyckelpar i HSM, Secure Element eller TPM-liknande miljö.
 2. Stationen skapar CSR:
     - Inkluderar publik nyckel
     - Inkluderar begärda attribut
