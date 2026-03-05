@@ -7,6 +7,19 @@ Utifrån Security Policy och den organisatoriska strukturen i C-Roads kan man de
 
 :one: **Identitetsinformation om organisationen**
 
+:two: **Roll- och rättigheter**
+
+:three: **Information om C-ITS-stationen**
+
+:four: **Certifikathanteringsdata**
+
+:five: **Avtals- och efterlevnadsinformation**
+
+:six: ****
+
+
+
+# Identitetsinformation om organisationen
 RA måste hantera uppgifter om de organisationer som ingår i C-ITS-domänen, bl a:
 - Organisationsidentifierare (teknisk identitet)
 - Organisationsnummer (juridisk identitet)
@@ -23,8 +36,7 @@ Syftet med dessa uppgifter är att säkerställa:
 
 Detta är klassisk PKI-registreringsinformation, men i C-ITS är kopplingen till roll och funktion särskilt viktig.
 
-:two: **Roll- och rättigheter**
-
+# Roll- och rättigheter
 Stationer i C-ITS har olika [roller och rättigheter](roles_in_cits.md). RA behöver ha en förteckning över:
 - Typer av C-ITS-stationer som kan registreras i domänen (RSU, OBU, central station, etc.)
 - Roller som kan förekomma i trust-modellen (road operator, OEM, service provider, etc.)
@@ -35,7 +47,7 @@ Detta är kritiskt eftersom:
 - vissa roller kan ha särskilda rättigheter (t ex SREM/SSEM för blåljus)
 - felaktig registrering kan skapa allvarliga säkerhetsrisker
 
-:three: **Information om C-ITS-stationen**
+# Information om C-ITS-stationen
 RA behöver skapa förutsättningar för att certifikat kan knytas till en konkret teknisk entitet.
 
 Exempel på data som registreras:
@@ -58,10 +70,23 @@ Detta möjliggör:
 >- Det är alltså EA/AA som har loggar som kopplar certifikat till stationen.
 >- EA kan tekniskt utfärda EC utan att känna till stationens verkliga identitet — bara ett RA-godkänt identifieringsvärde.
 
+# Certifikathanteringsdata
+RA hanterar metadata kring certifikatutgivning, t ex:
+- Certifikatförfrågan (CSR)
+- Koppling till rätt CA
+- Certifikattyp (Enrollment Certificate, Authorization Ticket, etc.)
+- Giltighetstid
+- Återkallandeinformation
+- Loggning av beslut
 
-:four: ****
+Detta är kärnan i registreringsprocessen och RA som funktion – att säkerställa korrekt koppling mellan identitet och certifikat och livscykelhantering.
 
-:five: ****
+# Avtals- och efterlevnadsinformation
+Eftersom C-ITS bygger på en gemensam trust-modell behövs även:
+- Intyg om efterlevnad av Security Policy 
+- Åtagande att följa Certificate Policy
+- Eventuella nationella tillägg baserat på domänägarens godkännande
+- Incidentrapporteringsansvar
 
-:six: ****
+Detta är särskilt viktigt när domänen styrs genom avtal, det vill säga när varje organisation frivilligt väljer att ansluta sig till och ingå i domänen, snarare än att omfattas av bindande regelverk eller lagstiftning.
 
