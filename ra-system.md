@@ -114,13 +114,13 @@ En C-ITS-station genomgår typiskt följande livscykelfaser i RA-verksamhetssyst
 
 :four: Operativ drift
 
-:five: Uppdatering / förändringshantering
+:five: Uppdatering/ändringshantering
 
-:six: Spärrning / suspension
+:six: Spärrning/avstängning
 
-:seven: Avregistrering / avveckling
+:seven: Avregistrering/avveckling
 
-:eight: Arkivering
+:eight: Arkivering och gallring
 
 ### Förberedande registrering (organisation + roll)
 Innan en station kan registreras måste organisationen vara godkänd i RA.
@@ -178,7 +178,7 @@ RA ansvarar för att:
 - övervaka avvikelser
 - initiera spärrning av certifikat
 
-### Uppdatering / förändringshantering
+### Uppdatering/ändringshantering
 Information om en station kan behöva uppdateras, t ex firmwareuppdatering, hårdvarubyte, ändrad geografisk placering, byte av ägare/organisation, ändrad roll eller funktion.
 
 Processen kan vara enligt följande steg:
@@ -192,10 +192,62 @@ Processen kan vara enligt följande steg:
 > [!NOTE]
 > Vid större förändring måste gamla certifikat spärras och nyregistrering eller ny CSR kan krävas.
 
-### Spärrning / suspension
+### Spärrning/avstängning
+En spärrning kan initieras av organisationen själv, RA, incidenthantering eller nationell säkerhetsfunktion.
+Det kan handla om komprometterad nyckel, manipulerad station, otillåten användning, felaktig registrering, m.m.
 
-### Avregistrering / avveckling
+Processen kan vara enligt följande steg:
+1. RA beslutar om spärrning.
+2. Certifikat återkallas (CRL/OCSP).
+3. Stationens status ändras till Spärrad.
+4. Incident dokumenteras.
 
-### Arkivering
+### Avregistrering/avveckling
+När en station tas ur drift kan processen kan vara enligt följande steg:
+1. Organisation anmäler avveckling.
+2. RA verifierar status att station inte är aktiv samt att certifikat är spärrade
+3. RA ändrar status till Avvecklad.
 
+Resultat: Operativa kopplingar stängs.
 
+Hur länge historisk information ska bevaras beslutas av domänägaren och är kopplat till revisionskrav.
+
+### Arkivering och gallring
+RA måste:
+- arkivera registreringsdata
+- bevara revisionsspår
+- följa CITS-domänens arkiv- och gallringsregler
+- följa relevant lagstiftning, såsom GDPR, NIS2 och nationella säkerhetsskyddskrav
+
+Gallring kan ske enligt fastställd bevarandetid, som fastställs utifrån gällande lagstiftning och säkerhetsklassning.
+
+## Hur CSR används i RA-processen
+### Enrollment CSR
+1. Stationen genererar nyckelpar i HSM, Secure element eller TPM-liknande miljö.
+2. Stationen skapar CSR:
+    - Inkluderar publik nyckel
+    - Inkluderar begärda attribut
+    - Signerar med privat nyckel
+3. CSR skickas till RA. Det kan vara (beroende på implementation):
+    - station → RA → EA, eller
+    - station → EA med RA som “godkännandesteg”/policy-gate 
+4. RA validerar CSR genom att kontrollera:
+    - att stationen är registrerad
+    - att rollen är korrekt
+    - att certifikattyp är tillåten
+    - att CSR är korrekt signerad
+    - att nyckelparametrar uppfyller policy
+5. RA godkänner sedan begäran till CA.
+6. EA utfärdar Enrollment Certificate (EC).
+7. RA uppdaterar sina poster i RA-verksamhetssystemet.
+
+### Authorization CSR
+1. Stationen använder sitt EC för att autentisera sig mot AA-tjänsten.
+2. Stationen genererar en batch av pseudonym-nycklar.
+3. Stationen skapar en signerad Authorization Ticket Request (CSR-liknande fil för begäran om en eller flera certifikat).
+4. AA genomför kryptografisk kontroll och policykontroll.
+5. RA har en indirekt roll genom att ha definierat stationens roll och rättigheter, men styrs i regel via EC. Domänen har dock möjlighet att ställa krav på AA att denne måste göra uppslag i RA-policy och/eller RA-attributtjänst.
+6. AA utfärdar pseudonymer och stationen får tillbaka en batch AT som kan användas för att signera meddelanden (CAM, DENM, etc.)
+
+> [!IMPORTANT]
+> En angripare kan försöka byta ut publik nyckel, ändra attribut eller begära fel certifikattyp. RA kan inte lita på attribut i CSR okritiskt och måste kontrollera attribut i CSR mot sitt eget register och på så sätt säkerställa att rätt rollattribut finns i certifikatet.
