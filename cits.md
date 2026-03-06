@@ -43,8 +43,8 @@ Det finns två huvudvägar, vilka också kan kombineras:
 Alla C-ITS-meddelanden signeras kryptografiskt enligt ETSI TS 103 097 för att säkerställa integritet och autenticitet.
 
 I Europa förespråkas hybridkommunikation (både ITS-G5 och mobilnät) för att täcka fler scenarier. Utöver att meddelanden måste vara äkta och orörda, 
-kräver [det europeiska systemet](euccms.md) att C-ITS inte får avslöja vem föraren är. Europa använder därför ett gemensamt C-ITS-PKI (se EU CCMS nedan) 
-med kortlivade pseudonyma certifikat. Själva formatet och säkerhetshuvudet definieras i ETSI TS 103 097. 
+kräver [det europeiska systemet](euccms.md) att C-ITS inte får avslöja vem föraren är. Europa använder därför ett gemensamt C-ITS-PKI med kortlivade 
+pseudonyma certifikat. Själva formatet och säkerhetshuvudet definieras i ETSI TS 103 097. 
 
 ## Exempel på användningsfall
 Några exempel på anvädningsfall:
