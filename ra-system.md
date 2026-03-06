@@ -289,3 +289,19 @@ Vid missbruk kan Misbehaviour Authority (MA) involveras. RA kan behöva verifier
 
 > [!IMPORTANT]
 > En angripare kan försöka byta ut publik nyckel, ändra attribut eller begära fel certifikattyp. RA kan inte lita på attribut i CSR okritiskt och måste kontrollera attribut i CSR mot sitt eget register och på så sätt säkerställa att rätt rollattribut finns i certifikatet.
+
+## Spårning vid incidenter
+När en station skickar meddelanden (t .ex. CAM eller DENM) används AT-certifikat (pseudonymer) som inte avslöjar stationens verkliga identitet. Om något allvarligt inträffar, såsom falska varningar eller attacker, behöver det vara möjligt att spåra avsändaren utan att bryta pseudonymiteten under normal drift. Detta kan RA, EA och AA göra tillsammans genom en stegvis spårning av identiteter. Stegen kan beskrivas enligt nedan:
+1. Man börjar med certifikatet i meddelandet som ger information om utfärdaren samt certifikatets serienummer.
+2. Med serienumret vet AA vilken EC som användes för att begära pseudonymcertifikatet.
+3. EA vet vilken station som har tilldelats EC.
+4. RA vet vilken organisation som registrerade stationen.
+
+## En viktig konsekvens
+Den aktör som kontrollerar RA har i praktiken kontroll över:
+- vilka stationer som finns i domänen
+- vilka organisationer som får delta
+- vem som kan identifieras vid incident
+
+Därför väljer många länder att ha RA nationellt, även om EA och AA kan vara externa.
+
