@@ -1,13 +1,13 @@
 # Roller och rättigheter i C-ITS
 Roller och rättigheter i C-ITS definieras men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
 
-:one: Tekniska roller i PKI / EU-CCMS
+:one: Tekniska roller i PKI (EU-CCMS)
 
 :two: Meddelandetyper och funktionella roller
 
 :three: Applikationsroller (t.ex. utryckningsfordon)
 
-## Tekniska roller i PKI / EU-CCMS
+## Tekniska roller i PKI (EU-CCMS)
 [Rollerna i säkerhets- och certifikatsystemet (EU-CCMS)](secits_domain.md#grundl%C3%A4ggande-struktur-i-eu-ccms) framgår i  Security Policy Release 3.0.
 
 Dessa roller är infrastrukturella roller och inte trafikroller.
