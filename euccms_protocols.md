@@ -1,4 +1,4 @@
-# EU CCMS-protokollen
+# EU-CCMS-protokollen
 EU-CCMS sätter specifika regler, datastrukturer och processer genom tillämpning av befintliga standarder, för att de ska funka på europeisk nivå för C-ITS.
 
 Standarderna man utgår från:
