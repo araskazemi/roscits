@@ -75,5 +75,7 @@ Teknikval, certifikathantering och integritetspolicy måste hålla över tid. De
 * Ekonomisk utmaning: vem betalar? Fordonstillverkare, staten, operatörer, eller en mix? – olika i varje land!
 
 <p>&nbsp;</p>
+
 ----
+
 :arrow_backward: [Hem](README.md) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_up_small: [Tillbaka till toppen](#top)  
