@@ -386,12 +386,12 @@ En balanserad modell skulle kunna vara enligt följande:
 - Certifikatutfärdare godkänns av domängaren och ansluts genom avtal.
 
 ### Risker
-Det föreslagna angreppssättet medför fördelar som kan bidra till att förenkla och effektivisera ett införande i det skede där Sverige, och implementeringen av C-ITS i Europa i stort, för närvarande befinner sig.
+Det föreslagna angreppssättet medför fördelar som ger snabb start, förenklar och effektiviserar ett införande i det skede där Sverige, och implementeringen av C-ITS i Europa i stort, för närvarande befinner sig. Aktörer får möjlighet att bygga praktisk erfarenhet.
 
-Avtalsmodellen fungerar så länge:
+Avtalsmodellen fungerar dock så länge:
 - Alla aktörer ser nyttan,
 - Ingen alternativ privat struktur växer fram,
-- Staten är tydlig med att detta är nationell standard.
+- Staten är tydlig med sin normering, dvs. att detta är nationell standard.
 
 Om marknaden före staten definierar strukturen kan det bli svårt att ta tillbaka kontrollen – jämför exempelvis med BankID eller Kivra.
 
