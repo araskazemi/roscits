@@ -376,6 +376,14 @@ Den svenska domänen ansvarar för:
 
 På så sätt kombineras europeisk säkerhet och interoperabilitet med nationell styrning.
 
+### Hur hänger det ihop i praktiken
+En balanserad modell skulle kunna vara enligt följande:
+- Regeringen ger ett övergripande uppdrag
+- Trafikverket i samarbete med Transportstyrelsen och PTS etablerar en nationell C-ITS-domän
+- RA utpekas och etablerar ett centralt RA-verksamhetssystem där registreringsrätt kan delegeras lokalt
+- Offentliga organisationer ansluts genom avtal
+- Privata aktörer ansluts genom avtal där tillitsgranskning är ett krav för anslutning
+
 ### Risker
 Det föreslagna angreppssättet medför fördelar som kan bidra till att förenkla och effektivisera ett införande i det skede där Sverige, och implementeringen av C-ITS i Europa i stort, för närvarande befinner sig.
 
