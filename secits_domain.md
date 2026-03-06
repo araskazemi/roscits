@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 # Ett möjligt svenskt alternativ
 Inför en svensk implementation av interoperabel C-ITS enligt EU-CCMS uppstår ett antal strategiska frågor kring:
 - Domänägarskap
@@ -144,7 +146,7 @@ En C-ITS-domän är en governance- och administrationsstruktur. Den är inte en 
 >
 > Domänen ansvarar för att administrera sina egna enheter, ansluta dem till PKI-systemet och se till att de får de certifikat med korrekta rättigheter som krävs för att kunna kommunicera säkert. Domänen fungerar alltså som kopplingen mellan den lokala driften av C-ITS-system och den europeiska PKI-infrastrukturen.
 >
-> Se även [den övergripande strukturen för tillitsmodellen i EU CCMS](euccms.md#%C3%B6vergripande-struktur).
+> Se även [den övergripande strukturen för tillitsmodellen i EU-CCMS](euccms.md#%C3%B6vergripande-struktur).
 
 :two: **C-ITS domänägare**
 
@@ -243,6 +245,139 @@ AA utfärdar sedan certifikat baserat på denna information.
 
 Se även, [Roller och rättigheter i C-ITS](roles_in_cits.md)
 
+## En möjlig vägval för svensk implementation
+Tidigare avsnitt redogör för den europeiska tillitsmodellen, vilken etableras genom [EU-CCMS](euccms.md). Det är i grunden en modell som utgår från Europas mellanstatliga samarbetsstruktur där man vill värna om medlemsstaternas nationella suveränitet. EU sätter ramarna för det gemensamma europeiska säkerhetsramverket, men organiseringen av aktörer och ansvar i stor utsträckning sker på nationell nivå. 
+
+Detta avsnitt redogör för hur en svensk C-ITS-domän kan etableras som ett organisatoriskt och avtalsmässigt ramverk för de aktörer som vill delta i C-ITS-systemet i Sverige.
+
+### Rättsliga förutsättningar
+Etableringen av en nationell struktur för C-ITS i Sverige innebär samverkan mellan ett stort antal aktörer från både offentlig och privat sektor, såsom myndigheter, kommuner och regioner, väghållare, fordonstillverkare, tjänsteleverantörer och operatörer. En reglering med ambition om att göra deltagande i C-ITS obligatoriskt eller i detalj styra ansvarsfördelning mellan aktörer kräver omfattande författningsändringar. Sådan lagstiftning skulle behöva omfatta bland annat frågor om:
+- ansvar för drift av olika typer av C-ITS-stationer
+- hantering av säkerhets- och certifikatinfrastruktur
+- roller och ansvar mellan offentliga och privata aktörer
+- tillsyn och efterlevnad
+- förhållandet till kommunal självstyrelse och andra sektorsregelverk.
+
+Lagstiftningsprocesser av detta slag bedöms inte vara realistiska, då de är omfattande och tidskrävande samt förutsätter utredning, remissförfarande och riksdagsbeslut. I många fall krävs även anpassningar till EU-rätten och befintlig nationell lagstiftning. Samtidigt är utvecklingen av C-ITS beroende av att samverkan mellan aktörer kan etableras i ett relativt tidigt skede för att möjliggöra teknisk utveckling, operativ erfarenhet och gradvis uppbyggnad av tjänster och marknader.
+
+Mot denna bakgrund kan det vara ändamålsenligt att i ett inledande skede etablera den nationella C-ITS-strukturen genom avtalsbaserad anslutning. En sådan modell innebär att organisationer frivilligt kan ansluta sig till en gemensam domän genom att ingå avtal där de förbinder sig att följa gemensamma regler för säkerhet, interoperabilitet och ansvar.
+
+En avtalsbaserad modell möjliggör att:
+- aktörer kan börja samverka utan att ny lagstiftning behöver inväntas (Detta utesluter dock inte att myndigheter kan behöva särskilda uppdrag eller justerade regleringsbrev),
+- tekniska och organisatoriska lösningar kan utvecklas och prövas i praktiken
+- erfarenheter kan samlas inför eventuella framtida regulatoriska åtgärder.
+
+En sådan utveckling är inte ovanlig vid etablering av ny digital infrastruktur. I flera fall har frivilliga samverkansmodeller och avtalsbaserade strukturer etablerats först, medan lagstiftning och mer formaliserade regleringar senare har utvecklats i takt med att användningen ökar och behovet av rättslig tydlighet blir större.
+
+Utgångspunkten för den svenska C-ITS-domänen är därför att deltagande i ett första skede sker genom avtalad anslutning till ett gemensamt tillits- och säkerhetsramverk, inom ramen för EU:s C-ITS-arkitektur och EU-CCMS.
+
+### Principer för svensk C-ITS-domän
+
+#### Öppen men reglerad anslutning
+Organisationer ska kunna ansluta sina C-ITS-stationer och tjänster till domänen om de uppfyller de krav som gäller för interoperabilitet, säkerhet och ansvar.
+
+Anslutning sker genom avtal där organisationen förbinder sig att följa:
+- EU:s C-ITS-policyer
+- ETSI-standarder
+- nationella (domänens) policyer för roller och ansvar.
+
+#### Aktörernas rådighet över sina system
+Varje organisation behåller rådighet över sina:
+- C-ITS-stationer,
+- tjänster,
+- leverantörer,
+- interna system.
+
+Den svenska C-ITS-domänen ska därför inte vara en central teknisk plattform utan ett federativt ramverk som möjliggör samverkan mellan självständiga aktörer.
+
+#### Gemensamma säkerhetsregler
+Alla aktörer i domänen ska följa EU-CCMS tillitsmodell och säkerhetspolicy.
+
+C-ITS är ett distribuerat system där många organisationer behandlar delar av systemets data, vilket innebär att informationssäkerheten är ett gemensamt ansvar mellan aktörerna – och behöver regleras i det federativa ramverket. 
+
+#### Interoperabilitet och standardisering
+Domänen ska säkerställa att aktörer använder harmoniserade standarder och specifikationer för:
+- meddelandeformat,
+- certifikathantering,
+- säkerhetsfunktioner,
+- kommunikationsprotokoll.
+
+Detta möjliggör interoperabilitet mellan aktörer i Sverige och övriga Europa.
+
+#### Möjlighet till konkurrens och innovation
+Domänmodellen ska inte begränsa marknaden till enskilda leverantörer eller tekniska lösningar.
+
+Aktörer ska kunna välja leverantörer för exempelvis:
+- C-ITS-stationer
+- PKI-tjänster
+- backend-system
+- tjänsteplattformar.
+
+På så sätt kan innovation och konkurrens utvecklas inom ramen för ett gemensamt tillitsramverk.
+
+### Roller i domänen
+För att möjliggöra samverkan behövs tydliga roller.
+
+#### Domänägare
+Den organisation som ansvarar för:
+- nationell policy
+- anslutningsregler
+- samordning med EU-CCMS
+- representation i europeiska forum.
+
+Domänägaren ansvarar för styrningen av domänen men behöver inte driva operativa system.
+
+#### Registration Authority (RA)
+RA ansvarar för att:
+- identifiera och registrera C-ITS-stationer
+- verifiera organisationer
+- godkänna anslutning till EU-CCMS.
+
+RA fungerar därmed som den organisatoriska kopplingen mellan nationella aktörer och det europeiska certifikatsystemet.
+
+#### C-ITS-station operatörer
+Organisationer som driver C-ITS-stationer, exempelvis:
+- väghållare
+- kommuner
+- tillverkare och leverantörer av stationer
+
+Dessa ansvarar för att stationerna uppfyller de tekniska och säkerhetsmässiga kraven.
+
+#### Tjänsteleverantörer
+Organisationer som utvecklar och tillhandahåller C-ITS-tjänster till användare eller andra aktörer.
+
+#### Säkerhets- och certifikataktörer
+Aktörer inom EU-CCMS-strukturen, såsom utfärdare (EA/AA) som är godkända för domänen.
+
+### Avtal (och vid behov granskning) för anslutning
+Anslutning till den svenska C-ITS-domänen sker genom ett anslutningsavtal mellan domänägaren och den organisation som vill ansluta sina stationer. I vissa fall kan avtal inbegripa någon form av tillitsgranskning.
+
+Avtalet reglerar bland annat:
+- ansvar för C-ITS-stationer
+- efterlevnad av säkerhetspolicy
+- användning av certifikat
+- incidenthantering
+- loggning och revision.
+
+Genom denna modell kan organisationer ansluta sig till domänen utan att ge upp kontrollen över sina egna stationer och system, samtidigt som säkerhet och interoperabilitet kan upprätthållas.
+
+### Relation till EU-CCMS
+Den svenska C-ITS-domänen utgör ett nationellt organisatoriskt lager ovanpå EU-CCMS PKI.
+
+Den europeiska nivån ansvarar för:
+- den europeiska tillitsmodellen
+- rotcertifikat och certifikathierarki
+- gemensamma säkerhetspolicyer.
+
+Den svenska domänen ansvarar för:
+- vilka aktörer som deltar i den nationella C-ITS-miljön
+- hur dessa ansluts till EU-CCMS
+- nationella roller och ansvar.
+
+På så sätt kombineras europeisk säkerhet och interoperabilitet med nationell styrning.
+
+
+
 ### Domänstrukturer – alternativa modeller
 
 #### En nationell domän
@@ -262,6 +397,14 @@ text...
 
 
 
+
+
+
+<p>&nbsp;</p>
+
+----
+
+:arrow_backward: [Hem](README.md) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_up_small: [Tillbaka till toppen](#top)  
 
 
 
