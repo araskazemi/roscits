@@ -376,6 +376,16 @@ Den svenska domänen ansvarar för:
 
 På så sätt kombineras europeisk säkerhet och interoperabilitet med nationell styrning.
 
+### Risker
+Det föreslagna angreppssättet medför fördelar som kan bidra till att förenkla och effektivisera ett införande i det skede där Sverige, och implementeringen av C-ITS i Europa i stort, för närvarande befinner sig.
+
+På längre sikt, i ett scenario där C-ITS utvecklas till en samhällskritisk funktion, finns det emellertid risker som behöver beaktas:
+- Vissa aktörer, t ex en kommun eller region kan välja att inte ansluta
+- Alternativa RA-strukturer kan uppstå
+- Otydlig rådighet i kris
+- Ojämn täckning nationellt
+
+Om C-ITS blir samhällskritiskt kan principen om frivillighet bli en svaghet. I ett sådant läge kan det därför uppstå behov av att lagstiftning och författningsreglering utvecklas för att säkerställa en mer sammanhållen nationell styrning.
 
 
 ### Domänstrukturer – alternativa modeller
