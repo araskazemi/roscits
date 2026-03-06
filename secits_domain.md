@@ -388,6 +388,13 @@ En balanserad modell skulle kunna vara enligt följande:
 ### Risker
 Det föreslagna angreppssättet medför fördelar som kan bidra till att förenkla och effektivisera ett införande i det skede där Sverige, och implementeringen av C-ITS i Europa i stort, för närvarande befinner sig.
 
+Avtalsmodellen fungerar så länge:
+- Alla aktörer ser nyttan,
+- Ingen alternativ privat struktur växer fram,
+- Staten är tydlig med att detta är nationell standard.
+
+Om marknaden före staten definierar strukturen kan det bli svårt att ta tillbaka kontrollen – jämför exempelvis med BankID eller Kivra.
+
 På längre sikt, i ett scenario där C-ITS utvecklas till en samhällskritisk funktion, finns det emellertid risker som behöver beaktas:
 - Vissa aktörer, t ex en kommun eller region kan välja att inte ansluta
 - Alternativa RA-strukturer kan uppstå
