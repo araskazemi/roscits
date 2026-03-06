@@ -336,7 +336,7 @@ RA ansvarar för att:
 RA fungerar därmed som den organisatoriska kopplingen mellan nationella aktörer och det europeiska certifikatsystemet.
 
 #### C-ITS-station operatörer
-Organisationer som driver C-ITS-stationer, exempelvis:
+Organisationer som driver och underhåller C-ITS-stationer, exempelvis:
 - väghållare
 - kommuner
 - tillverkare och leverantörer av stationer
@@ -403,26 +403,110 @@ På längre sikt, i ett scenario där C-ITS utvecklas till en samhällskritisk f
 
 Om C-ITS blir samhällskritiskt kan principen om frivillighet bli en svaghet. I ett sådant läge kan det därför uppstå behov av att lagstiftning och författningsreglering utvecklas för att säkerställa en mer sammanhållen nationell styrning.
 
-
 ### Domänstrukturer – alternativa modeller
+Domänstrukturen avgör hur Sverige organiserar sin C-ITS-tillitsinfrastruktur inom EU-CCMS. Designvalet påverkar:
+- nationell rådighet
+- kommunal och regional autonomi
+- säkerhetsnivåer
+- interoperabilitet
+- marknadsstruktur
 
-#### En nationell domän
-text...
+I detta avsnitt presenteras fyra möjliga modeller.
 
-#### Sektorsdomäner
-text...
+#### En nationell domän med en central RA-funktion
+En nationell domän med central styrning och policy där ett centralt RA-verksamhetssystem interagerar med tjänsterna hos godkända certifikatutfärdare.
+Organisationer kan få delegerad administration för hantering av sina stationer i RA-verksamhetssystemet.
 
-#### Domän per kommun/region
-text...
+Domänen omfattar alla svenska aktörer, såsom Trafikverket, kommuner, regioner, kollektivtrafik, blåljusmyndigheter, privata väghållare.
 
-### RA-struktur – Central vs Federerad
-text...
+Under denna styrning kan flera tekniska operatörer samexistera.
 
-### Offentlig vs Privat domänägare
-text...
+**Fördelar**:
+- tydlig nationell rådighet
+- enkel representation i EU-CCMS
+- gemensam rollmodell
+- enhetlig säkerhetsnivå
+- effektiv incidenthantering
 
+**Nackdelar**:
+- kräver nationell samordning
+- kräver mandat
 
+**Bedömning**:
+Den mest stabila grundmodellen för Sverige utifrån nuläget.
 
+#### En nationell domän med sektorsvisa RA
+I denna modell finns fortfarande en svensk domän, men RA-funktionen delas upp efter sektorer.
+
+Exempel:
+- Statlig väg, Trafikverket RA
+- Kommunala vägar, kommunal RA
+- Polisen, Polismyndigheten RA
+- Räddningstjänst och ambulans, nationell blåljus-RA
+
+Alla RA följer samma policy och ansluter till samma domän.
+
+**Fördelar**:
+- sektorskompetens
+- RA-funktioner kan integreras i befintiliga verksamhetssystem och ge bättre kontroll över samhällskritiska roller
+
+**Nackdelar**:
+- mer komplex governance
+- kräver tydlig samordning
+- kräver mer resurser och kostnad (utifrån ett nationellt perspektiv)
+
+**Bedömning**:
+Kan vara en bra modell för exempelvis blåljusroller, där särskild kontroll krävs och där en myndighet ser fördelar i att själv agera RA.
+
+#### Flera sektorsdomäner
+I denna modell etableras separata domäner, exempelvis civil C-ITS-domän, blåljusdomän, osv.
+
+Varje domän har egen RA och CA-struktur.
+
+**Fördelar**:
+- stark separation mellan säkerhetsnivåer
+- tydlig kontroll över samhällskritiska funktioner
+
+**Nackdelar**:
+- ökad komplexitet
+- svårare interoperabilitet
+- risk för dubbla strukturer och framgentering
+
+**Bedömning**:
+En dyr lösning som kan vara relevant för stationer inom kritisk säkerhetsinfrastruktur.
+
+#### Domän per organisation
+Varje myndighet, kommun, region eller organisation driver egen domän.
+
+Detta skulle på sikt innebära 1000-tals domäner med egna RA, certifikatugivare.
+
+**Fördelar**: 
+- full kontroll för varje enskild organisation som sätter spelreglerna
+
+**Nackdelar**:
+- fragmenterad säkerhetsmodell
+- svår incidenthantering
+- stora interoperabilitetsrisker
+- mycket hög komplexitet
+
+**Bedömning**:
+Kommer inte att flyga! Ej lämplig modell.
+
+### Alternativa RA-strukturer
+RA-funktionen utgör den administrativa inträdespunkten i systemet och ansvarar för att kontrollera och hantera uppgifter om organisationer, stationer, roller och rättigheter inom domänen. Hur RA organiseras har därför stor betydelse för systemets robusthet och förmåga att upprätthålla säkerhet, spårbarhet och korrekt administration.
+
+Ett alternativ är att organisera RA som en central funktion. I en sådan struktur kommunicerar alla godkända certifikatutfärdare – främst EA – med ett gemensamt RA-gränssnitt. Fördelarna med en central RA är flera: 
+- den möjliggör en gemensam datamodell,
+- ger en samlad överblick över systemet, och
+- underlättar revision.
+
+Den centrala funktionen förenklar också teknisk integration, spårbarhet och incidenthantering. Samtidigt innebär modellen att RA-funktionen måste kunna hantera ett stort antal aktörer, vilket ställer krav på skalbarhet, säkerhet och tydliga administrativa processer.
+
+För att främja konkurrens mellan leverantörer, stimulera innovation och skapa redundans i infrastrukturen bör organisationer kunna välja mellan flera ackrediterade CA-operatörer (EA/AA). En sådan modell ökar flexibiliteten i ekosystemet, men innebär också att incidenthantering kan bli mer komplex eftersom fler aktörer är involverade i utfärdande och förvaltning av certifikat.
+
+RA-strukturen behöver stödja delegerad administration. Organisationer ska kunna administrera sina egna stationer samtidigt som kommunikationen med RA-verksamhetssystemet sker på ett säkert och kontrollerat sätt. Detta kan exempelvis åstadkommas genom en federation av mTLS-noder där varje organisation som administrerar sina stationer fungerar som en API-klient mot RA-verkssamhetssystemets API.
+
+En alternativ modell med en federerad RA-struktur där varje organisation upprätthåller ett eget lokalt register mot certifikatutfärdarna är däremot mindre lämplig. I en sådan struktur skulle CA-operatörer behöva etablera kommunikation med flera olika RA-verksamhetssystem. Detta skapar en mer komplex integrationsmiljö, försvårar revision och riskerar att leda till otydlig ansvarsfördelning. Dessutom ökar attackytan i systemet, vilket kan påverka både säkerhet och driftstabilitet negativt.
 
 
 
