@@ -140,7 +140,11 @@ En C-ITS-domän är en organisatorisk och policybaserad funktion (för en nation
 En C-ITS-domän är en governance- och administrationsstruktur. Den är inte en Root CA och inte heller en teknisk komponent i den kryptografiska tillitskedjan.
 
 > [!NOTE]
-> Medan PKI-strukturen utgör den europeiska säkerhetsinfrastrukturen som gör att stationer kan lita på meddelanden från varandra, är en C-ITS-domän den organisatoriska miljön där C-ITS-enheter hanteras, till exempel inom ett land, en vägoperatör eller en tjänsteleverantör. Domänen ansvarar för att administrera sina egna enheter, ansluta dem till PKI-systemet och se till att de får de certifikat med korrekta rättigheter som krävs för att kunna kommunicera säkert. Domänen fungerar alltså som kopplingen mellan den lokala driften av C-ITS-system och den europeiska PKI-infrastrukturen. Se även [den övergripande strukturen för tillitsmodellen i EU CCMS](euccms.md#%C3%B6vergripande-struktur).
+> Medan PKI-strukturen utgör den europeiska säkerhetsinfrastrukturen som gör att stationer kan lita på meddelanden från varandra, är en C-ITS-domän den organisatoriska miljön där C-ITS-enheter hanteras, till exempel inom ett land, en vägoperatör eller en tjänsteleverantör.
+>
+> Domänen ansvarar för att administrera sina egna enheter, ansluta dem till PKI-systemet och se till att de får de certifikat med korrekta rättigheter som krävs för att kunna kommunicera säkert. Domänen fungerar alltså som kopplingen mellan den lokala driften av C-ITS-system och den europeiska PKI-infrastrukturen.
+>
+> Se även [den övergripande strukturen för tillitsmodellen i EU CCMS](euccms.md#%C3%B6vergripande-struktur).
 
 :two: **C-ITS domänägare**
 
