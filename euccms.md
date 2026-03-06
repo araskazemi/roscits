@@ -88,7 +88,7 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
          NATIONAL C-ITS DOMAIN (e.g. Sweden)
 ────────────────────────────────────────────────────────────
 
-              Domain Governance
+       Domain Governance and Policy
                      │
                      ▼
         ┌───────────────────────────┐
