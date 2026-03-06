@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 # EU-CCMS
 EU-CCMS (European Union Common Certificate Management System) är det gemensamma europeiska ramverket för certifikathantering inom C-ITS. Systemet 
 etablerar en förtroendebaserad <mark>Public Key Infrastructure (PKI)</mark> som möjliggör säker autentisering och signering av meddelanden mellan 
@@ -208,3 +210,9 @@ En interchange-nod:
 - distribuerar vidare till nod i annan domän
 
 Interchange-noder litar inte på varandra via EU-CCMS PKI. Deras tillit etableras genom federation, avtal och konfiguration.
+
+<p>&nbsp;</p>
+
+----
+
+:arrow_backward: [Hem](README.md) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_up_small: [Tillbaka till toppen](#top)  
