@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 # EU-CCMS-protokollen
 EU-CCMS sätter specifika regler, datastrukturer och processer genom tillämpning av befintliga standarder, för att de ska funka på europeisk nivå för C-ITS.
 
@@ -42,3 +44,10 @@ Tabellen nedan redogör för standard och dess tillämpning i EU-CCMS-protokolle
 | **Enhetscertifiering (C-ITS stationer)** | **ISO/IEC 15408 (Common Criteria)** | EU-krav: stationer ska utvärderas (minst EAL2+) tills officiella skyddsprofiler finns. |
 | **Revokering** | ETSI-mekanismer (CRL, delta CRL) | EU-CCMS: CPOC-protokollet definierar exakt hur RCA revokeras (inkl. fysiskt möte eller eIDAS-signerat e-mail i kritiska fall). Revokerade certifikat tas bort ur **ECTL** som TLM publicerar. |
 | **Trustlist (ECTL)** | **ETSI TS 102 941** – Trust List mgmt. | EU-profil: TLM är central instans, publicerar signerad ECTL regelbundet. <br>• Specifik publiceringsfrekvens. <br>• CPOC-webb som distributionspunkt. <br>• Maskinläsbara format definierade. |
+
+
+<p>&nbsp;</p>
+
+----
+
+:arrow_backward: [Hem](README.md) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_up_small: [Tillbaka till toppen](#top)  
