@@ -1,3 +1,4 @@
+<a name="top"></a>
 # Vad är C-ITS – och varför spelar det roll?
 Cooperative Intelligent Transport Systems (**C-ITS**) är ett samlingsbegrepp för teknologier och standardiserade kommunikationslösningar som möjliggör 
 <mark>informationsutbyte:
@@ -73,3 +74,5 @@ Teknikval, certifikathantering och integritetspolicy måste hålla över tid. De
 * Fordon har en livslängd på ca 15–20 år. Infrastruktur ännu längre. Beslut som fattas nu måste hålla i decennier, annars riskerar man “tekniska återvändsgränder”.
 * Ekonomisk utmaning: vem betalar? Fordonstillverkare, staten, operatörer, eller en mix? – olika i varje land!
 
+-------------
+:arrow_up_small: [Tillbaka till toppen](#top) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_backward: [Hem](README.md) 
