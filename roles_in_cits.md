@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 # Roller och rättigheter i C-ITS
 Roller och rättigheter i C-ITS definieras men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
 
@@ -106,4 +108,8 @@ Medlemsstaten styr den operativa maktstrukturen inom sin C-ITS-domän. Detta inn
 - Avgör acceptans av utländska rättigheter inom nationell infrastruktur
 
 
+<p>&nbsp;</p>
 
+----
+
+:arrow_backward: [Hem](README.md) &nbsp; &nbsp; | &nbsp; &nbsp; :arrow_up_small: [Tillbaka till toppen](#top)  
