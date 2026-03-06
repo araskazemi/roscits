@@ -299,9 +299,9 @@ När en station skickar meddelanden (t .ex. CAM eller DENM) används AT-certifik
 
 ## En viktig konsekvens
 Den aktör som kontrollerar RA har i praktiken kontroll över:
-- vilka stationer som finns i domänen
-- vilka organisationer som får delta
-- vem som kan identifieras vid incident
+- vilka stationer som finns i domänen,
+- vilka organisationer som får delta,
+- vem som kan identifieras vid incident.
 
 Därför väljer många länder att ha RA nationellt, även om EA och AA kan vara externa.
 
