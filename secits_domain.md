@@ -137,7 +137,13 @@ Den administrativa tillitsstrukturen består av:
 
 :one: **C-ITS-domän**
 
-En C-ITS-domän är en organisatorisk och policybaserad funktion (för en nationell eller organisatorisk miljö). Domänen ansvarar för registrering, certifikathantering och rollstyrning inom EU-CCMS.
+En C-ITS-domän kan beskrivas som en administrativ miljö där en C-ITS Point of Contact (PoC) ansvarar för registrering, policy och drift av de komponenter som ansluter C-ITS-stationer till EU-CCMS-infrastrukturen. I många fall sammanfaller en domän med en medlemsstat, men arkitekturen tillåter även andra organisatoriska strukturer.
+
+En C-ITS-domän omfattar normalt:
+- registreringsfunktioner (Registration Authority)
+- nationell policy och regelverk
+- organisatoriska roller och ansvar
+- anslutning till EU:s C-ITS PKI-infrastruktur
 
 En C-ITS-domän är en governance- och administrationsstruktur. Den är inte en Root CA och inte heller en teknisk komponent i den kryptografiska tillitskedjan.
 
@@ -150,16 +156,16 @@ En C-ITS-domän är en governance- och administrationsstruktur. Den är inte en 
 
 :two: **C-ITS domänägare**
 
-Domänägaren är en lednings- och styrningsfunktion ovanför RA.
+Domänägaren är den lednings- och styrningsfunktion som ansvarar för den administrativa styrningen av en C-ITS-domän.
 
-Domänägaren:
-* Fastställer policy och kan ändra reglerna
-* Utser RA
-* Utser de EA och AA, vilka kan konsumera data från domänens RA-system
-* Beslutar om roll- och behörighetskategorier
-* Beslutar om anslutningsvillkor
-* Har incidentmandat
-* Representerar Sverige i EU-CCMS
+Domänägarens ansvarsområde omfattar:
+* Fastställande av policy och ändringshantering av reglerna
+* Utse RA och godkänna registreringsprocesser
+* Utse de EA och AA, vilka kan konsumera data från domänens RA-verksamhetssystem
+* Besluta om roll- och behörighetskategorier
+* Besluta om anslutningsvillkor
+* Incidenthantering
+* Representation gentemot EU-CCMS
 
 Domänägaren svarar på frågan:
 > Hur ska svensk C-ITS-domän styras?
