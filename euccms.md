@@ -14,9 +14,17 @@ Implementeringen av EU-CCMS är därmed en central komponent i att upprätthåll
 digitaliserade transportsystem.
 
 ## Tillit och säkerhet
+Tillit i C-ITS baseras på validering av certifikatkedjor mot en uppsättning trust anchors. 
+Dessa trust anchors utgörs av Root CA-certifikat som distribueras via <mark>European C-ITS Trust List (ECTL)</mark>.
+
+En station (t ex ett fordon eller en vägkantsutrustning) validerar mottagna certifikat genom att kontrollera att:
+1. certifikatet är utfärdat av en giltig Certificate Authority (CA),
+2. certifikatkedjan kan byggas upp till ett betrott Root CA-certifikat,
+3. detta Root CA-certifikat finns i stationens trust store och motsvarar ett Root CA som publiceras i ECTL.
+
 Tillitskedjan inkluderar flera roller:
 * <mark>CPA (Certificate Policy Authority)</mark>: ansvarar för policydokument och godkänner Root CAs.
-* <mark>TLM (Trust List Manager)</mark>: skapar och publicerar den europeiska certifikatlistan (ECTL) med alla betrodda Root CAs.
+* <mark>TLM (Trust List Manager)</mark>: skapar och publicerar den europeiska certifikatlistan (ECTL) som innehåller alla de Root CAs som är godkända att delta i C-ITS-ekosystemet.
 * <mark>CPOC (C-ITS Point of Contact)</mark>: fungerar som nav mellan Root CAs och TLM, tar emot certifikat, publicerar ECTL och tillhandahåller ankre i tillitskedjan (trust anchors).
 * <mark>Root CA</mark>: kan vara statliga eller privata aktörer. Utfärdar certifikat till:
     * <mark>EA (Enrolment Authority)</mark>: utfärdar <mark>Enrolment Credentials (EC)</mark> till C-ITS-enheter (fordon och RSU:er).
