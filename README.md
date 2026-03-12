@@ -3,6 +3,12 @@ Transportsystemets digitalisering fortskrider i en hög takt. Nya teknologier so
 
 Detta projekt fokuserar på hur en trygg, robust och säker utrullning av <mark>C-ITS (Cooperative Intelligent Transport Systems)</mark> kan genomföras i Sverige. Målet är att identifiera tekniska, organisatoriska och säkerhetsmässiga förutsättningar för en långsiktigt hållbar implementering.
 
+Fokus ligger på hur registrering, policy och administration kan organiseras i en nationell kontext. Dokumentet beskriver inte den kryptografiska tillitsmodellen eller den europeiska PKI-arkitekturen i detalj. Syftet är snarare att beskriva den administrativa och organisatoriska strukturen kring C-ITS i Sverige, inklusive:
+- rollerna C-ITS-domänägare och Registration Authority (RA),
+- registreringsprocessen,
+- policybeslut och ansvarsfördelning.
+
+
 ## Innehållsförteckning
 1. [Vad är C-ITS – och varför spelar det roll?](cits.md)
 2. [EU-CCMS – det gemensamma europeiska ramverket för certifikathantering inom C-ITS.](euccms.md)
