@@ -40,7 +40,7 @@ Till skillnad från klassisk PKI, där identiteten ofta är knuten till certifik
 Authorisation Tickets (AT) har kort giltighetstid och måste bytas ofta (sekretesskrav). Detta skiljer sig från traditionella PKI-certifikat som ofta är giltiga i månader eller år.
 
 #### Multirot-struktur och central trust list
-Flera Root CAs kan samexistera, men alla listas i en central European Certificate Trust List (ECTL) signerad av TLM. Detta är annorlunda än en klassisk PKI där en organisation ofta har en hierarki med en root och underordnade CAs, men inte en gemensam europeisk trust anchor.
+Flera Root CAs kan samexistera, men alla listas i en central European Certificate Trust List (ECTL) signerad av TLM. 
 
 #### Separering av roller (EA och AA)
 En viktig säkerhetsdesign är separationen mellan enrolment (EC) och authorization (AT) för att undvika att någon enskild aktör kan både identifiera och spåra ett fordon. I en traditionell PKI finns inte denna uppdelning – CA utfärdar certifikat direkt till slutanvändare.
