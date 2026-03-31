@@ -82,6 +82,9 @@ Det innebär att fordonet får sända:
 
 Certifikat (AT) i ett vanligt fordon saknar SSP för `emergencyVehicleRole` samt saknar ITS-AID för SREM (och kan därmed inte sända SREM alls).
 
+> [!NOTE]
+> Validering av rättigheter sker helt lokalt hos mottagande station baserat på certifikatet (AT). Det finns ingen central auktorisation i realtid.
+
 ## Styrning av roller och rättigheter
 Styrning av roller och rättigheter hanteras i tre lager:
 
