@@ -42,7 +42,7 @@ men med olika behörighetsnivåer.
 
 > [!IMPORTANT]
 > ITS-AID	anger vilken applikation som är tillåten. <br />
-> SSP	anger vilka roller/underfunktioner inom applikationen som är tillåtna.
+> SSP	anger vilka roller/underfunktioner inom applikationen som är tillåtna. Mottagande station ansvarar för att tolka SSP och avgöra om ett mottaget meddelande är legitimt i sin kontext.
 
 Strukturen förenklat:
 ```
