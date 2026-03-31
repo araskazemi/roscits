@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 # Roller och rättigheter i C-ITS
-Roller och rättigheter i C-ITS definieras men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
+Roller och rättigheter i C-ITS definieras, men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
 
 :one: Tekniska roller i PKI (EU-CCMS)
 
@@ -28,7 +28,7 @@ I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för
 ## Applikationsroller
 En applikation i C-ITS-världen (use case) definieras av:
 - Ett syfte (t ex: “Emergency Vehicle Approaching”)
-- Ett meddelandetyp (t ex: DENM)
+- En meddelandetyp (t ex: DENM)
 - Specifika fältvärden (t ex: causeCode = emergencyVehicle)
 - Säkerhetsrättigheter (ITS-AID + SSP)
 
@@ -38,7 +38,7 @@ I certifikatet (AT) finns ett fält som heter `ITS-AID` (ITS Application Identif
 
 Det är alltså inte meddelandet i sig, utan rätten att använda applikationen som är säkerhetsstyrd.
 
-SSP (Service Specific Permissions) som också ligger i certifikattet (AT) är den mekanism som gör att två stationer kan ha rätt att sända samma meddelandetyp
+SSP (Service Specific Permissions) som också ligger i certifikatet (AT) är den mekanism som gör att två stationer kan ha rätt att sända samma meddelandetyp
 men med olika behörighetsnivåer.
 
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ Exempelvis ett blåljusfordon får AT som innehåller:
 
 Det innebär att fordonet får sända: 
 - CAM
-- DENM med `causeCode = emergencyVehicleApproaching` (ESVN-EPVA use case)
+- DENM med `Code = emergencyVehicleApproaching` (ESVN-EPVA use case)
 - SREM och begära prioritet i signalanläggning 
 
 Medan ett vanligt fordon får AT som innehåller:
