@@ -16,14 +16,14 @@ Dessa roller är infrastrukturella roller och inte trafikroller.
 
 ## Meddelandetyper och funktionella roller
 I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för olika use cases (som i C-ITS kallas *applikationer*), till exempel:
-- Emergency Vehicle Alert (EVA)
-- Road Works Warning (RWW)
-- Public Transport Priority
-- Special Transport
-- Dangerous Goods
+- Emergency and Service Vehicle Notifications – Emergency or Prioritised Vehicle Approaching (ESVN-EPVA)
+- Emergency and Service Vehicle Notifications – Slow Moving Maintenance Vehicle (ESVN-SMMV)
+- Emergency Vehicle Priority (SI-EVP)
+- Traffic Light Prioritisation (SI-TLP)
+- Hazardous Location Notification (HLN)
 
 > [!IMPORTANT]
-> Exempelvis innebär EVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
+> Exempelvis innebär ESVN-EPVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
 
 ## Applikationsroller
 En applikation i C-ITS-världen (use case) definieras av:
@@ -69,7 +69,7 @@ Exempelvis ett blåljusfordon får AT som innehåller:
 
 Det innebär att fordonet får sända: 
 - CAM
-- DENM med `causeCode = emergencyVehicleApproaching` (EVA-use case)
+- DENM med `causeCode = emergencyVehicleApproaching` (ESVN-EPVA use case)
 - SREM och begära prioritet i signalanläggning 
 
 Medan ett vanligt fordon får AT som innehåller:
