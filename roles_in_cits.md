@@ -110,6 +110,7 @@ Medlemsstaten styr den operativa maktstrukturen inom sin C-ITS-domän. Detta inn
 - Fastställer operativa prioriteringsregler
 - Avgör acceptans av utländska rättigheter inom nationell infrastruktur
 
+För interoperabilitet mellan medlemsstater krävs harmonisering av ITS-AID och SSP, så att rättigheter kan tolkas korrekt även över nationsgränser. Denna harmonisering sker genom gemensamma profiler och specifikationer som tas fram och valideras inom ramen för C-Roads.
 
 <p>&nbsp;</p>
 
