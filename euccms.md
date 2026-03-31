@@ -207,7 +207,7 @@ Domän definieras genom domänägarens styrning över:
 
 ## Hur hänger Interchange-noder i tillitsmodellen?
 Interchange är inte en PKI-aktör, snarare en broker/federationstjänst som transporterar IP-baserade meddelanden.
-En interchange node måste dock validera ETSI TS 103 097-signaturer samt följa Security Policy.
+En interchange-nod måste dock validera ETSI TS 103 097-signaturer samt följa Security Policy.
 
 Interchange kan beskrivas som en nod som drivs av en domän. Den ingår i ett nätverk eller en federation av noder och kan överföra C-ITS-meddelanden mellan olika domäner. 
 
