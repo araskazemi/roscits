@@ -35,7 +35,7 @@ I certifikatet (AT) finns ett fält som heter `ITS-AID` (ITS Application Identif
 - vilka applikationer stationen får använda, och
 - vilka [meddelandetyper](cits.md#vad-skickas) den får sända.
 
-Det är alltså inte meddelandet i sig, utan rätten att använda applikationen som är säkerhetsstyrd.
+Det är alltså inte meddelandet i sig, utan rätten att signera (=använda applikationen) som är säkerhetsstyrd.
 
 SSP (Service Specific Permissions) som också ligger i certifikatet (AT) är den mekanism som gör att två stationer kan ha rätt att sända samma meddelandetyp
 men med olika behörighetsnivåer.
