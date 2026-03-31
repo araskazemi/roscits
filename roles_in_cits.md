@@ -20,7 +20,6 @@ I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för
 - Emergency and Service Vehicle Notifications – Slow Moving Maintenance Vehicle (ESVN-SMMV)
 - Emergency Vehicle Priority (SI-EVP)
 - Traffic Light Prioritisation (SI-TLP)
-- Hazardous Location Notification (HLN)
 
 > [!IMPORTANT]
 > Exempelvis innebär ESVN-EPVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
