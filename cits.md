@@ -75,7 +75,9 @@ Teknikval, certifikathantering och integritetspolicy måste hålla över tid. De
 * Fordon har en livslängd på ca 15–20 år. Infrastruktur ännu längre. Beslut som fattas nu måste hålla i decennier, annars riskerar man “tekniska återvändsgränder”.
 * Ekonomisk utmaning: vem betalar? Fordonstillverkare, staten, operatörer, eller en mix? – olika i varje land!
 
-Flera EU-länder har initialt försökt att följa rekommendationerna för implementering av EU-CCMS inom ramen för C-Roads, men har kommit till slutsatsen att komplexiteten och kostnaderna överstiger den kortsiktiga nyttan. Dessa länder har istället valt att realisera C-ITS/ETSI-baserade use cases genom avtalsbaserade modeller och Interchange-noder. Detta möjliggör å ena sidan tidig nyttorealisering och återanvändning av befintliga system (t ex trafikljus). Å andra sidan riskerar sådana lösningar att leda till inlåsning och parallella ekosystem, vilket försvårar en fullständig implementering av EU-CCMS. Något som kan påverka både fordonsindustrin och Sveriges förmåga att fungera som testbädd, eftersom en fullt utbyggd EU-CCMS-infrastruktur då saknas på svenska vägar.
+Flera EU-länder har initialt försökt att följa rekommendationerna för implementering av EU-CCMS inom ramen för C-Roads, men har kommit till slutsatsen att komplexiteten och kostnaderna överstiger den kortsiktiga nyttan. Dessa länder har istället valt att realisera C-ITS/ETSI-baserade use cases genom avtalsbaserade modeller och Interchange-noder. Detta möjliggör å ena sidan tidig nyttorealisering och återanvändning av befintliga system (t ex trafikljus). Å andra sidan riskerar sådana lösningar att leda till inlåsning och parallella ekosystem, vilket försvårar en fullständig implementering av EU-CCMS. 
+
+En sådan utveckling kan påverka interoperabilitet, fordonsindustrin och möjligheten att etablera en sammanhängande europeisk test- och innovationsmiljö. Om en liknande inriktning skulle tillämpas i Sverige kan det påverka Sveriges förmåga att fungera som testbädd negativt, eftersom en fullt utbyggd EU-CCMS-infrastruktur då skulle saknas på svenska vägar.
 
 <p>&nbsp;</p>
 
