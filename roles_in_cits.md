@@ -53,7 +53,8 @@ Authorization Ticket
  └─ Signature
 ```
 
-En C-ITS-station (t ex ett blåljusfordon) får ett Enrollment Certificate (EC) samt ett eller flera Authorization Tickets (AT).
+En C-ITS-station (t ex ett blåljusfordon) får ett Enrollment Certificate (EC) samt ett eller flera Authorization Tickets (AT). En station kan även ha flera AT samtidigt, exempelvis för olika applikationer (ITS-AID).
+
 Certifikatet AT innehåller:
 - Applikationsrättigheter
 - Tillåtna meddelandetyper
