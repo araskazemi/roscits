@@ -29,7 +29,7 @@ I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för
 En applikation i C-ITS-världen (use case) definieras av:
 - Ett syfte (t ex: “Emergency Vehicle Approaching”)
 - En meddelandetyp (t ex: DENM)
-- Specifika fältvärden (t ex: causeCode = emergencyVehicle)
+- Specifika fältvärden (t ex: causeCode = emergencyVehicleApproaching)
 - Säkerhetsrättigheter (ITS-AID + SSP)
 
 I certifikatet (AT) finns ett fält som heter `ITS-AID` (ITS Application Identifier). Det anger:
