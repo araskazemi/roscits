@@ -28,9 +28,11 @@ Detta gör det möjligt för system att upptäcka och verifiera motparter basera
 ## Vilka är fördelarna med MATF?
 MATF ger tre centrala effekter: automatisering, förutsägbarhet och kontroll.
 
-- Federationsmetadata ger en gemensam och konsekvent bild av deltagande organisationer och de nycklar som är kopplade till deras system  
-- System kan verifiera sina motparter med hjälp av samma auktoritativa källa för tillitsinformation, vilket eliminerar behovet av lokala tillåtslistor eller miljöspecifika konfigurationer  
-- När en anslutning etableras kan både klient och server validera varandras nycklar mot federationsmetadata innan trafik tillåts. Detta minskar avsevärt risken för identitetskapning – även från aktörer som presenterar tekniskt giltiga certifikat  
+:one: Federationsmetadata ger en gemensam och konsekvent bild av deltagande organisationer och de nycklar som är kopplade till deras system  
+
+:two: System kan verifiera sina motparter med hjälp av samma auktoritativa källa för tillitsinformation, vilket eliminerar behovet av lokala tillåtslistor eller miljöspecifika konfigurationer  
+
+:three: När en anslutning etableras kan både klient och server validera varandras nycklar mot federationsmetadata innan trafik tillåts. Detta minskar avsevärt risken för identitetskapning – även från aktörer som presenterar tekniskt giltiga certifikat  
 
 MATF är en federativ mekanism för hur nycklar och anslutningar beskrivs, distribueras och verifieras i distribuerade miljöer där oberoende aktörer kommunicerar direkt.  
 Det gör den särskilt värdefull i miljöer som kräver skalbar och tillförlitlig digital samverkan.
