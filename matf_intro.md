@@ -1,58 +1,46 @@
 <a name="top"></a>
 
-# Introduction to MATF – Mutually Authenticating TLS in the Context of Federations
-As system-to-system communication between organisations is increasingly realised through APIs and backend integrations, 
-establishing trust between systems becomes critical. A widely adopted approach to system authentication and trust establishment 
-relies on the exchange of cryptographic material and the use of mutual TLS (mTLS), where both client and server authenticate 
-each other.
+# Introduktion till MATF – Mutual TLS med ömsesidig autentisering i federativa miljöer
+När system-till-system-kommunikation mellan organisationer i allt högre grad sker via API:er och backend-integrationer blir det avgörande att kunna etablera tillit mellan systemen. En vanligt förekommande metod för autentisering och tillitsuppbyggnad bygger på utbyte av kryptografiskt material och användning av mutual TLS (mTLS) där både klient och server autentiserar varandra.
 
-While mTLS provides strong cryptographic authentication of communicating parties, it does not by itself answer a fundamental question: 
-> Which systems should actually be trusted and allowed to connect?
+Även om mTLS ger stark kryptografisk autentisering av de kommunicerande parterna, besvarar det inte i sig en grundläggande fråga:  
+> Vilka system ska faktiskt betraktas som betrodda och tillåtas ansluta?
 
-A valid certificate proves possession of a key, but not necessarily that the system represents an authorised or governed organisation within a given context.
+Ett giltigt certifikat bevisar innehav av en nyckel, men inte nödvändigtvis att systemet representerar en auktoriserad eller styrd organisation i ett visst sammanhang.
 
-Consequently, it is not sufficient for a system to present a technically valid certificate. The organisation behind that system must be 
-identifiable, explicitly approved, and subject to governance and follow-up in a controlled manner.
+Det räcker därför inte att ett system presenterar ett tekniskt giltigt certifikat. Organisationen bakom systemet måste kunna identifieras, vara explicit godkänd och omfattas av styrning och uppföljning på ett kontrollerat sätt.
 
-MATF addresses this challenge in environments where multiple independent organisations operate under shared trust rules. 
-Such an environment is referred to here as a *federation*. Within a federation, there is an agreed set of participants and 
-a structured description of their systems.
+MATF adresserar denna utmaning i miljöer där flera oberoende organisationer verkar under gemensamma tillitsregler. En sådan miljö benämns här som en *federation*. Inom en federation finns en överenskommen uppsättning deltagare samt en strukturerad beskrivning av deras system.
 
-MATF connects this federated trust framework directly to API and backend traffic. Each connection is bound to a named federation member, 
-and the counterpart is verified as an approved participant—not merely as a system presenting a valid certificate.
+MATF kopplar denna federativa tillitsmodell direkt till API- och backend-trafik. Varje anslutning knyts till en namngiven medlem i federationen, och motparten verifieras som en godkänd deltagare – inte enbart som ett system med ett giltigt certifikat.
 
-## What is MATF?
-Mutually Authenticating TLS in the context of Federations (MATF) is a mechanism for combining cryptographic authentication with federated 
-trust management in system-to-system communication between organisations.
+## Vad är MATF?
+Mutually Authenticating TLS in the context of Federations (MATF) är en mekanism för att kombinera kryptografisk autentisering med federativ tillitshantering i system-till-system-kommunikation mellan organisationer.
 
-It is designed for environments where multiple independent actors interact via APIs and backend systems. In such settings, it must be possible to 
-determine which servers and clients belong to which organisations — and which of them are actually authorised to participate in a given trust context.
+Den är utformad för miljöer där flera oberoende aktörer interagerar via API:er och backend-system. I sådana sammanhang måste det vara möjligt att avgöra vilka servrar och klienter som tillhör vilka organisationer – och vilka av dessa som faktiskt är auktoriserade att delta i ett givet tillitssammanhang.
 
-MATF builds on standard TLS with mutual authentication (mTLS). The TLS protocol itself is not modified. Instead, MATF introduces a federated layer that enables:
+MATF bygger vidare på standardiserad TLS med ömsesidig autentisering (mTLS). Själva TLS-protokollet förändras inte. I stället introducerar MATF ett federativt lager som möjliggör:
 
-- The aggregation of information about members’ servers and clients into a shared metadata document.
-- The binding of each server and client to one or more public keys used for authentication.
-- The publication and cryptographic signing of this metadata by a federation operator, allowing all participants to trust its integrity and origin.
+- Sammanställning av information om medlemmars servrar och klienter i ett gemensamt metadatadokument  
+- Koppling av varje server och klient till en eller flera publika nycklar som används för autentisering  
+- Publicering och kryptografisk signering av denna metadata av en federationsoperatör, vilket gör att alla deltagare kan lita på dess integritet och ursprung  
 
-This allows systems to discover and verify counterparts based on a common, authoritative source—rather than requiring each organisation to 
-build and maintain its own trust configuration.
+Detta gör det möjligt för system att upptäcka och verifiera motparter baserat på en gemensam, auktoritativ källa, i stället för att varje organisation behöver bygga och underhålla egna tillitskonfigurationer.
 
-## What are the benefits of MATF?
-MATF provides three key outcomes: automation, predictability, and control.
+## Vilka är fördelarna med MATF?
+MATF ger tre centrala effekter: automatisering, förutsägbarhet och kontroll.
 
-- Federation metadata provides a shared and consistent view of participating organisations and the keys associated with their systems.
-- Systems can verify counterparts using the same authoritative source of trust information, eliminating the need for local allow-lists or environment-specific configurations.
-- When a connection is established, both client and server can validate each other’s keys against federation metadata before allowing traffic. This significantly reduces the risk of impersonation—even by actors presenting technically valid certificates.
+- Federationsmetadata ger en gemensam och konsekvent bild av deltagande organisationer och de nycklar som är kopplade till deras system  
+- System kan verifiera sina motparter med hjälp av samma auktoritativa källa för tillitsinformation, vilket eliminerar behovet av lokala tillåtslistor eller miljöspecifika konfigurationer  
+- När en anslutning etableras kan både klient och server validera varandras nycklar mot federationsmetadata innan trafik tillåts. Detta minskar avsevärt risken för identitetskapning – även från aktörer som presenterar tekniskt giltiga certifikat  
 
-MATF is a federated mechanism for how keys and connections are described, distributed, and verified in distributed environments where independent actors communicate directly. 
-This makes it particularly valuable in environments requiring scalable and trustworthy digital collaboration.
+MATF är en federativ mekanism för hur nycklar och anslutningar beskrivs, distribueras och verifieras i distribuerade miljöer där oberoende aktörer kommunicerar direkt.  
+Det gör den särskilt värdefull i miljöer som kräver skalbar och tillförlitlig digital samverkan.
 
-## A step toward automated trust
-With MATF, trusted organisations and their associated keys are defined in signed federation metadata rather than distributed across local configurations. 
-Trust becomes part of the shared infrastructure, rather than something managed ad hoc within individual systems.
+## Ett steg mot automatiserad tillit
+Med MATF definieras betrodda organisationer och deras tillhörande nycklar i signerad federationsmetadata i stället för att spridas över lokala konfigurationer. Tillit blir därmed en del av den gemensamma infrastrukturen, snarare än något som hanteras ad hoc i enskilda system.
 
-This simplifies the onboarding of new members, key rotation, and access governance. Organisations can collaborate more efficiently and securely, with reduced 
-reliance on manual certificate exceptions and troubleshooting of trust chains.
+Detta förenklar onboarding av nya medlemmar, nyckelrotation och styrning av åtkomst. Organisationer kan samarbeta mer effektivt och säkert, med minskat beroende av manuella undantag för certifikat och felsökning av tillitskedjor.
 
 <p>&nbsp;</p>
 
