@@ -26,16 +26,23 @@ MATF bygger vidare på standardiserad TLS med ömsesidig autentisering (mTLS). S
 Detta gör det möjligt för system att upptäcka och verifiera motparter baserat på en gemensam, auktoritativ källa, i stället för att varje organisation behöver bygga och underhålla egna tillitskonfigurationer.
 
 ## Vilka är fördelarna med MATF?
-MATF ger tre centrala effekter: automatisering, förutsägbarhet och kontroll.
+MATF ger tre centrala effekter: 
 
-:one: Federationsmetadata ger en gemensam och konsekvent bild av deltagande organisationer och de nycklar som är kopplade till deras system  
+:one: automatisering, 
 
-:two: System kan verifiera sina motparter med hjälp av samma auktoritativa källa för tillitsinformation, vilket eliminerar behovet av lokala tillåtslistor eller miljöspecifika konfigurationer  
+:two: förutsägbarhet, 
 
-:three: När en anslutning etableras kan både klient och server validera varandras nycklar mot federationsmetadata innan trafik tillåts. Detta minskar avsevärt risken för identitetskapning – även från aktörer som presenterar tekniskt giltiga certifikat  
+:three: kontroll.
 
-MATF är en federativ mekanism för hur nycklar och anslutningar beskrivs, distribueras och verifieras i distribuerade miljöer där oberoende aktörer kommunicerar direkt.  
-Det gör den särskilt värdefull i miljöer som kräver skalbar och tillförlitlig digital samverkan.
+Federationsmetadata ger en gemensam och konsekvent bild av deltagande organisationer och de nycklar som är kopplade till deras system  
+
+System kan verifiera sina motparter med hjälp av samma auktoritativa källa för tillitsinformation, vilket eliminerar behovet av lokala tillåtslistor eller miljöspecifika konfigurationer.
+
+När en anslutning etableras kan både klient och server validera varandras nycklar mot federationsmetadata innan trafik tillåts. 
+Detta minskar avsevärt risken för identitetskapning – även från aktörer som presenterar tekniskt giltiga certifikat.
+
+MATF är en federativ mekanism för hur nycklar och anslutningar beskrivs, distribueras och verifieras i distribuerade miljöer där 
+oberoende aktörer kommunicerar direkt. Det gör den särskilt värdefull i miljöer som kräver skalbar och tillförlitlig digital samverkan.
 
 ## Ett steg mot automatiserad tillit
 Med MATF definieras betrodda organisationer och deras tillhörande nycklar i signerad federationsmetadata i stället för att spridas över lokala konfigurationer. Tillit blir därmed en del av den gemensamma infrastrukturen, snarare än något som hanteras ad hoc i enskilda system.
