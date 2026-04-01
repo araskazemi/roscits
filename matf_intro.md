@@ -6,9 +6,7 @@ När system-till-system-kommunikation mellan organisationer i allt högre grad s
 Även om mTLS ger stark kryptografisk autentisering av de kommunicerande parterna, besvarar det inte i sig en grundläggande fråga:  
 > Vilka system ska faktiskt betraktas som betrodda och tillåtas ansluta?
 
-Ett giltigt certifikat bevisar innehav av en nyckel, men inte nödvändigtvis att systemet representerar en auktoriserad eller styrd organisation i ett visst sammanhang.
-
-Det räcker därför inte att ett system presenterar ett tekniskt giltigt certifikat. Organisationen bakom systemet måste kunna identifieras, vara explicit godkänd och omfattas av styrning och uppföljning på ett kontrollerat sätt.
+Ett giltigt certifikat bevisar innehav av en nyckel, men inte nödvändigtvis att systemet representerar en auktoriserad eller styrd organisation i ett visst sammanhang. Det räcker därför inte att ett system presenterar ett tekniskt giltigt certifikat. Organisationen bakom systemet måste kunna identifieras, vara explicit godkänd och omfattas av styrning och uppföljning på ett kontrollerat sätt.
 
 MATF adresserar denna utmaning i miljöer där flera oberoende organisationer verkar under gemensamma tillitsregler. En sådan miljö benämns här som en *federation*. Inom en federation finns en överenskommen uppsättning deltagare samt en strukturerad beskrivning av deras system.
 
