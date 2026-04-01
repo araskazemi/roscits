@@ -27,7 +27,7 @@ Ett backend-system behöver därför ha två separata identiteter:
 1. **C-ITS-identitet** för att skapa och verifiera signerade meddelanden enligt EU-CCMS.
 2. **Transport-identitet** för att kunna autentisera sig mot en Interchange-nod och utbyta meddelanden på ett säkert sätt.
 
-Detta innebär att transporttillit och meddelandetillit behöver hanteras som två olika lager.
+Detta innebär att tillit till meddelandet (autenticitet och integritet) och tillit till vidareförmedlingen av ETSI-meddelanden behöver hanteras som två olika lager.
 
 ## Federationens struktur
 I en svensk kontext är det varken realistiskt eller ändamålsenligt att samla all C-ITS-trafik i en gemensam nationell Interchange-nod.
@@ -42,11 +42,11 @@ Ansvar, drift och informationsägarskap är redan idag distribuerade mellan fler
 
 Att samla all trafik i en enda nod innebär flera utmaningar:
 
-- oklar ansvarsfördelning och styrning mellan organisatoriskt oberoende aktörer
-- ökad risk för centraliserade beroenden och single points of failure
-- sämre skalbarhet och lägre förändringstakt
-- svårare integration med befintliga system
-- risk för att lokala och regionala behov underordnas en central modell
+- oklar ansvarsfördelning och styrning mellan organisatoriskt oberoende aktörer,
+- ökad risk för centraliserade beroenden och single points of failure,
+- sämre skalbarhet och lägre förändringstakt,
+- svårare integration med befintliga system,
+- risk för att lokala och regionala behov underordnas en central modell.
 
 En federativ struktur med flera Interchange-noder är därför bättre anpassad till svenska förhållanden.
 
@@ -57,11 +57,11 @@ Det innebär att vissa större aktörer eller operativa domäner kan motivera eg
 
 Omfånget bör bestämmas utifrån hur trafiksystem faktiskt hänger ihop, till exempel per storstadsregion och olika operativa domäner, som exempelvis:
 
-- statlig väginfrastruktur och trafikledning
-- urbana trafiksystem och trafiksignaler
-- kollektivtrafik och signalprioritering
-- blåljus och andra prioriterade fordon
-- drift och underhåll
+- statlig väginfrastruktur och trafikledning,
+- urbana trafiksystem och trafiksignaler,
+- kollektivtrafik och signalprioritering,
+- blåljus och andra prioriterade fordon,
+- drift och underhåll.
 
 En kommun bör därför inte automatiskt motsvara en egen Interchange-nod. I många fall är det mer ändamålsenligt att flera kommuner delar en gemensam nod, medan större städer eller aktörer med avancerade trafiksystem kan motivera en egen nod.
 
@@ -87,10 +87,10 @@ Informationsutbytet bygger på två separata lager av tillit som hanteras oberoe
 
 Autenticitet och integritet hos själva ETSI-meddelandet hanteras genom att backend-systemen fungerar som C-ITS-stationer i EU-CCMS och därför kan:
 
-- skapa ETSI-meddelanden
-- signera meddelanden
-- verifiera mottagna meddelanden
-- använda relevanta certifikat och rättigheter
+- skapa ETSI-meddelanden,
+- signera meddelanden,
+- verifiera mottagna meddelanden,
+- använda relevanta certifikat och rättigheter.
 
 Rätten att ansluta till en Interchange-nod och utbyta information över IP hanteras separat från EU-CCMS, exempelvis genom mTLS mellan backend-system och Interchange-nod.
 
@@ -101,11 +101,11 @@ Backend-system som ska använda Interchange behöver vara kända och godkända a
 
 Varje Interchange-nod behöver därför ha en funktion för:
 
-- identifiering av anslutande aktörer och system
-- godkännande av anslutning
-- hantering av certifikat för transporttillit
-- tilldelning av rättigheter för publicering och konsumtion
-- livscykelhantering, inklusive förändringar och borttagning
+- identifiering av anslutande aktörer och system,
+- godkännande av anslutning,
+- hantering av certifikat för tillit till vidareförmedlingen av ETSI-meddelanden,
+- tilldelning av rättigheter för publicering och konsumtion,
+- livscykelhantering, inklusive förändringar och borttagning.
 
 Denna funktion motsvarar en lokal registrerings- och onboardingprocess eller en lokal federativ åtkomststyrning inom respektive nod.
 
