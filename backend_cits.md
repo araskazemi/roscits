@@ -110,7 +110,7 @@ Varje Interchange-nod behöver därför ha en funktion för:
 Denna funktion motsvarar en lokal registrerings- och onboardingprocess eller en lokal federativ åtkomststyrning inom respektive nod.
 
 ## Tillit mellan Interchange-noder
-Interchange-noder etablerar tillit till varandra genom en federativ modell, där autentisering och auktorisation baseras på gemensamma, signerade metadata. Den federativa modellen kan exempelvis realiseras genom tekniska mekanismer som MATF (Metadata for mTLS Federation).
+Interchange-noder etablerar tillit till varandra genom en federativ modell, där autentisering och auktorisation baseras på gemensamma, signerade metadata. Den federativa modellen kan exempelvis realiseras genom tekniska mekanismer som [MATF (Mutually Authenticating TLS in the context of Federations)](matf_intro.md).
 
 I en sådan federation:
 
