@@ -15,6 +15,7 @@ Fokus ligger på hur registrering, policy och administration kan organiseras i e
 3. [Roller och rättigheter](roles_in_cits.md)
 4. [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
 5. [Ett möjligt svenskt alternativ](secits_domain.md)
+6. [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
 
 ### Extramaterial
 * [EU-CCMS-protokollen](euccms_protocols.md)
