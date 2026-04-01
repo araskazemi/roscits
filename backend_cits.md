@@ -27,7 +27,7 @@ Ett backend-system behöver därför ha två separata identiteter:
 1. **C-ITS-identitet** för att skapa och verifiera signerade meddelanden enligt EU-CCMS.
 2. **Transport-identitet** för att kunna autentisera sig mot en Interchange-nod och utbyta meddelanden på ett säkert sätt.
 
-Detta innebär att tillit till meddelandet (autenticitet och integritet) och tillit till vidareförmedlingen av ETSI-meddelanden behöver hanteras som två olika lager.
+Detta innebär att tillit till meddelandet (autenticitet och integritet) och tillit till transporten av ETSI-meddelanden behöver hanteras som två olika lager.
 
 ## Federationens struktur
 I en svensk kontext är det varken realistiskt eller ändamålsenligt att samla all C-ITS-trafik i en gemensam nationell Interchange-nod.
@@ -83,7 +83,7 @@ Informationsutbytet bygger på två separata lager av tillit som hanteras oberoe
 
 :one: **Tillit till meddelandets autenticitet och integritet**
 
-:two: **Tillit till vidareförmedlingen av ETSI-meddelanden**
+:two: **Tillit till transporten av ETSI-meddelanden**
 
 Autenticitet och integritet hos själva ETSI-meddelandet hanteras genom att backend-systemen fungerar som C-ITS-stationer i EU-CCMS och därför kan:
 
@@ -103,14 +103,14 @@ Varje Interchange-nod behöver därför ha en funktion för:
 
 - identifiering av anslutande aktörer och system,
 - godkännande av anslutning,
-- hantering av certifikat för tillit till vidareförmedlingen av ETSI-meddelanden,
+- hantering av certifikat för tillit till transporten av ETSI-meddelanden,
 - tilldelning av rättigheter för publicering och konsumtion,
 - livscykelhantering, inklusive förändringar och borttagning.
 
 Denna funktion motsvarar en lokal registrerings- och onboardingprocess eller en lokal federativ åtkomststyrning inom respektive nod.
 
 ## Tillit mellan Interchange-noder
-Interchange-noder etablerar tillit till varandra genom en federativ modell, där autentisering och auktorisation baseras på gemensam, signerad metadata. Den federativa modellen kan exempelvis realiseras genom tekniska mekanismer som MATF (Metadata for mTLS Federation).
+Interchange-noder etablerar tillit till varandra genom en federativ modell, där autentisering och auktorisation baseras på gemensamma, signerade metadata. Den federativa modellen kan exempelvis realiseras genom tekniska mekanismer som MATF (Metadata for mTLS Federation).
 
 I en sådan federation:
 
