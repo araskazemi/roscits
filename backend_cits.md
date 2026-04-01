@@ -25,7 +25,7 @@ I denna modell fungerar backend-systemen som centrala C-ITS-stationer och använ
 Ett backend-system behöver därför ha två separata identiteter:
 
 1. **C-ITS-identitet** för att skapa och verifiera signerade meddelanden enligt EU-CCMS.
-2. **Transportidentitet** för att kunna autentisera sig mot en Interchange-nod och utbyta meddelanden på ett säkert sätt.
+2. **Transport-identitet** för att kunna autentisera sig mot en Interchange-nod och utbyta meddelanden på ett säkert sätt.
 
 Detta innebär att transporttillit och meddelandetillit behöver hanteras som två olika lager.
 
@@ -81,9 +81,9 @@ Vid exempelvis signalprioritering för utryckningsfordon:
 
 Informationsutbytet bygger på två separata lager av tillit som hanteras oberoende av varandra:
 
-:one: Tillit till meddelandets autenticitet och integritet
+:one: **Tillit till meddelandets autenticitet och integritet**
 
-:two: Tillit till vidareförmedlingen av ETSI-meddelanden
+:two: **Tillit till vidareförmedlingen av ETSI-meddelanden**
 
 Autenticitet och integritet hos själva ETSI-meddelandet hanteras genom att backend-systemen fungerar som C-ITS-stationer i EU-CCMS och därför kan:
 
