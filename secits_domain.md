@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# Ett möjligt svenskt alternativ
+# En möjlig svensk implementering av distribuerad C-ITS enligt EU-CCMS
 Inför en svensk implementation av interoperabel C-ITS enligt EU-CCMS uppstår ett antal strategiska frågor kring:
 - Domänägarskap
 - Registration Authority (RA)
