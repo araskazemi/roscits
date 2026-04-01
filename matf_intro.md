@@ -13,7 +13,7 @@ MATF adresserar denna utmaning i miljöer där flera oberoende organisationer ve
 MATF kopplar denna federativa tillitsmodell direkt till API- och backend-trafik. Varje anslutning knyts till en namngiven medlem i federationen, och motparten verifieras som en godkänd deltagare – inte enbart som ett system med ett giltigt certifikat.
 
 ## Vad är MATF?
-Mutually Authenticating TLS in the context of Federations (MATF) är en mekanism för att kombinera kryptografisk autentisering med federativ tillitshantering i system-till-system-kommunikation mellan organisationer.
+<mark>Mutually Authenticating TLS in the context of Federations (MATF)</mark> är en mekanism för att kombinera kryptografisk autentisering med federativ tillitshantering i system-till-system-kommunikation mellan organisationer.
 
 Den är utformad för miljöer där flera oberoende aktörer interagerar via API:er och backend-system. I sådana sammanhang måste det vara möjligt att avgöra vilka servrar och klienter som tillhör vilka organisationer – och vilka av dessa som faktiskt är auktoriserade att delta i ett givet tillitssammanhang.
 
