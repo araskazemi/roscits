@@ -49,6 +49,9 @@ Med MATF definieras betrodda organisationer och deras tillhörande nycklar i sig
 
 Detta förenklar onboarding av nya medlemmar, nyckelrotation och styrning av åtkomst. Organisationer kan samarbeta mer effektivt och säkert, med minskat beroende av manuella undantag för certifikat och felsökning av tillitskedjor.
 
+## Referenser
+[RFC 9932 Mutually Authenticating TLS in the Context of Federations](https://www.rfc-editor.org/rfc/rfc9932.html)
+
 <p>&nbsp;</p>
 
 ----
