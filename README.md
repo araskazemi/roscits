@@ -13,7 +13,7 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
 ### Bakgrund
 1. [Översikt](bakgrund.md)
 2. [C-ITS översikt](cits.md)
-3. [EU-CCMS – det gemensamma europeiska ramverket för certifikathantering inom C-ITS.](euccms.md)
+3. [Det europeiska ramverket för C-ITS.](euccms.md)
 4. [Roller och rättigheter](roles_in_cits.md)
 5. [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
 6. [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
