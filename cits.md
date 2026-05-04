@@ -1,83 +1,50 @@
 <a name="top"></a>
 
-# Vad är C-ITS – och varför spelar det roll?
-Cooperative Intelligent Transport Systems (**C-ITS**) är ett samlingsbegrepp för teknologier och standardiserade kommunikationslösningar som möjliggör 
-<mark>informationsutbyte:
-* mellan fordon (**V2V**)</mark>, t ex “jag bromsar hårt nu!”.
-* <mark>mellan fordon och infrastruktur (**V2I**)</mark>, t ex  “hjulspinn/ABS-aktivering – varning för halt väglag!” och “tillfällig hastighetsbegränsning”.
-* <mark>mellan fordon och allt runtomkring, andra trafikanter, trafikljus, vägskyltar, driftledningar eller centrala system (**V2X**)</mark>. 
+# C-ITS översikt
+Cooperative Intelligent Transport Systems (**C-ITS**) avser system där fordon, infrastruktur och andra trafikanter utbyter information i realtid för att förbättra trafiksäkerhet, framkomlighet och effektivitet i transportsystemet. Till skillnad från traditionella ITS-lösningar, som i huvudsak bygger på centraliserad informationsspridning, möjliggör C-ITS ett distribuerat informationsutbyte där flera aktörer både producerar och konsumerar data.
 
-Syftet är att skapa ett mer koordinerat och situationsmedvetet transportsystem där aktörer kan dela realtidsinformation om exempelvis olyckor, 
-vägarbeten, väderförhållanden eller plötsliga trafikstörningar.
+C-ITS är ett samlingsbegrepp för teknologier och standardiserade kommunikationslösningar som stödjer olika former av kommunikation, inklusive mellan fordon (V2V), mellan fordon och infrastruktur (V2I), samt mellan fordon och omgivande system och trafikanter (V2X), exempelvis via backend-system och tjänsteplattformar (V2N). I praktiken innebär detta att information kan delas om exempelvis hårda inbromsningar, halt väglag, tillfälliga hastighetsbegränsningar, olyckor, vägarbeten eller andra trafikstörningar.
 
-Genom att möjliggöra lågfördröjd och tillförlitlig kommunikation bidrar C-ITS till ökad trafiksäkerhet, förbättrad framkomlighet och minskad 
-miljöpåverkan. Tekniken utgör även en central förutsättning för utvecklingen av högre nivåer av fordonsautomation. Samtidigt ställer C-ITS 
-höga krav på interoperabilitet, informationssäkerhet, integritetsskydd och gemensamma styrningsmodeller, särskilt i en gränsöverskridande 
-europeisk kontext. Därför är robusta och harmoniserade ramverk avgörande för en säker och effektiv implementering.
+Syftet är att skapa ett mer koordinerat och situationsmedvetet transportsystem där aktörer kan agera på aktuell och tillförlitlig information. Genom lågfördröjd kommunikation kan C-ITS bidra till ökad trafiksäkerhet, förbättrad framkomlighet och minskad miljöpåverkan. Tekniken utgör även en viktig möjliggörare för utvecklingen av högre nivåer av fordonsautomation.
 
-EU koordinerar implementering av C-ITS via <mark>C-Roads</mark>, som är en europeisk samarbetsplattform för medlemsstater och väghållningsmyndigheter. 
-Initiativet fokuserar på interoperabilitet, gemensamma tekniska specifikationer och praktisk utrullning av kooperativa tjänster, för att säkerställa att 
-C-ITS-lösningar fungerar sömlöst och likadant över nationsgränser.
+## Informationsutbyte baserat på ETSI-meddelanden
+Inom C-ITS utbyts säkerhets- och trafikrelaterad information genom standardiserade meddelanden som definieras inom ETSI och används i operativa C-ITS-tjänster. Kommunikation kan ske både via direktkommunikation (meddelanden ofta sänds som broadcast inom räckvidd) och via mobilnät (distribution vanligtvis via backend-system med unicast eller multicast). Det finns alltså två huvudvägar, vilka också kan kombineras:
+* <mark>ITS-G5/PC5</mark>: dedikerad direktkommunikation för korta avstånd.
+* <mark>LTE/5G</mark>: nätverksbaserad kommunikation via mobilnät.
+I Europa förespråkas hybridkommunikation (ITS-G5 och mobilnät) för att täcka fler scenarier.
 
-## Informationsutbytet
-### Vad skickas?
-Inom C-ITS utbyts standardiserade säkerhets- och trafikrelaterade meddelanden. Kommunikationen sker i huvudsak genom broadcast (en-till-alla inom räckvidd). 
-Informationen omfattar exempelvis position, hastighet, riktning, inbromsningar, vägarbeten, olyckor, väderförhållanden och andra potentiella faror. 
-Meddelandena är tidskritiska och syftar till att öka situationsmedvetenheten i realtid, vilket bidrar till förbättrad trafiksäkerhet, effektivare 
-trafikflöden och minskad miljöpåverkan.
+Den tekniska grunden för C-ITS är i stor utsträckning etablerad, och fokus har i ökande grad förskjutits från teknikutveckling till frågor om implementering, interoperabilitet och långsiktig drift.
 
-C-ITS inbegriper olika meddelandetyper. De viktigaste är:
-* <mark>CAM (Cooperative Awareness Message)</mark>: “Här är jag!” – korta pulsar som håller andra uppdaterade om enhetens närvaro och status (position, hastighet, körriktning).
-* <mark>DENM (Decentralized Environmental Notification)</mark>: händelsebaserade varningar – t ex “hal is”, “stillastående fordon”, “olycka”.
-* <mark>IVIM (Infrastructure-to-Vehicle Information Message)</mark>: ger information från infrastruktur, t ex vägmärken eller vägstatus.
-* <mark>SPATEM (Signal Phase and Timing Extended Message)</mark>: beskriver signalstatus (trafikljus) och tidsplan.
-* <mark>MAPEM (MAP Extended Message)</mark>: tillhandahåller geometri för korsningar och vägnät.
-* <mark>SREM (Signal Request Message)</mark>: begär prioritet i trafiksignaler (t ex för utryckningsfordon eller kollektivtrafik).
-* <mark>SSEM (Signal Status Message)</mark>: svar på SREM, anger status på begäran.
+Meddelandena innehåller information om exempelvis position, hastighet, körriktning och inbromsningar, men även händelsebaserad information såsom vägarbeten, olyckor, väderförhållanden och andra potentiella faror. Dessa är tidskritiska och syftar till att öka situationsmedvetenheten i realtid, vilket bidrar till förbättrad trafiksäkerhet, effektivare trafikflöden och minskad miljöpåverkan.
 
-Dessa meddelanden är standardiserade i ETSI och används i dagliga C-ITS-tjänster. 
+C-ITS omfattar flera typer av standardiserade meddelanden, där de mest centrala är:
+* <mark>CAM (Cooperative Awareness Message)</mark>: kontinuerliga statusmeddelanden som informerar om en enhets närvaro och dynamiska tillstånd, såsom position, hastighet och körriktning.
+* <mark>DENM (Decentralized Environmental Notification)</mark>: händelsebaserade varningsmeddelanden, exempelvis vid halt väglag, stillastående fordon eller olyckor.
+* <mark>IVIM (Infrastructure-to-Vehicle Information Message)</mark>: informationsmeddelanden från infrastruktur, exempelvis vägmärken eller vägstatus.
+* <mark>SPATEM (Signal Phase and Timing Extended Message)</mark>: beskriver trafiksignalers aktuella status och tidsförlopp.
+* <mark>MAPEM (MAP Extended Message)</mark>: tillhandahåller geometrisk information om vägnät och korsningar.
+* <mark>SREM (Signal Request Message)</mark>: används för att begära prioritet i trafiksignaler, exempelvis för utryckningsfordon eller kollektivtrafik.
+* <mark>SSEM (Signal Status Message)</mark>: svar på SREM som anger status för begäran.
 
-### Hur skickas?
-Det finns två huvudvägar, vilka också kan kombineras:
-* <mark>ITS-G5 (802.11p)</mark>: dedikerad kortdistanskommunikation, ofta 5.9 GHz, direkt fordon-till-fordon.
-* <mark>IP-baserad kommunikation (4G/5G)</mark>: via mobilnät och/eller direkt sidelänk.
+## Säkerhetsarkitektur
+Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet.
 
-Alla C-ITS-meddelanden signeras kryptografiskt enligt ETSI TS 103 097 för att säkerställa integritet och autenticitet.
+Säkerhetsarkitekturen är uppbyggd kring två kompletterande tillitslager som tillsammans skyddar både meddelanden och kommunikationskanaler:
+1. <mark>Meddelandelager</mark> (PKI, t ex EU-CCMS): Säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras.
+2. <mark>Transportlager</mark> (Federation, t ex mTLS): Säkerställer att kommunikation endast etableras mellan betrodda organisationer och noder.
 
-I Europa förespråkas hybridkommunikation (både ITS-G5 och mobilnät) för att täcka fler scenarier. Utöver att meddelanden måste vara äkta och orörda, 
-kräver [det europeiska systemet](euccms.md) att C-ITS inte får avslöja vem föraren är. Europa använder därför ett gemensamt C-ITS-PKI med kortlivade 
-pseudonyma certifikat. Själva formatet och säkerhetshuvudet definieras i ETSI TS 103 097. 
+Kopplingen mellan dessa lager hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder.
 
-## Exempel på användningsfall
-Några exempel på anvädningsfall:
-* Halka runt kröken: En bil aktiverar antispinn → skickar DENM “halt väglag” → bilar bakom sänker farten innan de passerar isfläcken.
-* Stillastående fordon på motorvägen: Bilen som stannat sänder varning → ankommande fordon får tidig heads-up i instrumentklustret. 
-* Vägarbete: RSU skickar varning + rekommenderad hastighet → mjukare flöde och färre “sista-sekunden-inbromsningar”. 
+För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](eussms.md) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
-## Utmaningar
-### Införandegrad: nyttan växer när många fordon och vägar är uppkopplade.
-C-ITS bygger på nyttan av att “alla pratar samma språk” – men värdet blir stort först när många bilar och vägar är med.
+### ITS-direktivet 
+EU:s ITS-direktiv (2010/40/EU), med senare uppdateringar, utgör den övergripande regulatoriska ramen för införandet av intelligenta transportsystem inom unionen. Direktivet syftar till att säkerställa interoperabilitet, standardisering och effektivt införande av ITS-tjänster över nationsgränser. 
 
-Hönan-och-ägget-problemet: Fordonstillverkare tvekar att lägga in tekniken om infrastrukturen är begränsad, och väghållare tvekar att investera i utrustning om få fordon kan använda det.
+I den senaste uppdateringen har särskilt fokus lagts på samverkande, uppkopplade och automatiserade transportsystem, där C-ITS utgör en central komponent. Direktivet ställer krav på medlemsstater att möjliggöra tillgång till relevanta data, säkerställa interoperabla tjänster och stödja utvecklingen av säker kommunikation mellan aktörer i transportsystemet. 
 
-Exempel: Om endast 8 % av fordon och RSU:er kan varna för halka, då ser 92 % aldrig varningen → liten samhällsnytta. Men vid 30–40 % penetration börjar effekten bli märkbar. Först då blir C-ITS riktigt användbart.
+För C-ITS innebär detta att nationella implementationer behöver anpassas till gemensamma europeiska specifikationer, både avseende meddelandeformat, kommunikation och säkerhet. Direktivet driver därmed behovet av harmoniserade lösningar och samordning mellan medlemsstater. 
 
-### Interoperabilitet & tillit
-När fordon rör sig mellan städer och länder måste budskapen i meddelandena tolkas på samma sätt. ETSI och CEN har format och regler, men små skillnader i implementation kan skapa problem. Uppkomst av olika dialekter kan medföra at alla inte förstår alltid allt.
-
-Meddelanden måste vara signerade så att mottagaren kan lita på att de är äkta. Det innebär att certifikat som är utfärdat i ett land måste accepteras också av alla andra länder. Om tilliten brister eller om länder börjar införa egna alternativa trust modeller kan man få “tillitsluckor” – t ex en tysk bil som inte litar på en svensk väginfrastruktur.
-
-### Styrning och konflikter
-Teknikval, certifikathantering och integritetspolicy måste hålla över tid. Det finns dock flera risker:
-* EU rekommenderar “hybrid”, dvs att man kombinerar kortdistans (ITS-G5) och mobilnät (LTE/5G). Då täcker man både direkta säkerhetskritiska varningar (annat fordon bromsar framför dig) och tjänster som kräver nät (t ex trafikinformation från en tjänst i molnet). Industrin har delade åsikter: Vissa förespråkar C-V2X (5G), andra ser värde i ITS-G5. Risken: parallella ekosystem som inte kan prata fullt ut med varandra.
-* Det pågår diskussioner om vilket radiospektrum C-ITS ska få, särskilt eftersom mobilindustrin vill ha samma frekvenser för 5G. Det kan skapa regulatoriska konflikter.
-* Vägar, fordon, mobilnät och myndigheter ägs av olika aktörer med olika incitament. Det krävs stark samordning.
-* Fordon har en livslängd på ca 15–20 år. Infrastruktur ännu längre. Beslut som fattas nu måste hålla i decennier, annars riskerar man “tekniska återvändsgränder”.
-* Ekonomisk utmaning: vem betalar? Fordonstillverkare, staten, operatörer, eller en mix? – olika i varje land!
-
-Flera EU-länder har initialt försökt att följa rekommendationerna för implementering av EU-CCMS inom ramen för C-Roads, men har kommit till slutsatsen att komplexiteten och kostnaderna överstiger den kortsiktiga nyttan. Dessa länder har istället valt att realisera C-ITS/ETSI-baserade applikationer genom avtalsbaserade modeller och Interchange-noder. Detta möjliggör å ena sidan tidig nyttorealisering och återanvändning av befintliga system (t ex trafikljus). Å andra sidan riskerar sådana lösningar att leda till inlåsning och parallella ekosystem, vilket försvårar en fullständig implementering av EU-CCMS. 
-
-En sådan utveckling kan påverka interoperabilitet, fordonsindustrin och möjligheten att etablera en sammanhängande europeisk test- och innovationsmiljö. Om en liknande inriktning skulle tillämpas i Sverige kan det påverka Sveriges förmåga att fungera som testbädd negativt, eftersom en fullt utbyggd EU-CCMS-infrastruktur då skulle saknas på svenska vägar.
+:arrow_right: [Nästa](euccms.md)
 
 <p>&nbsp;</p>
 
