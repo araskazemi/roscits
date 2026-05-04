@@ -213,10 +213,10 @@ Interchange-noder ansvarar för att vidareföremedla ETSI-meddelanden. Validerin
 Interchange kan beskrivas som en eller flera noder som ingår i en federation. Tillit etableras utanför EU-CCMS PKI genom en kombination av avtalsbaserade överenskommelser, tekniska säkerhetsmekanismer och konfiguration.
 
 En Interchange-nod:
-- tar emot ett C-ITS-meddelande via IP
-- vid behov verifierar signaturen (ETSI TS 103 097)
-- kontrollerar relevans
-- distribuerar vidare meddelandet till en annan nod via IP 
+- tar emot ett C-ITS-meddelande via IP,
+- vid behov verifierar signaturen (ETSI TS 103 097),
+- kontrollerar relevans (t ex position, meddelandetyp),
+- distribuerar vidare meddelandet till en annan nod via IP. 
 
 Interchange-noder kan även användas för att utbyta meddelanden mellan noder i olika C-ITS-domäner, till exempel inom samarbeten som NordicWay. Detta möjliggör interoperabilitet mellan nationella eller regionala implementationer utan att dessa behöver dela samma tekniska eller organisatoriska kontrollstruktur, men ställer samtidigt krav på tydliga överenskommelser kring tillit, ansvar och informationsutbyte.
 
