@@ -37,13 +37,6 @@ Kopplingen mellan dessa lager hanteras via Registration Authorities (RA), som bi
 
 För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](eussms.md) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
-### ITS-direktivet 
-EU:s ITS-direktiv (2010/40/EU), med senare uppdateringar, utgör den övergripande regulatoriska ramen för införandet av intelligenta transportsystem inom unionen. Direktivet syftar till att säkerställa interoperabilitet, standardisering och effektivt införande av ITS-tjänster över nationsgränser. 
-
-I den senaste uppdateringen har särskilt fokus lagts på samverkande, uppkopplade och automatiserade transportsystem, där C-ITS utgör en central komponent. Direktivet ställer krav på medlemsstater att möjliggöra tillgång till relevanta data, säkerställa interoperabla tjänster och stödja utvecklingen av säker kommunikation mellan aktörer i transportsystemet. 
-
-För C-ITS innebär detta att nationella implementationer behöver anpassas till gemensamma europeiska specifikationer, både avseende meddelandeformat, kommunikation och säkerhet. Direktivet driver därmed behovet av harmoniserade lösningar och samordning mellan medlemsstater. 
-
 :arrow_right: [Nästa](euccms.md)
 
 <p>&nbsp;</p>
