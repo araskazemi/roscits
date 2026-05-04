@@ -1,8 +1,16 @@
 <a name="top"></a>
 
 # Det europeiska ramverket för C-ITS
+EU:s ekosystem för C-ITS utgör en kombination av policy, standardisering och teknisk infrastruktur som syftar till att möjliggöra säker och interoperabel kommunikation mellan aktörer inom transportsektorn. Det är utformat för att stödja ett brett spektrum av användningsfall, från trafiksäkerhetsrelaterade varningar till mer avancerade tjänster för trafikstyrning och prioritering.
+
+En central utgångspunkt i EU:s arbete med C-ITS är behovet av gränsöverskridande interoperabilitet. Fordon och infrastruktur ska kunna kommunicera och förstå varandra oavsett vilket medlemsland de befinner sig i. Detta ställer krav på harmoniserade regelverk, gemensamma tekniska specifikationer och en samordnad tillitsinfrastruktur.
+
+På policynivå har EU etablerat ramar genom ITS-direktivet (2010/40/EU) och efterföljande delegerade akter. Dessa kompletteras av riktlinjer och samarbetsinitiativ, såsom C-ITS Platform, där medlemsstater, industri och andra intressenter gemensamt utvecklar principer för införande.
+
+Standardisering utgör en bärande del av ekosystemet. Organisationer som ETSI och CEN utvecklar tekniska standarder som specificerar kommunikationsprotokoll, meddelandeformat och säkerhetsmekanismer. En särskilt viktig komponent är [EU-CCMS](euccms.md) som utformar en gemensam Public Key Infrastructure (PKI). Denna säkerställer att meddelanden kan verifieras av mottagaren samtidigt som avsändarens integritet skyddas.
+
 ## ITS-direktivet 
-EU:s ITS-direktiv (2010/40/EU), med senare uppdateringar, utgör den övergripande regulatoriska ramen för införandet av intelligenta transportsystem inom unionen. Direktivet syftar till att säkerställa interoperabilitet, standardisering och effektivt införande av ITS-tjänster över nationsgränser. 
+EU:s ITS-direktiv (2010/40/EU) och efterföljande delegerade akter utgör den övergripande regulatoriska ramen för införandet av intelligenta transportsystem inom unionen. Direktivet syftar till att säkerställa interoperabilitet, standardisering och effektivt införande av ITS-tjänster över nationsgränser. 
 
 I den senaste uppdateringen har särskilt fokus lagts på samverkande, uppkopplade och automatiserade transportsystem, där C-ITS utgör en central komponent. Direktivet ställer krav på medlemsstater att möjliggöra tillgång till relevanta data, säkerställa interoperabla tjänster och stödja utvecklingen av säker kommunikation mellan aktörer i transportsystemet. 
 
