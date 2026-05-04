@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 # Roller och rättigheter i C-ITS
-Roller och rättigheter i C-ITS definieras men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
+Roller och rättigheter i C-ITS definieras, men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
 
 :one: Tekniska roller i PKI (EU-CCMS)
 
@@ -16,34 +16,33 @@ Dessa roller är infrastrukturella roller och inte trafikroller.
 
 ## Meddelandetyper och funktionella roller
 I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för olika use cases (som i C-ITS kallas *applikationer*), till exempel:
-- Emergency Vehicle Alert (EVA)
-- Road Works Warning (RWW)
-- Public Transport Priority
-- Special Transport
-- Dangerous Goods
+- Emergency and Service Vehicle Notifications – Emergency or Prioritised Vehicle Approaching (ESVN-EPVA)
+- Emergency and Service Vehicle Notifications – Slow Moving Maintenance Vehicle (ESVN-SMMV)
+- Emergency Vehicle Priority (SI-EVP)
+- Traffic Light Prioritisation (SI-TLP)
 
 > [!IMPORTANT]
-> Exempelvis innebär EVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
+> Exempelvis innebär ESVN-EPVA att systemet kan signalera att ett fordon är ett utryckningsfordon. Men det är inte en fri roll som man själv deklarerar, snarare **en egenskap som är kopplad till auktoriserade certifikat**.
 
 ## Applikationsroller
 En applikation i C-ITS-världen (use case) definieras av:
 - Ett syfte (t ex: “Emergency Vehicle Approaching”)
-- Ett meddelandetyp (t ex: DENM)
-- Specifika fältvärden (t ex: causeCode = emergencyVehicle)
+- En meddelandetyp (t ex: DENM)
+- Specifika fältvärden (t ex: causeCode = emergencyVehicleApproaching)
 - Säkerhetsrättigheter (ITS-AID + SSP)
 
 I certifikatet (AT) finns ett fält som heter `ITS-AID` (ITS Application Identifier). Det anger:
 - vilka applikationer stationen får använda, och
 - vilka [meddelandetyper](cits.md#vad-skickas) den får sända.
 
-Det är alltså inte meddelandet i sig, utan rätten att använda applikationen som är säkerhetsstyrd.
+Det är alltså inte meddelandet i sig, utan rätten att signera (=använda applikationen) som är säkerhetsstyrd.
 
-SSP (Service Specific Permissions) som också ligger i certifikattet (AT) är den mekanism som gör att två stationer kan ha rätt att sända samma meddelandetyp
+SSP (Service Specific Permissions) som också ligger i certifikatet (AT) är den mekanism som gör att två stationer kan ha rätt att sända samma meddelandetyp
 men med olika behörighetsnivåer.
 
 > [!IMPORTANT]
 > ITS-AID	anger vilken applikation som är tillåten. <br />
-> SSP	anger vilka roller/underfunktioner inom applikationen som är tillåtna.
+> SSP	anger vilka roller/underfunktioner inom applikationen som är tillåtna. Mottagande station ansvarar för att tolka SSP och avgöra om ett mottaget meddelande är legitimt i sin kontext.
 
 Strukturen förenklat:
 ```
@@ -54,7 +53,8 @@ Authorization Ticket
  └─ Signature
 ```
 
-En C-ITS-station (t ex ett blåljusfordon) får ett Enrollment Certificate (EC) samt ett eller flera Authorization Tickets (AT).
+En C-ITS-station (t ex ett blåljusfordon) får ett Enrollment Certificate (EC) samt ett eller flera Authorization Tickets (AT). En station kan även ha flera AT samtidigt, exempelvis för olika applikationer (ITS-AID).
+
 Certifikatet AT innehåller:
 - Applikationsrättigheter
 - Tillåtna meddelandetyper
@@ -69,7 +69,7 @@ Exempelvis ett blåljusfordon får AT som innehåller:
 
 Det innebär att fordonet får sända: 
 - CAM
-- DENM med `causeCode = emergencyVehicleApproaching` (EVA-use case)
+- DENM med `Code = emergencyVehicleApproaching` (ESVN-EPVA use case)
 - SREM och begära prioritet i signalanläggning 
 
 Medan ett vanligt fordon får AT som innehåller:
@@ -82,6 +82,9 @@ Det innebär att fordonet får sända:
 - vissa DENM (t ex `stationary vehicle`, `slippery road`)
 
 Certifikat (AT) i ett vanligt fordon saknar SSP för `emergencyVehicleRole` samt saknar ITS-AID för SREM (och kan därmed inte sända SREM alls).
+
+> [!NOTE]
+> Validering av rättigheter sker helt lokalt hos mottagande station baserat på innehåll i certifikatet (AT).
 
 ## Styrning av roller och rättigheter
 Styrning av roller och rättigheter hanteras i tre lager:
@@ -107,6 +110,7 @@ Medlemsstaten styr den operativa maktstrukturen inom sin C-ITS-domän. Detta inn
 - Fastställer operativa prioriteringsregler
 - Avgör acceptans av utländska rättigheter inom nationell infrastruktur
 
+För interoperabilitet mellan medlemsstater krävs harmonisering av ITS-AID och SSP, så att rättigheter kan tolkas korrekt även över nationsgränser. Denna harmonisering sker genom gemensamma profiler och specifikationer som tas fram och valideras inom ramen för C-Roads.
 
 <p>&nbsp;</p>
 

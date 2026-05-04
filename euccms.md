@@ -206,18 +206,19 @@ Domän definieras genom domänägarens styrning över:
 - Incidenthantering
 
 ## Hur hänger Interchange-noder i tillitsmodellen?
-Interchange är inte en PKI-aktör, snarare en broker/federationstjänst som transporterar IP-baserade meddelanden.
-En interchange-nod måste dock validera ETSI TS 103 097-signaturer samt följa Security Policy.
+Interchange är inte en PKI-aktör, utan fungerar snarare som en broker eller federationstjänst för transport av IP-baserade meddelanden.
 
-Interchange kan beskrivas som en nod som drivs av en domän. Den ingår i ett nätverk eller en federation av noder och kan överföra C-ITS-meddelanden mellan olika domäner. 
+Interchange-noder ansvarar för att vidareföremedla ETSI-meddelanden. Validering av signaturer enligt ETSI TS 103 097 är valfri och kan tillämpas vid behov. Signering och verifiering av meddelandens autenticitet och integritet är krav som behöver hanteras av den avsändande respektive mottagande stationen. I praktiken förutsätter många use case att meddelanden är signerade i enlighet med gällande säkerhetsramverk (EU CCMS Security Policy).
 
-En interchange-nod:
-- tar emot ett C-ITS-meddelande via IP
-- verifierar signaturen (ETSI TS 103 097)
-- kontrollerar relevans
-- distribuerar vidare till nod i annan domän
+Interchange kan beskrivas som en eller flera noder som ingår i en federation. Tillit etableras utanför EU-CCMS PKI genom en kombination av avtalsbaserade överenskommelser, tekniska säkerhetsmekanismer och konfiguration.
 
-Interchange-noder litar inte på varandra via EU-CCMS PKI. Deras tillit etableras genom federation, avtal och konfiguration.
+En Interchange-nod:
+- tar emot ett C-ITS-meddelande via IP,
+- vid behov verifierar signaturen (ETSI TS 103 097),
+- kontrollerar relevans (t ex position, meddelandetyp),
+- distribuerar vidare meddelandet till en annan nod via IP. 
+
+Interchange-noder kan även användas för att utbyta meddelanden mellan noder i olika C-ITS-domäner, till exempel inom samarbeten som NordicWay. Detta möjliggör interoperabilitet mellan nationella eller regionala implementationer utan att dessa behöver dela samma tekniska eller organisatoriska kontrollstruktur, men ställer samtidigt krav på tydliga överenskommelser kring tillit, ansvar och informationsutbyte.
 
 <p>&nbsp;</p>
 
