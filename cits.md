@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 # C-ITS översikt
-Cooperative Intelligent Transport Systems (**C-ITS**) avser system där fordon, infrastruktur och andra trafikanter utbyter information i realtid för att förbättra trafiksäkerhet, framkomlighet och effektivitet i transportsystemet. Till skillnad från traditionella ITS-lösningar, som i huvudsak bygger på centraliserad informationsspridning, möjliggör C-ITS ett distribuerat informationsutbyte där flera aktörer både producerar och konsumerar data.
+<mark>Cooperative Intelligent Transport Systems (C-ITS)</mark> avser system där fordon, infrastruktur och andra trafikanter utbyter information i realtid för att förbättra trafiksäkerhet, framkomlighet och effektivitet i transportsystemet. Till skillnad från traditionella ITS-lösningar, som i huvudsak bygger på centraliserad informationsspridning, möjliggör C-ITS ett distribuerat informationsutbyte där flera aktörer både producerar och konsumerar data.
 
 C-ITS är ett samlingsbegrepp för teknologier och standardiserade kommunikationslösningar som stödjer olika former av kommunikation, inklusive mellan fordon (V2V), mellan fordon och infrastruktur (V2I), samt mellan fordon och omgivande system och trafikanter (V2X), exempelvis via backend-system och tjänsteplattformar (V2N). I praktiken innebär detta att information kan delas om exempelvis hårda inbromsningar, halt väglag, tillfälliga hastighetsbegränsningar, olyckor, vägarbeten eller andra trafikstörningar.
 
