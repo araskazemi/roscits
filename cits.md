@@ -7,6 +7,25 @@ C-ITS är ett samlingsbegrepp för teknologier och standardiserade kommunikation
 
 Syftet är att skapa ett mer koordinerat och situationsmedvetet transportsystem där aktörer kan agera på aktuell och tillförlitlig information. Genom lågfördröjd kommunikation kan C-ITS bidra till ökad trafiksäkerhet, förbättrad framkomlighet och minskad miljöpåverkan. Tekniken utgör även en viktig möjliggörare för utvecklingen av högre nivåer av fordonsautomation.
 
+``` 🔥 NYTT! ```
+
+## C-ITS i en global kontext
+C-ITS bör förstås som en global utvecklingsriktning. Olika regioner använder delvis olika begrepp, tekniska profiler och styrningsmodeller, men de adresserar i grunden samma behov: att skapa säkert, skalbart och interoperabelt informationsutbyte mellan transportsystemets aktörer.
+
+På standardiseringssidan bidrar organisationer som ISO och CEN med övergripande ITS-standardisering och arkitekturramverk, medan ETSI har en särskilt viktig roll i Europa genom standarder för meddelanden, kommunikationsprofiler och säkerhetsmekanismer. 
+
+I USA används ofta begreppet Connected Vehicles eller V2X snarare än C-ITS. Där har utvecklingen länge drivits genom pilotprogram och initiativ från U.S. Department of Transportation, bland annat med fokus på V2V- och V2I-tillämpningar, trafiksäkerhet och säkerhetsarkitekturen SCMS, Security Credential Management System. SCMS bygger, liksom EU:s modell, på PKI-principer för att möjliggöra betrodd kommunikation mellan aktörer och enheter.
+
+Kina har i sin tur i hög grad fokuserat på C-V2X och en mer integrerad modell där fordon, väg och moln kopplas samman i ett gemensamt ekosystem. Utvecklingen beskrivs ofta som “vehicle-road-cloud integration” och är nära kopplad till ambitioner kring intelligenta uppkopplade fordon och avancerad automatisering.
+
+EU:s ekosystem för C-ITS utgör en kombination av policy, standardisering och teknisk infrastruktur som syftar till att möjliggöra säker och interoperabel kommunikation mellan aktörer inom transportsektorn. Det är utformat för att stödja ett brett spektrum av användningsfall, från trafiksäkerhetsrelaterade varningar till mer avancerade tjänster för trafikstyrning och prioritering.
+
+En central utgångspunkt i EU:s arbete med C-ITS är behovet av gränsöverskridande interoperabilitet. Fordon och infrastruktur ska kunna kommunicera och förstå varandra oavsett vilket medlemsland de befinner sig i. Detta ställer krav på harmoniserade regelverk, gemensamma tekniska specifikationer och en samordnad tillitsinfrastruktur.
+
+På policynivå har EU etablerat ramar genom ITS-direktivet (2010/40/EU) och efterföljande delegerade akter. Dessa kompletteras av riktlinjer och samarbetsinitiativ, såsom C-ITS Platform, där medlemsstater, industri och andra intressenter gemensamt utvecklar principer för införande.
+
+Standardisering utgör en bärande del av ekosystemet. Organisationer som ETSI och CEN utvecklar tekniska standarder som specificerar kommunikationsprotokoll, meddelandeformat och säkerhetsmekanismer. En särskilt viktig komponent är [EU-CCMS](euccms.md) som utformar en gemensam Public Key Infrastructure (PKI). Denna säkerställer att meddelanden kan verifieras av mottagaren samtidigt som avsändarens integritet skyddas.
+
 ## Informationsutbyte baserat på ETSI-meddelanden
 Inom C-ITS utbyts säkerhets- och trafikrelaterad information genom standardiserade meddelanden som definieras inom ETSI och används i operativa C-ITS-tjänster. Kommunikation kan ske både via direktkommunikation (meddelanden ofta sänds som broadcast inom räckvidd) och via mobilnät (distribution vanligtvis via backend-system med unicast eller multicast). Det finns alltså två huvudvägar, vilka också kan kombineras:
 * <mark>ITS-G5/PC5</mark>: dedikerad direktkommunikation för korta avstånd.
