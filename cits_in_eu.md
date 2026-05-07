@@ -7,7 +7,7 @@ En central utgångspunkt i EU:s arbete med C-ITS är behovet av gränsöverskrid
 
 På policynivå har EU etablerat ramar genom ITS-direktivet (2010/40/EU) och efterföljande delegerade akter. Dessa kompletteras av riktlinjer och samarbetsinitiativ, såsom C-ITS Platform, där medlemsstater, industri och andra intressenter gemensamt utvecklar principer för införande.
 
-Standardisering utgör en bärande del av ekosystemet. Organisationer som ETSI och CEN utvecklar tekniska standarder som specificerar kommunikationsprotokoll, meddelandeformat och säkerhetsmekanismer. En särskilt viktig komponent är EU-CCMS som utformar en gemensam Public Key Infrastructure (PKI). Denna säkerställer att meddelanden kan verifieras av mottagaren samtidigt som avsändarens integritet skyddas.
+Standardisering utgör en bärande del av ekosystemet. Organisationer som ETSI och CEN utvecklar tekniska standarder som specificerar kommunikationsprotokoll, meddelandeformat och säkerhetsmekanismer. En särskilt viktig komponent är [EU-CCMS](euccms.md) som utformar en gemensam Public Key Infrastructure (PKI). Denna säkerställer att meddelanden kan verifieras av mottagaren samtidigt som avsändarens integritet skyddas.
 
 ## ITS-direktivet 
 EU:s ITS-direktiv (2010/40/EU) och efterföljande delegerade akter utgör den övergripande regulatoriska ramen för införandet av intelligenta transportsystem inom unionen. Direktivet syftar till att säkerställa interoperabilitet, standardisering och effektivt införande av ITS-tjänster över nationsgränser. 
