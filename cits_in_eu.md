@@ -22,7 +22,7 @@ European Union Common Certificate Management System (EU-CCMS) är ett gemensamt 
 EU CCMS är en förutsättning för interoperabilitet mellan länder och aktörer inom C-ITS, men innebär samtidigt betydande krav på både teknisk implementation och organisatorisk struktur. Varje land ansvarar för organisering av registrering, policyer och administration av de aktörer och stationer som ansluts till infrastrukturen.
 
 ### Tillit och säkerhet
-Tillit i C-ITS baseras på validering av certifikatkedjor mot en uppsättning trust anchors. 
+Tillit i EU-CCMS baseras på validering av certifikatkedjor mot en uppsättning trust anchors. 
 Dessa trust anchors utgörs av Root CA-certifikat som distribueras via <mark>European C-ITS Trust List (ECTL)</mark>.
 
 En station (till exempel ett fordon eller en vägkantsutrustning) validerar mottagna certifikat genom att kontrollera att:
@@ -40,7 +40,7 @@ Tillitskedjan inkluderar flera roller:
 
 C-ITS-enheter använder EC för identifiering gentemot tillitsinfrastrukturen och AT för att signera och verifiera C-ITS-meddelanden.
 
-### Vad som utmärker C-ITS jämfört med klassisk PKI
+### Vad som utmärker EU-CCMS jämfört med klassisk PKI
 #### Pseudonymitet och integritetsskydd
 Till skillnad från klassisk PKI, där identiteten ofta är knuten till certifikatet, använder C-ITS pseudonyma certifikat (ATs) som byts ofta för att förhindra spårning av fordon. Kopplingen till fordonets verkliga identitet hålls skyddad av EA/AA och exponeras inte i kommunikationen.
 
