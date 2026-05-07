@@ -26,8 +26,27 @@ På policynivå har EU etablerat ramar genom ITS-direktivet (2010/40/EU) och eft
 
 Standardisering utgör en bärande del av ekosystemet. Organisationer som ETSI och CEN utvecklar tekniska standarder som specificerar kommunikationsprotokoll, meddelandeformat och säkerhetsmekanismer. En särskilt viktig komponent är [EU-CCMS](euccms.md) som utformar en gemensam Public Key Infrastructure (PKI). Denna säkerställer att meddelanden kan verifieras av mottagaren samtidigt som avsändarens integritet skyddas.
 
+``` 🔥 NYTT! ```
+
+## Olika angreppssätt för C-ITS
+Implementationer av C-ITS runtom i världen skiljer sig åt i fråga om policy, teknikval, spektrumreglering, säkerhetsarkitektur och graden av central styrning. Europa har i hög grad fokuserat på interoperabilitet över nationsgränser, gemensamma standarder och en europeisk tillitsinfrastruktur. Detta har lett till ett ekosystem där ETSI-standarder, C-Roads-profiler och EU-CCMS tillsammans utgör viktiga byggstenar för införande och samverkan.
+
+I USA har utvecklingen historiskt varit starkt kopplad till Connected Vehicle-program, pilotinföranden och säkerhetsapplikationer. Även där är tillit en central fråga, men arkitekturen har organiserats kring SCMS snarare än EU-CCMS. Fokus har ofta legat på praktiska pilotmiljöer, såsom stadstrafik, motorvägskorridorer och särskilda säkerhetsanvändningsfall.
+
+Kina skiljer sig genom en mer uttalad inriktning mot C-V2X, cellulär kommunikation och kopplingen mellan fordon, vägkantssystem och molnplattformar. Detta ger en delvis annan tyngdpunkt än den europeiska modellen, där både kortdistanskommunikation och IP-baserad kommunikation kan förekomma inom ramen för ett interoperabelt ekosystem.
+
+Trots dessa skillnader finns betydande likheter. Samtliga regionala implementationer behöver hantera samma grundläggande frågor:
+- vilka aktörer som ska få delta,
+- hur deras behörighet ska verifieras,
+- hur meddelanden ska skyddas mot manipulation,
+- hur systemet ska kunna skalas över organisatoriska och geografiska gränser.
+
+Gemensamt för dessa angrepssätt är behovet av att balansera säkerhet, integritet och spårbarhet. Fordon och infrastruktursystem måste kunna lita på mottagen information, samtidigt som systemen inte bör möjliggöra onödig övervakning eller spårning av enskilda fordon eller trafikanter.
+
+En viktig slutsats är därför att regionala skillnader främst ligger i styrning, teknikval och implementation, medan de underliggande problemen är gemensamma. C-ITS är i praktiken ett globalt interoperabilitets- och tillitsproblem, där varje region utvecklar sin egen lösning utifrån lokala regelverk, marknadsförutsättningar och teknisk strategi.
+
 ## Informationsutbyte baserat på ETSI-meddelanden
-Inom C-ITS utbyts säkerhets- och trafikrelaterad information genom standardiserade meddelanden som definieras inom ETSI och används i operativa C-ITS-tjänster. Kommunikation kan ske både via direktkommunikation (meddelanden ofta sänds som broadcast inom räckvidd) och via mobilnät (distribution vanligtvis via backend-system med unicast eller multicast). Det finns alltså två huvudvägar, vilka också kan kombineras:
+Inom C-ITS utbyts säkerhets- och trafikrelaterad information genom standardiserade meddelanden som definieras inom ETSI och används i operativa C-ITS-tjänster. Kommunikation kan ske både via direktkommunikation (meddelanden sänds ofta som broadcast inom räckvidd) och via mobilnät (distributionen sker vanligtvis via backend-system med unicast eller multicast). Det finns alltså två huvudvägar, vilka också kan kombineras:
 * <mark>ITS-G5/PC5</mark>: dedikerad direktkommunikation för korta avstånd.
 * <mark>LTE/5G</mark>: nätverksbaserad kommunikation via mobilnät.
 I Europa förespråkas hybridkommunikation (ITS-G5 och mobilnät) för att täcka fler scenarier.
