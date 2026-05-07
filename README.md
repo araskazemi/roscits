@@ -11,13 +11,13 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
 ## Innehållsförteckning
 
 ### Bakgrund
-1. [Översikt](bakgrund.md)
-2. [C-ITS översikt](cits.md)
-3. [Det europeiska ramverket för C-ITS.](euccms.md)
-4. [Roller och rättigheter](roles_in_cits.md)
-5. [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
-6. [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
-7. [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
+- [Bakgrund](bakgrund.md)
+    - [C-ITS översikt](cits.md)
+    - [Det europeiska ramverket för C-ITS.](euccms.md)
+    - [Roller och rättigheter](roles_in_cits.md)
+    - [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
+    - [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
+    - [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
 
 
 ### Del B – Analys av Roller och Implementation
