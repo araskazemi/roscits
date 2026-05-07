@@ -63,7 +63,7 @@ Rollerna (Root CAs, EA, AA, TLM) omfattas av detaljerade krav på revision, fysi
 #### Manuella och fysiska processer för nyckelhantering
 Root CA-certifikat lämnas ofta fysiskt (med kurir) till CPOC för att minska risken för kompromettering. Detta är ovanligt i klassisk PKI, där processerna i större utsträckning är automatiserade.
 
-## Övergripande struktur
+### Övergripande tillitsstruktur
 Den övergripande strukturen för tillitsmodellen kan delas i följande tre skikt:
 
 :one: EU-nivå
