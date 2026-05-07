@@ -37,7 +37,7 @@ Kopplingen mellan dessa lager hanteras via Registration Authorities (RA), som bi
 
 För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](eussms.md) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
-:arrow_right: [Nästa](euccms.md)
+:arrow_right: [Nästa](cits_in_eu.md)
 
 <p>&nbsp;</p>
 
