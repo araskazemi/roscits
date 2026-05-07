@@ -18,7 +18,7 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
     - [Det europeiska ramverket för C-ITS.](euccms.md)
         - [ITS-direktivet](euccms.md#its-direktivet)
         - [EU-CCMS](euccms.md#eu-ccms)
-    - [Roller och rättigheter](roles_in_cits.md)
+    - [Roller och rättigheter i C-ITS](roles_in_cits.md)
     - [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
     - [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
     - [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
