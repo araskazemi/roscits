@@ -13,6 +13,8 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
 ### Bakgrund
 - [Bakgrund](bakgrund.md)
     - [C-ITS översikt](cits.md)
+        - [Informationsutbyte baserat på ETSI-meddelanden](https://github.com/araskazemi/roscits/blob/main/cits.md#informationsutbyte-baserat-p%C3%A5-etsi-meddelanden)
+        - [Säkerhetsarkitektur](https://github.com/araskazemi/roscits/blob/main/cits.md#s%C3%A4kerhetsarkitektur)
     - [Det europeiska ramverket för C-ITS.](euccms.md)
     - [Roller och rättigheter](roles_in_cits.md)
     - [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
