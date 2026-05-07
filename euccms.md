@@ -150,7 +150,7 @@ Den övergripande strukturen för tillitsmodellen kan delas i följande tre skik
 ```
 
 ### Hur PKI-kedjan hänger ihop
-PKI-kedjan bygger på en multiple root CA-arkitektur med en gemensam trust list.
+PKI-kedjan i EU-CCMS bygger på en multiple root CA-arkitektur med en gemensam trust list.
 Det innebär att:
 - en svensk station accepterar en fransk station,
 - en norsk station accepterar en tysk station,
@@ -199,8 +199,8 @@ Tillitskedjena kan se ut så här:
 
 ```
 
-## Hur hänger den nationella C-ITS-domänen i tillitsmodellen?
-Den nationella domänen är inte en separat PKI-root, utan består av:
+## Nationella C-ITS-domän
+Den nationella (eller organisatoriska) domänen är inte en separat PKI-root, utan består av:
 - Nationellt RA-system
 - Avtal
 - Styrning och upprätthållande av policy
@@ -213,7 +213,7 @@ Domän definieras genom domänägarens styrning över:
 - Nationella policykrav
 - Incidenthantering
 
-## Hur hänger Interchange-noder i tillitsmodellen?
+## Interchange-noder
 Interchange är inte en PKI-aktör, utan fungerar snarare som en broker eller federationstjänst för transport av IP-baserade meddelanden.
 
 Interchange-noder ansvarar för att vidareföremedla ETSI-meddelanden. Validering av signaturer enligt ETSI TS 103 097 är valfri och kan tillämpas vid behov. Signering och verifiering av meddelandens autenticitet och integritet är krav som behöver hanteras av den avsändande respektive mottagande stationen. I praktiken förutsätter många use case att meddelanden är signerade i enlighet med gällande säkerhetsramverk (EU CCMS Security Policy).
@@ -254,7 +254,7 @@ Flera EU-länder har initialt försökt att följa rekommendationerna för imple
 
 En sådan utveckling kan påverka interoperabilitet, fordonsindustrin och möjligheten att etablera en sammanhängande europeisk test- och innovationsmiljö. Om en liknande inriktning skulle tillämpas i Sverige kan det påverka Sveriges förmåga att fungera som testbädd negativt, eftersom en fullt utbyggd EU-CCMS-infrastruktur då skulle saknas på svenska vägar.
 
-
+:arrow_right: [Nästa](roles_in_cits.md)
 
 <p>&nbsp;</p>
 
