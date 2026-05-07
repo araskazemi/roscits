@@ -3,7 +3,7 @@
 # Roller och rättigheter i C-ITS
 Roller och rättigheter i C-ITS definieras, men på ett specifikt sätt. Det är viktigt att skilja på tre nivåer:
 
-:one: Tekniska roller i PKI (EU-CCMS)
+:one: Tekniska roller i PKI (t ex EU-CCMS)
 
 :two: Meddelandetyper och funktionella roller
 
