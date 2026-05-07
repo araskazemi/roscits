@@ -17,19 +17,11 @@ I den senaste uppdateringen har särskilt fokus lagts på samverkande, uppkoppla
 För C-ITS innebär detta att nationella implementationer behöver anpassas till gemensamma europeiska specifikationer, både avseende meddelandeformat, kommunikation och säkerhet. Direktivet driver därmed behovet av harmoniserade lösningar och samordning mellan medlemsstater. 
 
 ## EU-CCMS
-EU-CCMS (European Union Common Certificate Management System) är ett gemensamt europeiskt PKI-baserat säkerhetssystem som hanterar digitala certifikat för [samverkande intelligenta transportsystem (C-ITS)](cits.md) inom EU. Det gör att fordon och infrastruktur kan kommunicera säkert och lita på meddelanden från varandra. 
+European Union Common Certificate Management System (EU-CCMS) är ett gemensamt europeiskt PKI-baserat säkerhetssystem som hanterar digitala certifikat för [samverkande intelligenta transportsystem (C-ITS)](cits.md) inom EU. Det säkerställer gränsöverskridande interoperabilitet genom att möjliggöra verifiering av att meddelanden är autentiska, oförändrade och utfärdade av en behörig part, samtidigt som avsändarens integritet skyddas.
 
-Syftet med EU-CCMS är att säkerställa att endast betrodda och auktoriserade aktörer kan delta i C-ITS-kommunikation, samtidigt som användarnas 
-<mark>integritet skyddas genom pseudonymisering och regelbunden certifikatsrotation</mark>. Genom en harmoniserad europeisk certifikatsstruktur 
-möjliggörs <mark>gränsöverskridande interoperabilitet</mark>, vilket är en grundförutsättning för ett sammanhängande och skalbart C-ITS-ekosystem 
-inom EU.
+EU CCMS är en förutsättning för interoperabilitet mellan länder och aktörer inom C-ITS, men innebär samtidigt betydande krav på både teknisk implementation och organisatorisk struktur. Varje land ansvarar för organisering av registrering, policyer och administration av de aktörer och stationer som ansluts till infrastrukturen.
 
-Varje land ansvarar för organisering av registrering, policyer och administration av de aktörer och stationer som ansluts till infrastrukturen.
-
-Implementeringen av EU-CCMS är därmed en central komponent i att upprätthålla säkerhet, tillit och funktionell interoperabilitet i framtidens 
-digitaliserade transportsystem.
-
-## Tillit och säkerhet
+### Tillit och säkerhet
 Tillit i C-ITS baseras på validering av certifikatkedjor mot en uppsättning trust anchors. 
 Dessa trust anchors utgörs av Root CA-certifikat som distribueras via <mark>European C-ITS Trust List (ECTL)</mark>.
 
