@@ -69,7 +69,7 @@ Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras med
 
 Säkerhetsarkitekturen är uppbyggd kring två kompletterande tillitslager som tillsammans skyddar både meddelanden och kommunikationskanaler:
 1. <mark>Meddelandelager</mark> (PKI, t ex [EU-CCMS](euccms.md)): Säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras.
-2. <mark>Transportlager</mark> (Federation, t ex mTLS): Säkerställer att kommunikation endast etableras mellan betrodda organisationer och interchange-noder.
+2. <mark>Transportlager</mark> (Federation, t ex mTLS): Säkerställer att kommunikation endast etableras mellan betrodda organisationer och Interchange-noder.
 
 Kopplingen mellan dessa lager hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder.
 
