@@ -22,13 +22,20 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
         - [Interchange-noder](cits_in_eu.md#interchange-noder)
         - [Svensk implementering av C-ITS](cits_in_eu.md#svensk-implementering-av-c-its)
         - [Utmaningar](cits_in_eu.md#utmaningar)
+    - [European Union Common Certificate Management System](euccms.md)
+        - [Övergripande tillitsstruktur](euccms.md#%C3%B6vergripande-tillitsstruktur)
+        - [Hur PKI-kedjan hänger ihop](euccms.md#hur-pki-kedjan-h%C3%A4nger-ihop)
     - [Roller och rättigheter i C-ITS](roles_in_cits.md)
-    - [RA-verksamhetssystem för C-ITS-domän](ra-system.md)
-    - [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
-    - [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
+        - [Tekniska roller i PKI](roles_in_cits.md#tekniska-roller-i-pki-f%C3%B6r-meddelandesignering)
+        - [Meddelandetyper och funktionella roller](roles_in_cits.md#meddelandetyper-och-funktionella-roller)
+        - [Applikationsroller](roles_in_cits.md#applikationsroller)
+        - [Styrning av roller och rättigheter](roles_in_cits.md#styrning-av-roller-och-r%C3%A4ttigheter)
+    - [RA-funktioner för C-ITS-domän](ra-system.md)
 
 
 ### Del B – Analys av Roller och Implementation
+    - [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
+    - [Backend-baserad C-ITS med Interchange-noder – ett avvägt första steg](backend_cits.md)
 
 ### Extramaterial
 * [EU-CCMS-protokollen](euccms_protocols.md)
