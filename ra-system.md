@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# RA-verksamhetssystem för C-ITS-domän
+# RA-funktioner för C-ITS-domän
 <mark>Registration Authority (RA)</mark> i [EU-CCMS](euccms.md) är den funktion som ansvarar för registrering av C-ITS-stationer i systemet.
 
 RA:s uppgifter omfattar normalt:
