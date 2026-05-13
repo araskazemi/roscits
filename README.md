@@ -31,6 +31,12 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
         - [Applikationsroller](roles_in_cits.md#applikationsroller)
         - [Styrning av roller och rättigheter](roles_in_cits.md#styrning-av-roller-och-r%C3%A4ttigheter)
     - [RA-funktioner för C-ITS-domän](ra-system.md)
+        - [Information som en RA hanterar](ra-system.md#information-som-en-ra-hanterar)
+        - [Livscykelhantering av stationsinformation i ett RA-verksamhetssystem](ra-system.md#livscykelhantering-av-stationsinformation-i-ett-ra-verksamhetssystem)
+        - [Teknisk gränssnitt mellan RA och CA](ra-system.md#teknisk-gr%C3%A4nssnitt-mellan-ra-och-ca)
+        - [Hur CSR används i RA-processen](ra-system.md#hur-csr-anv%C3%A4nds-i-ra-processen)
+        - [Spårning vid incidenter](ra-system.md#sp%C3%A5rning-vid-incidenter)
+        - [En viktig konsekvens](ra-system.md#en-viktig-konsekvens)
 
 
 ### Del B – Analys av Roller och Implementation
