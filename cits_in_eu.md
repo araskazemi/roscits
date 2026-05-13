@@ -110,6 +110,7 @@ Den tekniska mognaden är generellt hög, och flera användarfall är redo för 
 Tidigare projekt har identifierat dessa utmaningar på en övergripande nivå. I denna rapport konkretiseras de ytterligare genom analys och praktisk implementering, med fokus på vad som krävs för att gå från pilotverksamhet till operativ drift i Sverige. 
 
 ``` ⚠️ KOM IHÅG! ```
+
 <mark>Skriv ett stycke med länkar till de olika förslagen för implementering i rapportens del B</mark> 
 
 ## Utmaningar
