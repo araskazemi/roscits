@@ -10,9 +10,11 @@ Roller och rättigheter i C-ITS definieras, men på ett specifikt sätt. Det är
 :three: Applikationsroller (t.ex. utryckningsfordon)
 
 ## Tekniska roller i PKI för meddelandesignering
-[Rollerna i säkerhets- och certifikatsystemet (EU-CCMS)](secits_domain.md#grundl%C3%A4ggande-struktur-i-eu-ccms) framgår i  Security Policy Release 3.0.
+Tekniska roller för signering av ETSI-meddelanden är infrastrukturella och inte trafikroller.
 
-Dessa roller är infrastrukturella roller och inte trafikroller.
+*Security Policy Release 3.0*, i [det europeiska ramverket för C-ITS](cits_in_eu.md), beskriver rollerna i säkerhets- och certifikatsystemet för [EU-CCMS](euccms.md), som bland annat reglerar signering av meddelanden.
+
+Internationellt kan det finnas andra PKI-system med motsvarande eller avvikande roller.
 
 ## Meddelandetyper och funktionella roller
 I C-ITS finns särskilda [meddelandetyper](cits.md#vad-skickas) och flaggor för olika use cases (som i C-ITS kallas *applikationer*), till exempel:
