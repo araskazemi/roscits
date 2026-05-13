@@ -63,7 +63,7 @@ Rollerna (Root CAs, EA, AA, TLM) omfattas av detaljerade krav på revision, fysi
 #### Manuella och fysiska processer för nyckelhantering
 Root CA-certifikat lämnas ofta fysiskt (med kurir) till CPOC för att minska risken för kompromettering. Detta är ovanligt i klassisk PKI, där processerna i större utsträckning är automatiserade.
 
-``` 🔥 UPDATERAT! ```
+``` 🔥 UPDATERING! ```
 ## Nationella C-ITS-domän
 Den nationella (eller organisatoriska) C-ITS-domänen utgör den organisatoriska och administrativa struktur inom vilken aktörer, stationer och tillitsrelationer hanteras. Domänen är inte en separat PKI-root i EU-CCMS, utan etableras genom styrning, ansvarsfördelning och processer för registrering och certifikathantering.
 
