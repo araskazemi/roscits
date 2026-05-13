@@ -63,19 +63,27 @@ Rollerna (Root CAs, EA, AA, TLM) omfattas av detaljerade krav på revision, fysi
 #### Manuella och fysiska processer för nyckelhantering
 Root CA-certifikat lämnas ofta fysiskt (med kurir) till CPOC för att minska risken för kompromettering. Detta är ovanligt i klassisk PKI, där processerna i större utsträckning är automatiserade.
 
+``` 🔥 UPDATERAT! ```
 ## Nationella C-ITS-domän
-Den nationella (eller organisatoriska) domänen är inte en separat PKI-root, utan består av:
-- Nationellt RA-system
-- Avtal
-- Styrning och upprätthållande av policy
-- Tilldelning av roller
+Den nationella (eller organisatoriska) C-ITS-domänen utgör den organisatoriska och administrativa struktur inom vilken aktörer, stationer och tillitsrelationer hanteras. Domänen är inte en separat PKI-root i EU-CCMS, utan etableras genom styrning, ansvarsfördelning och processer för registrering och certifikathantering.
 
-Domän definieras genom domänägarens styrning över:
-- Vem/vilka får agera RA
-- Vilka aktörer och deras stationer får registreras i RA
-- Vilka EA/AA som är godkända att utfärda certifikat för stationerna inom domänen
-- Nationella policykrav
-- Incidenthantering
+En nationell domän omfattar typiskt:
+- nationella eller organisatoriska RA-funktioner (Registration Authority),
+- avtal och organisatoriska överenskommelser,
+- styrning och efterlevnad av krav och policyer,
+- tilldelning och administration av roller,
+- incidenthantering och operativa processer.
+
+Domänen definieras ytterst av domänägarens kontroll över vilka aktörer som får delta och under vilka förutsättningar. Detta inkluderar ansvar för:
+- vilka organisationer som får agera RA,
+- vilka aktörer och stationer som får registreras,
+- vilka EA- och AA-funktioner som är godkända att utfärda certifikat inom domänen,
+- nationella policykrav och säkerhetsregler,
+- hantering av incidenter och avvikelser.
+
+Den nationella domänen fungerar därmed som ett lager mellan den europeiska tillitsinfrastrukturen och de operativa aktörer som använder C-ITS-tjänster. Även om tilliten till meddelandenas autenticitet och integritet ytterst baseras på certifikat och tillitskedjor inom EU-CCMS och ECTL krävs nationell eller organisatorisk styrning för att säkerställa att registrering, ansvar och operativa processer fungerar i praktiken.
+
+Utformningen av en nationell domän kan skilja sig mellan medlemsstater beroende på organisatoriska förutsättningar, ansvarsfördelning och befintlig systemarkitektur. Vissa länder har valt mer centraliserade modeller medan andra verkar i en mer distribuerad struktur där flera aktörer behöver samverka inom samma domän.
 
 ## Interchange-noder
 Interchange är inte en PKI-aktör, utan fungerar snarare som en broker eller federationstjänst för transport av IP-baserade meddelanden.
