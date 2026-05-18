@@ -10,33 +10,7 @@ Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Coo
 
 ## Innehållsförteckning
 
-### Bakgrund
-- [Bakgrund](bakgrund.md)
-    - [C-ITS översikt](cits.md)
-        - [Informationsutbyte baserat på ETSI-meddelanden](cits.md#informationsutbyte-baserat-p%C3%A5-etsi-meddelanden)
-        - [Säkerhetsarkitektur](cits.md#s%C3%A4kerhetsarkitektur)
-    - [Det europeiska ramverket för C-ITS](cits_in_eu.md)
-        - [ITS-direktivet](cits_in_eu.md#its-direktivet)
-        - [EU-CCMS](cits_in_eu.md#eu-ccms)
-        - [Nationella C-ITS-domän](cits_in_eu.md#nationella-c-its-dom%C3%A4n)
-        - [Interchange-noder](cits_in_eu.md#interchange-noder)
-        - [Svensk implementering av C-ITS](cits_in_eu.md#svensk-implementering-av-c-its)
-        - [Utmaningar](cits_in_eu.md#utmaningar)
-    - [European Union Common Certificate Management System](euccms.md)
-        - [Övergripande tillitsstruktur](euccms.md#%C3%B6vergripande-tillitsstruktur)
-        - [Hur PKI-kedjan hänger ihop](euccms.md#hur-pki-kedjan-h%C3%A4nger-ihop)
-    - [Roller och rättigheter i C-ITS](roles_in_cits.md)
-        - [Tekniska roller i PKI](roles_in_cits.md#tekniska-roller-i-pki-f%C3%B6r-meddelandesignering)
-        - [Meddelandetyper och funktionella roller](roles_in_cits.md#meddelandetyper-och-funktionella-roller)
-        - [Applikationsroller](roles_in_cits.md#applikationsroller)
-        - [Styrning av roller och rättigheter](roles_in_cits.md#styrning-av-roller-och-r%C3%A4ttigheter)
-    - [RA-funktioner för C-ITS-domän](ra-system.md)
-        - [Information som en RA hanterar](ra-system.md#information-som-en-ra-hanterar)
-        - [Livscykelhantering av stationsinformation i ett RA-verksamhetssystem](ra-system.md#livscykelhantering-av-stationsinformation-i-ett-ra-verksamhetssystem)
-        - [Teknisk gränssnitt mellan RA och CA](ra-system.md#teknisk-gr%C3%A4nssnitt-mellan-ra-och-ca)
-        - [Hur CSR används i RA-processen](ra-system.md#hur-csr-anv%C3%A4nds-i-ra-processen)
-        - [Spårning vid incidenter](ra-system.md#sp%C3%A5rning-vid-incidenter)
-        - [En viktig konsekvens](ra-system.md#en-viktig-konsekvens)
+- [Inledning](cits_intro.md)
 
 
 ### Del B – Analys av Roller och Implementation
