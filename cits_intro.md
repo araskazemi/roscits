@@ -16,7 +16,7 @@ Ett ytterligare problemområde rör införande och adoption. Många av de tänkt
 Mot denna bakgrund syftar kapitlet till att beskriva den etablerade målbilden för C-ITS samt EU-CCMS roll i att möjliggöra en gemensam europeisk tillitsinfrastruktur. I rapportens Del B – Analys av roller och implementation – analyseras hur olika implementeringsstrategier kan stödja en gradvis och realistisk utveckling. Analysen belyser relationen mellan EU:s tillitsinfrastruktur och nationella initiativ samt undersöker alternativa angreppssätt som kan sänka trösklarna för deltagande samtidigt som grundläggande krav på säkerhet och interoperabilitet upprätthålls.
 
 
-## Cooperative Intelligent Transport Systems
+## Cooperative Intelligent Transport Systems (C-ITS)
 <mark>Cooperative Intelligent Transport Systems (C-ITS)</mark> avser system där fordon, infrastruktur och andra trafikanter utbyter information i realtid för att förbättra trafiksäkerhet, framkomlighet och effektivitet i transportsystemet. Till skillnad från traditionella ITS-lösningar, som i huvudsak bygger på centraliserad informationsspridning, möjliggör C-ITS ett distribuerat informationsutbyte där flera aktörer både producerar och konsumerar data.
 
 C-ITS är ett samlingsbegrepp för teknologier och standardiserade kommunikationslösningar som stödjer olika former av kommunikation, inklusive mellan fordon (V2V), mellan fordon och infrastruktur (V2I), samt mellan fordon och omgivande system och trafikanter (V2X), exempelvis via backend-system och tjänsteplattformar (V2N). I praktiken innebär detta att information kan delas om exempelvis hårda inbromsningar, halt väglag, tillfälliga hastighetsbegränsningar, olyckor, vägarbeten eller andra trafikstörningar.
@@ -196,7 +196,7 @@ En sådan utveckling kan påverka interoperabilitet, fordonsindustrin och möjli
 
 <a name="euccms"></a>
 
-## European Union Common Certificate Management System 
+## European Union Common Certificate Management System (EU-CCMS)
 European Union Common Certificate Management System (EU-CCMS) är EU:s gemensamma säkerhetsinfrastruktur för C-ITS och möjliggör säker och interoperabel kommunikation mellan aktörer och länder genom hantering av digitala certifikat. Det säkerställer att meddelanden är autentiska och skyddar samtidigt användarnas integritet genom pseudonyma certifikat och ett [gemensamt europeiskt ramverk](#cits_in_eu).
 
 Tillit i EU-CCMS baseras på validering av certifikatkedjor mot en uppsättning trust anchors. Dessa trust anchors utgörs av Root CA-certifikat som distribueras via <mark>European C-ITS Trust List (ECTL)</mark>.
