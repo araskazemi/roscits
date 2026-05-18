@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# Backend-baserad C-ITS med Interchange-noder
+# Systemcentrerad C-ITS med Interchange-noder och back-end-integrationer
 Detta avsnitt beskriver en möjlig implementeringsmodell för Sverige där C-ITS/ETSI-baserade applikationer realiseras genom befintliga backend-system, kompletterade med Interchange-noder för informationsutbyte mellan domäner inom en avtalsbaserad modell.
 
 Syftet är att möjliggöra ett avvägt första steg där komplexitet och kostnader hålls nere genom att återanvända befintliga system, samtidigt som backend-systemen ges rollen som centrala C-ITS-stationer med ansvar för att skapa, signera och verifiera ETSI-meddelanden.
