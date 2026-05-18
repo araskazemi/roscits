@@ -113,9 +113,9 @@ I den senaste uppdateringen har särskilt fokus lagts på samverkande, uppkoppla
 För C-ITS innebär detta att nationella implementationer behöver anpassas till gemensamma europeiska specifikationer, både avseende meddelandeformat, kommunikation och säkerhet. Direktivet driver därmed behovet av harmoniserade lösningar och samordning mellan medlemsstater. 
 
 ### Meddelandesäkerhet
-European Union Common Certificate Management System (EU-CCMS) är ett gemensamt europeiskt PKI-baserat säkerhetssystem som hanterar digitala certifikat för samverkande intelligenta transportsystem (C-ITS) inom EU. Det säkerställer gränsöverskridande interoperabilitet genom att möjliggöra verifiering av att meddelanden är autentiska, oförändrade och utfärdade av en behörig part, samtidigt som avsändarens integritet skyddas.
+[EU-CCMS](#euccms) är ett gemensamt europeiskt PKI-baserat säkerhetssystem som hanterar digitala certifikat för samverkande intelligenta transportsystem (C-ITS) inom EU. Det säkerställer gränsöverskridande interoperabilitet genom att möjliggöra verifiering av att meddelanden är autentiska, oförändrade och utfärdade av en behörig part, samtidigt som avsändarens integritet skyddas.
 
-EU CCMS är en förutsättning för interoperabilitet mellan länder och aktörer inom C-ITS, men innebär samtidigt betydande krav på både teknisk implementation och organisatorisk struktur. Varje land ansvarar för organisering av registrering, policyer och administration av de aktörer och stationer som ansluts till infrastrukturen.
+EU-CCMS är en förutsättning för interoperabilitet mellan länder och aktörer inom C-ITS, men innebär samtidigt betydande krav på både teknisk implementation och organisatorisk struktur. Varje land ansvarar för organisering av registrering, policyer och administration av de aktörer och stationer som ansluts till infrastrukturen.
 
 
 ``` 🔥 UPDATERING! ```
