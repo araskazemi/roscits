@@ -15,8 +15,7 @@ Denna sida syftar till att strukturera frågorna, presentera alternativa organis
 
 ## Grundläggande struktur i EU-CCMS
 ### Teknisk tillitsstruktur
-[EU-CCMS](euccms.md) är den tekniska tillitsstrukturen för C-ITS i Europa och består av <mark>en gemensam europeisk policy och ledningsstruktur</mark> 
-(CPA, TLM och ECTL), vilka styr en multipel Root CA-arkitektur med <mark>flera parallella Root CAs</mark>.
+[EU-CCMS](euccms.md) är den tekniska tillitsstrukturen för C-ITS meddelandesäkerhet i Europa och består av <mark>en gemensam europeisk policy och ledningsstruktur</mark> (CPA, TLM och ECTL), som styr en multipel Root CA-arkitektur med <mark>flera parallella Root CAs</mark>.
 
 EU-CCMS är alltså en governance-styrd trust-list-modell – inte en klassisk single-root PKI-hierarki.
 
