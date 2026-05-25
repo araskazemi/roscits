@@ -89,12 +89,15 @@ Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av tv�
 
 :two: Federativ tillit till organisationer (för backendintegrationer och vidareförmedling av information)
 
+#### Tillit till information
 Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet. För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](#euccms) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
 EU-CCMS ansvarar för tillit till information och säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras. Detta inkluderar alla stationer och signerade meddelanden samt tillhörande hantering av identitet, certifikat, behörigheter och meddelandeverifiering enligt ETSI-standarder och den europeiska tillitsmodellen.
 
+#### Federativ tillit till organisationer
 Federation används för att etablera organisatorisk tillit och säker kommunikation mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna. Federationen är på så sätt ett separat tillitslager ovanpå EU-CCMS och används inte för verifiering av signerade ETSI-meddelandena i sig. Den används för att skydda och autentisera de IP-baserade kommunikationskanalerna mellan backend-system.
 
+#### Bindning mellan meddelandesäkerhet och organisatorisk tillit
 Kopplingen mellan dessa modeller hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder. RA säkerställer
 - registrering av metadata om identitets- och livscykelhantering av stationer och deras behörigheter inom C-ITS-domänen, och
 - registrering av metadata och certifikat om backend-system och Interchange-noder, vilka hanteras utanför EU-CCMS med separata federativa tillitsmekanismer och federationstjänster.
