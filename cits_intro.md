@@ -103,7 +103,7 @@ I denna struktur är stationen den logiska entiteten som signerar och verifierar
 - en fysisk enhet, exempelvis ett fordon eller en vägkantsutrustning, eller
 - en centraliserad ITS-station implementerad i ett backend-system.
 
-Interchange-noder och andra federativa backend-komponenter är inte stationer i den gemensamma PKI-strukturen, utan utgör ett transportlager mellan organisatoriska domäner, vilka utbyter information med varandra i en federation.
+Interchange-noder och andra federativa backend-komponenter är på så sätt inte stationer i den gemensamma PKI-strukturen (EU-CCMS), utan utgör ett transportlager mellan organisatoriska domäner, vilka utbyter information med varandra i en federation.
 
 <a name="cits_in_eu"></a>
 
