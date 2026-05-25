@@ -84,7 +84,9 @@ C-ITS omfattar flera typer av standardiserade meddelanden, där de mest centrala
 
 ### Säkerhetsarkitektur
 Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av två kompletterande men separata tillitsmodeller:
+
 :one: Tillit till information (för meddelandesäkerhet)
+
 :two: Federativ tillit till organisationer (för backendintegrationer och vidareförmedling av information)
 
 Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet.
