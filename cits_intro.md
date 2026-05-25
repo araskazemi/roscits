@@ -91,7 +91,7 @@ Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av tv�
 
 Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet.
 
-EU CCMS ansvarar för tillit till information och säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras. Detta inkluderar alla stationer och signerade meddelanden samt tillhörande hantering av identitet, certifikat, behörigheter och meddelandeverifiering enligt ETSI-standarder och den europeiska tillitsmodellen.
+EU-CCMS ansvarar för tillit till information och säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras. Detta inkluderar alla stationer och signerade meddelanden samt tillhörande hantering av identitet, certifikat, behörigheter och meddelandeverifiering enligt ETSI-standarder och den europeiska tillitsmodellen.
 
 Den federativa tilliten ansvarar för säker kommunikation och tillit mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna.
 
@@ -99,6 +99,11 @@ Kopplingen mellan dessa modeller hanteras via Registration Authorities (RA), som
 
 För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](#euccms) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
+I denna struktur är stationen den logiska entiteten som signerar och verifierar meddelanden inom EU-CCMS. En station kan vara:
+- en fysisk enhet, exempelvis ett fordon eller en vägkantsutrustning, eller
+- en centraliserad ITS-station implementerad i ett backend-system.
+
+Interchange-noder och andra federativa backend-komponenter är inte stationer i den gemensamma PKI-strukturen, utan utgör ett transportlager mellan organisatoriska domäner, vilka utbyter information med varandra i en federation.
 
 <a name="cits_in_eu"></a>
 
