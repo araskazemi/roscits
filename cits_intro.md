@@ -83,13 +83,17 @@ C-ITS omfattar flera typer av standardiserade meddelanden, där de mest centrala
 * <mark>SSEM (Signal Status Message)</mark>: svar på SREM som anger status för begäran.
 
 ### Säkerhetsarkitektur
+Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av två kompletterande men separata tillitsmodeller:
+:one: Tillit till information (för meddelandesäkerhet)
+:two: Federativ tillit till organisationer (för backendintegrationer och vidareförmedling av information)
+
 Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet.
 
-Säkerhetsarkitekturen är uppbyggd kring två kompletterande tillitslager som tillsammans skyddar både meddelanden och kommunikationskanaler:
-1. <mark>Meddelandelager</mark> (PKI, t ex [EU-CCMS](#euccms)): Säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras.
-2. <mark>Transportlager</mark> (Federation, t ex mTLS): Säkerställer att kommunikation endast etableras mellan betrodda organisationer och Interchange-noder.
+EU CCMS ansvarar för tillit till information och säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras. Detta inkluderar alla stationer och signerade meddelanden samt tillhörande hantering av identitet, certifikat, behörigheter och meddelandeverifiering enligt ETSI-standarder och den europeiska tillitsmodellen.
 
-Kopplingen mellan dessa lager hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder.
+Den federativa tilliten ansvarar för säker kommunikation och tillit mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna.
+
+Kopplingen mellan dessa modeller hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder.
 
 För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](#euccms) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
 
