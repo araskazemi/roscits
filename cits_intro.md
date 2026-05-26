@@ -82,6 +82,8 @@ C-ITS omfattar flera typer av standardiserade meddelanden, där de mest centrala
 * <mark>SREM (Signal Request Message)</mark>: används för att begära prioritet i trafiksignaler, exempelvis för utryckningsfordon eller kollektivtrafik.
 * <mark>SSEM (Signal Status Message)</mark>: svar på SREM som anger status för begäran.
 
+``` 🔥 UPDATERING! ```
+
 ### Säkerhetsarkitektur
 Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av två kompletterande men separata tillitsmodeller:
 
@@ -90,9 +92,19 @@ Den säkerhetsmodell som används i ett federerat C-ITS-ekosystem består av tv�
 :two: Federativ tillit till organisationer (för backendintegrationer och vidareförmedling av information)
 
 #### Tillit till information
-Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet. För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](#euccms) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet.
+Inom operativa C-ITS-implementationer enligt europeiska ramverk distribueras meddelanden som kryptografiskt signerade meddelanden i enlighet med ETSI TS 103 097. 
+Signering av ITS-meddelanden är en grundförutsättning för tillit till information. Detta möjliggör verifiering av avsändarens identitet samt säkerställer meddelandets integritet och autenticitet. 
 
-EU-CCMS ansvarar för tillit till information och säkerställer att varje enskilt meddelande är autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras. Detta inkluderar alla stationer och signerade meddelanden samt tillhörande hantering av identitet, certifikat, behörigheter och meddelandeverifiering enligt ETSI-standarder och den europeiska tillitsmodellen.
+Utan kryptografisk verifiering går det inte att säkerställa:
+- vem som skickat ett meddelande,
+- att informationen inte manipulerats,
+- eller att avsändaren är behörig.
+
+Det öppnar för att angripare kan skapa falska trafikincidenter, utge sig för att vara exempelvis utryckningsfordon eller manipulera trafikflöden och autonoma funktioner.
+
+PKI och certifikat används för att etablera ett distribuerat tillitssystem där fordon och infrastruktur kan verifiera meddelanden även när de kommunicerar över öppna och federerade nätverk. På så sätt kan varje enskilt meddelande verifieras som autentiskt, oförändrat och utfärdat av en behörig part, oberoende av hur det transporteras.
+
+För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI [EU-CCMS](#euccms) med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet. Detta innebär att mottagaren inte behöver känna till den exakta identiteten bakom ett meddelande, men ändå kan verifiera att det kommer från en legitim och betrodd station inom C-ITS-ekosystemet. På så sätt kan aktörer i systemet etablera tillit till informationen utan att varje meddelande behöver kunna kopplas till ett specifikt fordon eller en specifik individ.
 
 #### Federativ tillit till organisationer
 Federation används för att etablera organisatorisk tillit och säker kommunikation mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna. Federationen är på så sätt ett separat tillitslager ovanpå EU-CCMS och används inte för verifiering av signerade ETSI-meddelandena i sig. Den används för att skydda och autentisera de IP-baserade kommunikationskanalerna mellan backend-system.
