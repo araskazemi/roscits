@@ -521,7 +521,7 @@ För interoperabilitet mellan medlemsstater krävs harmonisering av ITS-AID och 
 
 
 ## RA-funktioner för C-ITS-domän
-<mark>Registration Authority (RA)</mark> i [EU-CCMS](#euccms) är den funktion som ansvarar för registrering av C-ITS-stationer i systemet.
+<mark>Registration Authority (RA)</mark> i [EU-CCMS](#euccms) (eller motsvarande PKI) är den funktion som ansvarar för registrering av C-ITS-stationer i systemet.
 
 RA:s uppgifter omfattar normalt:
 - verifiering av identitet hos den organisation som driver stationen
