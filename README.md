@@ -4,7 +4,7 @@ Denna repo används för innehålsproduktion och versionshantering av material s
 Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Cooperative Intelligent Transport Systems) kan genomföras i Sverige. Målet är att identifiera tekniska, organisatoriska och säkerhetsmässiga förutsättningar för en långsiktigt hållbar implementering.
 
 
-## För den som vill orientera sig i ämnet
+## För dig som vill orientera i ämnet
 - [Inledning](cits_intro.md)
 
 
