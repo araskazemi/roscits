@@ -107,18 +107,18 @@ PKI och certifikat används för att etablera ett distribuerat tillitssystem dä
 För att samtidigt uppnå säkerhet och skydd av personuppgifter använder C-ITS i Europa ett gemensamt PKI, [EU-CCMS](#euccms), med kortlivade pseudonyma certifikat. Detta innebär att meddelanden kan verifieras utan att avslöja fordonets eller förarens identitet. Detta innebär att mottagaren inte behöver känna till den exakta identiteten bakom ett meddelande, men ändå kan verifiera att det kommer från en legitim och betrodd station inom C-ITS-ekosystemet. På så sätt kan aktörer i systemet etablera tillit till informationen utan att varje meddelande behöver kunna kopplas till ett specifikt fordon eller en specifik individ.
 
 #### Federativ tillit till organisationer
-Federation används för att etablera organisatorisk tillit och säker kommunikation mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna. Federationen är på så sätt ett separat tillitslager ovanpå EU-CCMS och används inte för verifiering av signerade ETSI-meddelandena i sig. Den används för att skydda och autentisera de IP-baserade kommunikationskanalerna mellan backend-system.
+Federation används för att etablera organisatorisk tillit och säker kommunikation mellan backend-system, Interchange-noder och organisatoriska domäner över IP-baserade nätverk. Detta etableras typiskt genom mTLS och federerad identitet mellan de ingående organisationerna. Federationen är på så sätt ett separat tillitslager ovanpå EU-CCMS (eller motsvarande PKI) och används inte för verifiering av signerade ETSI-meddelandena i sig. Den används för att skydda och autentisera de IP-baserade kommunikationskanalerna mellan backend-system.
 
 #### Bindning mellan meddelandesäkerhet och organisatorisk tillit
 Kopplingen mellan dessa modeller hanteras via Registration Authorities (RA), som binder samman tekniska identiteter (certifikat) med organisatorisk tillit och åtkomst till interoperabla noder. RA säkerställer
 - registrering av metadata om identitets- och livscykelhantering av stationer och deras behörigheter inom C-ITS-domänen, och
-- registrering av metadata och certifikat om backend-system och Interchange-noder, vilka hanteras utanför EU-CCMS med separata federativa tillitsmekanismer och federationstjänster.
+- registrering av metadata och certifikat om backend-system och Interchange-noder, vilka hanteras utanför PKI-strukturen med separata federativa tillitsmekanismer och federationstjänster.
 
-I denna struktur är stationen den logiska entiteten som signerar och verifierar meddelanden inom EU-CCMS. En station kan vara:
+I denna struktur är stationen den logiska entiteten som signerar och verifierar meddelanden inom EU-CCMS (eller motsvarande PKI). En station kan vara:
 - en fysisk enhet, exempelvis ett fordon eller en vägkantsutrustning, eller
 - en centraliserad ITS-station implementerad i ett backend-system.
 
-Interchange-noder och andra federativa backend-komponenter är på så sätt inte stationer i den gemensamma PKI-strukturen (EU-CCMS), utan utgör ett transportlager mellan organisatoriska domäner, vilka utbyter information med varandra i en federation.
+Interchange-noder och andra federativa backend-komponenter är på så sätt inte stationer i PKI-strukturen (t ex EU-CCMS), utan utgör ett transportlager mellan organisatoriska domäner, vilka utbyter information med varandra i en federation.
 
 <a name="cits_in_eu"></a>
 
