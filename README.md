@@ -3,21 +3,18 @@ Denna repo används för innehålsproduktion och versionshantering av material s
 
 Projektet fokuserar på hur en trygg, robust och säker utrullning av C-ITS (Cooperative Intelligent Transport Systems) kan genomföras i Sverige. Målet är att identifiera tekniska, organisatoriska och säkerhetsmässiga förutsättningar för en långsiktigt hållbar implementering.
 
--------------
 
-## Innehållsförteckning
-
+## För den som vill orientera sig i ämnet
 - [Inledning](cits_intro.md)
-För den som vill orientera sig i ämnet...
 
 
-### Del B – Analys av Roller och Implementation
+## Analys av Roller och Implementation
 
 - [En möjlig väg för svensk implementering av C-ITS enligt EU-CCMS](secits_domain.md)
 - [Alternativ implementeringsansats 1: Systemcentrerad C-ITS med Interchange-noder och back-end-integrationer – ett avvägt första steg](backend_cits.md)
 - Alternativ implementeringsansats 2: C-ITS med egen PKI
 
 
-### Extramaterial
+## Extramaterial
 * [EU-CCMS-protokollen](euccms_protocols.md)
 * [MATF (Mutually Authenticating TLS in the context of Federations)](matf_intro.md)
