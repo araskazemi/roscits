@@ -530,7 +530,7 @@ RA:s uppgifter omfattar normalt:
 - vidarebefordran av certifikatbegäran till relevant Certificate Authority
 
 RA utfärdar inte certifikat och ingår inte i certifikatkedjan.  
-Certifikat utfärdas av betrodda CAs inom EU-CCMS-infrastrukturen.
+Certifikat utfärdas av betrodda CAs inom PKI-strukturen (t ex EU CCMS).
 
 RA säkerställer att CA får korrekta uppgifter för att rätt aktör, rätt utrustning och rätt roll och rättigheter kopplas till rätt certifikat enligt Certificate Policy.
 
@@ -762,7 +762,7 @@ Gallring kan ske enligt fastställd bevarandetid, som fastställs utifrån gäll
 ### Teknisk gränssnitt mellan RA och CA
 Certifikatutfärdare behöver inte ha direktåtkomst till RA-verksamhetssystemet eller RA-databasen.
 
-Ett korrekt designat EU-CCMS bygger på:
+Ett korrekt designat PKI-struktur (t ex EU-CCMS) bygger på:
 - rollseparation,
 - minimal informationsdelning, och
 - kryptografisk validering.
